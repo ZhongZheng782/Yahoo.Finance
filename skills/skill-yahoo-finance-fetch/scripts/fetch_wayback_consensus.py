@@ -496,7 +496,25 @@ COVERAGE_COLUMNS = [
 
 
 def utc_now() -> str:
-    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def normalize_attempt_timestamps(attempts_csv: Path | None) -> None:
+    """Migrate legacy naive UTC attempt timestamps to ISO 8601 Z format."""
+    if attempts_csv is None or not attempts_csv.exists():
+        return
+    try:
+        df = pd.read_csv(attempts_csv, encoding="utf-8-sig", dtype=str, keep_default_na=False)
+        if "process_timestamp" not in df.columns:
+            return
+        parsed = pd.to_datetime(df["process_timestamp"], errors="coerce", utc=True)
+        valid = parsed.notna()
+        if not valid.any():
+            return
+        df.loc[valid, "process_timestamp"] = parsed.loc[valid].dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+        df.to_csv(attempts_csv, index=False, encoding="utf-8-sig", lineterminator="\n")
+    except Exception as exc:
+        print(f"Warning: Could not normalize Wayback attempt timestamps: {exc}")
 
 
 def resolve_repo_path(path_value: str | None, default_value: str | None = None) -> Path | None:
@@ -566,14 +584,14 @@ def load_covered_snapshots(coverage_csv: Path | None, retry_failed_attempts: boo
         return set()
 
     try:
-        df_attempts = pd.read_csv(coverage_csv, encoding="utf-8")
+        df_attempts = pd.read_csv(coverage_csv, encoding="utf-8-sig", dtype=str, keep_default_na=False)
     except Exception as e:
-        print(f"Warning: Failed to load Wayback coverage matrix: {e}")
+        print(f"Warning: Failed to load Wayback snapshot-attempt ledger: {e}")
         return set()
 
     required = {"stock_code", "snapshot_timestamp"}
     if not required.issubset(df_attempts.columns):
-        print(f"Warning: Wayback coverage matrix lacks required columns: {coverage_csv}")
+        print(f"Warning: Wayback snapshot-attempt ledger lacks required columns: {coverage_csv}")
         return set()
 
     df_attempts["stock_code"] = df_attempts["stock_code"].astype(str).str.strip()
@@ -602,7 +620,7 @@ def load_covered_snapshots(coverage_csv: Path | None, retry_failed_attempts: boo
         attempted.add(key)
 
     print(
-        f"Loaded coverage matrix: {len(attempted)} snapshots still skipped; "
+        f"Loaded snapshot-attempt ledger: {len(attempted)} snapshots still skipped; "
         f"{retryable_failures} failed/unknown attempts are eligible for retry."
     )
     return attempted
@@ -614,7 +632,7 @@ def append_coverage_row(coverage_csv: Path | None, row: dict) -> None:
     coverage_csv.parent.mkdir(parents=True, exist_ok=True)
     write_header = not coverage_csv.exists() or coverage_csv.stat().st_size == 0
     with coverage_csv.open("a", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=COVERAGE_COLUMNS)
+        writer = csv.DictWriter(f, fieldnames=COVERAGE_COLUMNS, lineterminator="\n")
         if write_header:
             writer.writeheader()
         writer.writerow({col: row.get(col, "") for col in COVERAGE_COLUMNS})
@@ -732,7 +750,7 @@ def main():
         help="Comma-separated stock codes to fetch, e.g. 2330,2382",
     )
     parser.add_argument("--output-csv", help="Wayback batch output CSV path")
-    parser.add_argument("--coverage-csv", help="Wayback coverage matrix CSV path")
+    parser.add_argument("--attempts-csv", "--coverage-csv", dest="attempts_csv", help="Wayback snapshot-attempt ledger CSV path")
     parser.add_argument("--history-csv", help="Consensus history CSV to use for gap detection and merge")
     parser.add_argument(
         "--max-runtime-minutes",
@@ -742,7 +760,7 @@ def main():
     parser.add_argument(
         "--retry-failed-attempts",
         action="store_true",
-        help="Retry snapshots already present in the coverage matrix",
+        help="Retry snapshots already present in the attempt ledger",
     )
     parser.add_argument(
         "--no-merge",
@@ -757,9 +775,10 @@ def main():
         config.get("output", {}).get("wayback_consensus_csv") or OUTPUT_CSV,
     )
     coverage_csv = resolve_repo_path(
-        args.coverage_csv,
-        config.get("output", {}).get("wayback_coverage_matrix_csv"),
+        args.attempts_csv,
+        config.get("output", {}).get("wayback_fetch_attempts_csv"),
     )
+    normalize_attempt_timestamps(coverage_csv)
     history_csv = resolve_repo_path(args.history_csv, config.get("output", {}).get("wayback_consensus_history_csv"))
     max_runtime = args.max_runtime_minutes
     if max_runtime is None:
@@ -881,7 +900,7 @@ def main():
             if attempt_key in covered_snapshots:
                 print(
                     f"  [{idx}/{len(snapshots)}] {asof_date} already recorded "
-                    "in coverage matrix - skipping download."
+                    "in attempt ledger - skipping download."
                 )
                 continue
 

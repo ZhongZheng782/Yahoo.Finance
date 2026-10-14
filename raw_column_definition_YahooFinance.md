@@ -146,12 +146,12 @@ destination: downstream definitions/raw_column_definition_YahooFinance.md
 
 ---
 
-## raw_wayback_coverage_matrix.csv (Yahoo Finance Wayback Snapshot Coverage Matrix)
+## raw_wayback_fetch_attempts.csv (Yahoo Finance Wayback Snapshot Attempt Ledger)
 
-**Source:** `data/reports/raw_wayback_coverage_matrix.csv`  
+**Source:** `data/reports/raw_wayback_fetch_attempts.csv`  
 **Data Source:** Wayback Machine CDX snapshots and archived Yahoo Finance download/parse attempts  
 **Update Frequency:** Updated during each bounded Wayback run  
-**Extraction Strategy:** Append one row per attempted archived snapshot, including successful parses and known non-parseable snapshots. Later runs use this matrix to skip already-recorded snapshots and avoid repeating the same failed downloads/parses.
+**Extraction Strategy:** Append one row per attempted archived snapshot, including successful parses and known non-parseable snapshots. Later runs use this ledger to skip already-recorded snapshots and retry failures after their cooldown.
 
 ### Status Values
 
@@ -174,7 +174,25 @@ destination: downstream definitions/raw_column_definition_YahooFinance.md
 | `original_url` | string | Original Yahoo Finance analysis URL stored by Wayback | CDX `original` | May be finance/hk/sg Yahoo domain |
 | `status` | string | Snapshot processing result | System | See status values above |
 | `message` | string | Error or status details | System | Blank for `success` |
-| `process_timestamp` | datetime | UTC timestamp when the coverage row was written | System | `YYYY-MM-DD HH:MM:SS` |
+| `process_timestamp` | datetime | UTC timestamp when the attempt row was written | System | ISO 8601 with `Z` suffix |
+
+---
+
+## raw_wayback_run_history.csv (Yahoo Finance Wayback Scheduled Run History)
+
+**Source:** `data/reports/raw_wayback_run_history.csv`  
+**Update Frequency:** Reconciled on each Yahoo Finance workflow run; frequency reporting uses scheduled runs from the last 30 days.  
+**Success Rule:** A scheduled run is successful only when it emits at least one new consensus item and has no failed snapshot attempts. Runs with no output, failed snapshots, or an unsuccessful fetch step count as unsuccessful.
+
+| Column | Description |
+|---|---|
+| `run_id` / `run_attempt` | GitHub Actions workflow run and attempt identifiers |
+| `created_at` | Workflow run creation time in UTC |
+| `event` | GitHub Actions event; only `schedule` contributes to regular failure frequency |
+| `run_status` | `success`, `partial`, `failure`, or `no_output` |
+| `fetch_step_outcome` | Wayback fetch step conclusion |
+| `successful_items` / `failed_items` | New snapshot records produced by the run |
+| `process_timestamp` | UTC time this run audit row was recorded |
 
 ---
 

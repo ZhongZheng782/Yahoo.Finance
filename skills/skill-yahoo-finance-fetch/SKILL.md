@@ -78,9 +78,9 @@ python scripts/fetch_wayback_consensus.py --backfill
 - `--specific-symbols`：逗號分隔股票代號，覆蓋清單篩選。
 - `--limit-months`：覆蓋所有股票的回溯月數（優先於 `--backfill`）。
 - `--max-runtime-minutes`：達到時間預算就優雅中止並提交部分結果（預設讀取 `configs/default.yaml` 的 `wayback.max_runtime_minutes`，即 300 分鐘），適合排進有時間限制的排程工作。
-- `--retry-failed-attempts`：重試先前已記錄在 coverage matrix 中、但抓取失敗的快照。
+- `--retry-failed-attempts`：重試先前已記錄在快照嘗試紀錄中、但抓取失敗的快照。
 - `--no-merge`：只寫 `--output-csv`，不合併進 `--history-csv`。
-- `--output-csv` / `--coverage-csv` / `--history-csv`：分別覆蓋批次輸出、快照涵蓋矩陣、下游合併歷史 CSV 的路徑，預設對應 `configs/default.yaml` 的 `output.wayback_consensus_csv` / `output.wayback_coverage_matrix_csv` / `output.wayback_consensus_history_csv`。
+- `--output-csv` / `--attempts-csv` (`--coverage-csv` 舊別名) / `--history-csv`：分別覆蓋批次輸出、快照嘗試紀錄、下游合併歷史 CSV 的路徑，預設對應 `configs/default.yaml` 的 `output.wayback_consensus_csv` / `output.wayback_fetch_attempts_csv` / `output.wayback_consensus_history_csv`。
 
 #### Wayback 連線韌性（archive.org 對雲端 CI IP 的節流/封鎖）
 
@@ -109,7 +109,7 @@ input:
 output:
   raw_csv: data/reports/raw_yahoo_finance.csv
   wayback_consensus_csv: data/reports/raw_wayback_yahoo_finance_consensus.csv
-  wayback_coverage_matrix_csv: data/reports/raw_wayback_coverage_matrix.csv
+  wayback_fetch_attempts_csv: data/reports/raw_wayback_fetch_attempts.csv
   wayback_consensus_history_csv: data/reports/raw_yahoo_finance_consensus_history.csv
 
 wayback:

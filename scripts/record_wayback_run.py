@@ -15,7 +15,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ATTEMPTS_CSV = ROOT / "data/reports/raw_wayback_coverage_matrix.csv"
+ATTEMPTS_CSV = ROOT / "data/reports/raw_wayback_fetch_attempts.csv"
 RUNS_CSV = ROOT / "data/reports/raw_wayback_run_history.csv"
 RUN_COLUMNS = [
     "run_id",
@@ -72,6 +72,9 @@ def count_attempts_in_window(started_at: str, ended_at: str) -> tuple[int, int]:
             attempted_at = dt.datetime.fromisoformat(raw_time.replace("Z", "+00:00"))
         except ValueError:
             continue
+        if attempted_at.tzinfo is None:
+            # Legacy attempt logs used naive strings from a UTC clock.
+            attempted_at = attempted_at.replace(tzinfo=dt.timezone.utc)
         if start <= attempted_at <= end:
             if status == "success":
                 success += 1

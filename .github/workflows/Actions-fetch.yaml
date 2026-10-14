@@ -102,7 +102,7 @@ jobs:
           git add StockID_TWSE_TPEX.csv StockID_TWSE_TPEX_focus.csv
           git add data/reports/raw_yahoo_finance.csv
           git add data/reports/raw_yahoo_finance_summary_latest.csv
-          git add data/reports/raw_wayback_coverage_matrix.csv
+          git add data/reports/raw_wayback_fetch_attempts.csv
           git add data/reports/raw_yahoo_finance_daily_price.csv
           git add data/reports/raw_yahoo_finance_consensus_daily.csv
           git add data/reports/raw_yahoo_finance_consensus_history.csv
@@ -118,7 +118,7 @@ jobs:
       - name: Capture Wayback attempt baseline
         id: wayback_baseline
         run: |
-          file="data/reports/raw_wayback_coverage_matrix.csv"
+          file="data/reports/raw_wayback_fetch_attempts.csv"
           if [ -f "$file" ]; then
             rows=$(wc -l < "$file")
             rows=$((rows - 1))
@@ -149,8 +149,8 @@ jobs:
           if [ -f data/reports/raw_wayback_yahoo_finance_consensus.csv ]; then
             git add data/reports/raw_wayback_yahoo_finance_consensus.csv
           fi
-          if [ -f data/reports/raw_wayback_coverage_matrix.csv ]; then
-            git add data/reports/raw_wayback_coverage_matrix.csv
+          if [ -f data/reports/raw_wayback_fetch_attempts.csv ]; then
+            git add data/reports/raw_wayback_fetch_attempts.csv
           fi
           if [ -f data/reports/raw_wayback_run_history.csv ]; then
             git add data/reports/raw_wayback_run_history.csv

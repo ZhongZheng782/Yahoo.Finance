@@ -7,7 +7,7 @@ output:
   raw_csv: data/reports/raw_yahoo_finance.csv
   summary_csv: data/reports/raw_yahoo_finance_summary_latest.csv
   wayback_consensus_csv: data/reports/raw_wayback_yahoo_finance_consensus.csv
-  wayback_coverage_matrix_csv: data/reports/raw_wayback_coverage_matrix.csv
+  wayback_fetch_attempts_csv: data/reports/raw_wayback_fetch_attempts.csv
   wayback_consensus_history_csv: data/reports/raw_yahoo_finance_consensus_history.csv
 
 wayback:
