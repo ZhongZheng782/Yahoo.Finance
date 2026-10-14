@@ -167,15 +167,19 @@ def _retry_delay(attempt: int, exc: BaseException) -> float:
     return min(base + random.uniform(0, base * 0.5), 30.0)
 
 
-def fetch_wayback_snapshots(url, limit_months=24):
+def fetch_wayback_snapshots(url, limit_months=24, from_date=None, to_date=None):
     """Query Wayback CDX API for historical snapshot timestamps of the URL.
 
     Returns (snapshots, network_blocked). network_blocked is True only when
     every retry failed with a network-level error (see
     _is_network_level_error) — i.e. archive.org was unreachable/throttling,
     not merely "no snapshots exist for this URL"."""
-    encoded_url = urllib.parse.quote_plus(url)
-    cdx_url = f"https://web.archive.org/cdx/search/cdx?url={encoded_url}&output=json&statuscode=200"
+    params = {"url": url, "output": "json", "statuscode": "200"}
+    if from_date:
+        params["from"] = from_date
+    if to_date:
+        params["to"] = to_date
+    cdx_url = f"https://web.archive.org/cdx/search/cdx?{urllib.parse.urlencode(params)}"
 
     headers = {"User-Agent": WAYBACK_USER_AGENT}
     req = urllib.request.Request(cdx_url, headers=headers)
@@ -910,6 +914,56 @@ def main():
                 # archive.org's rate limiting in the first place).
                 break
             time.sleep(1.0)
+
+        if is_focus and focus_priority_months:
+            found_months = {snap["timestamp"][:6] for snap in all_snapshots}
+            missing_priority_months = [
+                month for month in focus_priority_months if month not in found_months
+            ]
+            if missing_priority_months:
+                range_start = min(missing_priority_months) + "01"
+                range_end_month = datetime.datetime.strptime(
+                    max(missing_priority_months), "%Y%m"
+                ).date()
+                next_month = range_end_month.replace(day=28) + datetime.timedelta(days=4)
+                range_end = (next_month.replace(day=1) - datetime.timedelta(days=1)).strftime(
+                    "%Y%m%d"
+                )
+                print(
+                    "Priority months missing from broad CDX results; querying date range "
+                    f"{range_start}..{range_end}: "
+                    + ", ".join(
+                        f"{month[:4]}-{month[4:]}" for month in missing_priority_months
+                    )
+                )
+                for url in candidate_urls:
+                    if time_budget_exhausted(deadline):
+                        print("Runtime budget reached during priority-month CDX queries.")
+                        break
+                    print(f"  Querying priority range: {url}")
+                    snaps, network_blocked = fetch_wayback_snapshots(
+                        url,
+                        limit_months=limit_months,
+                        from_date=range_start,
+                        to_date=range_end,
+                    )
+                    print(f"    Found {len(snaps)} snapshots in priority date range.")
+                    all_snapshots.extend(snaps)
+                    network_block_streak = network_block_streak + 1 if network_blocked else 0
+                    found_months.update(snap["timestamp"][:6] for snap in snaps)
+                    missing_priority_months = [
+                        month for month in focus_priority_months if month not in found_months
+                    ]
+                    if not missing_priority_months or network_block_streak >= NETWORK_BLOCK_STREAK_LIMIT:
+                        break
+                    time.sleep(1.0)
+                if missing_priority_months:
+                    print(
+                        "No CDX snapshots found for priority month(s): "
+                        + ", ".join(
+                            f"{month[:4]}-{month[4:]}" for month in missing_priority_months
+                        )
+                    )
 
         monthly_snaps = {}
         for snap in all_snapshots:
