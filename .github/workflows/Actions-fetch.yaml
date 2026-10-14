@@ -30,11 +30,7 @@ jobs:
     permissions:
       contents: write
     env:
-      SYNC_PAT_ANALYZER: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_INVESTMENT }}
       SYNC_PAT_BIZTRENDS: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_MONEY }}
-      SYNC_PAT_TAIEX: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_MONEY }}
-      SYNC_PAT_INVESTORCONFERENCE: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_MONEY }}
-      SYNC_PAT_GSBANKS: ${{ secrets.REPO_FILE_SYNC_WJLEE1020_MONEY }}
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v7
@@ -158,19 +154,7 @@ jobs:
             fi
           fi
 
-      - name: Sync raw Yahoo report to Analyzer
-        # Runs only when the repo has the cross-repo sync PAT configured.
-        if: env.SYNC_PAT_ANALYZER != ''
-        continue-on-error: true
-        uses: BetaHuhn/repo-file-sync-action@v1
-        with:
-          GH_PAT: ${{ env.SYNC_PAT_ANALYZER }}
-          CONFIG_PATH: .github/sync-to-Analyzer.yml
-          COMMIT_EACH_FILE: false
-          PR_LABELS: "automated-sync"
-          SKIP_PR: true
-
-      - name: Sync forecast summary to biztrends.TW
+      - name: Sync Yahoo data to biztrends.TW
         if: env.SYNC_PAT_BIZTRENDS != ''
         uses: BetaHuhn/repo-file-sync-action@v1
         with:
@@ -180,38 +164,6 @@ jobs:
           PR_LABELS: "automated-sync"
           SKIP_PR: true
 
-      - name: Sync consensus history to InvestorConference
-        if: env.SYNC_PAT_INVESTORCONFERENCE != ''
-        uses: BetaHuhn/repo-file-sync-action@v1
-        with:
-          GH_PAT: ${{ env.SYNC_PAT_INVESTORCONFERENCE }}
-          CONFIG_PATH: .github/sync-to-InvestorConference.yml
-          COMMIT_EACH_FILE: false
-          PR_LABELS: "automated-sync"
-          SKIP_PR: true
-
-      - name: Sync daily price history to MarketCostDistribution
-        if: env.SYNC_PAT_ANALYZER != ''
-        uses: BetaHuhn/repo-file-sync-action@v1
-        with:
-          GH_PAT: ${{ env.SYNC_PAT_ANALYZER }}
-          CONFIG_PATH: .github/sync-to-MarketCostDistribution.yml
-          COMMIT_EACH_FILE: false
-          PR_LABELS: "automated-sync"
-          SKIP_PR: true
-
-
-      - name: Sync skip notices
-        run: |
-          if [ -z "$SYNC_PAT_ANALYZER" ]; then
-            echo "::warning::REPO_FILE_SYNC_WENCHIEHLEE_INVESTMENT is not configured; skipping Analyzer sync."
-          fi
-          if [ -z "$SYNC_PAT_BIZTRENDS" ]; then
-            echo "::warning::REPO_FILE_SYNC_WENCHIEHLEE_MONEY is not configured; skipping biztrends.TW sync."
-          fi
-          if [ -z "$SYNC_PAT_INVESTORCONFERENCE" ]; then
-            echo "::warning::REPO_FILE_SYNC_WENCHIEHLEE_MONEY is not configured; skipping InvestorConference sync."
-          fi
-          if [ -z "$SYNC_PAT_GSBANKS" ]; then
-            echo "::warning::REPO_FILE_SYNC_WJLEE1020_MONEY is not configured; skipping GoogleSheet.Banks sync."
-          fi
+      - name: Sync skip notice
+        if: env.SYNC_PAT_BIZTRENDS == ''
+        run: echo "::warning::REPO_FILE_SYNC_WENCHIEHLEE_MONEY is not configured; skipping biztrends.TW sync."
