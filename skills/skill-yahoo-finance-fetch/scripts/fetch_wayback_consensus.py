@@ -817,6 +817,11 @@ def main():
     max_runtime = args.max_runtime_minutes
     if max_runtime is None:
         max_runtime = float(config.get("wayback", {}).get("max_runtime_minutes", 300))
+    focus_priority_months = [
+        str(month).replace("-", "")
+        for month in config.get("wayback", {}).get("focus_priority_months", [])
+    ]
+    focus_priority_set = set(focus_priority_months)
     deadline = time.monotonic() + max_runtime * 60 if max_runtime > 0 else None
 
     print("Checking Wayback Machine connectivity before starting...")
@@ -915,6 +920,20 @@ def main():
 
         snapshots = sorted(list(monthly_snaps.values()), key=lambda x: x["timestamp"])
         snapshots = snapshots[-limit_months:]
+        if is_focus and focus_priority_months:
+            priority_order = {month: index for index, month in enumerate(focus_priority_months)}
+            snapshots.sort(
+                key=lambda snap: (
+                    0,
+                    priority_order[snap["timestamp"][:6]],
+                )
+                if snap["timestamp"][:6] in priority_order
+                else (1, snap["timestamp"])
+            )
+            print(
+                "Focus priority months (attempted first; prior failures retried): "
+                + ", ".join(f"{month[:4]}-{month[4:]}" for month in focus_priority_months)
+            )
         print(f"Total unique monthly snapshots after merging: {len(snapshots)}")
 
         for idx, snap in enumerate(snapshots, 1):
@@ -931,7 +950,9 @@ def main():
             if (code, snap_ym) in already_covered:
                 print(f"  [{idx}/{len(snapshots)}] {asof_date} already covered - skipping download.")
                 continue
-            if attempt_key in covered_snapshots:
+            if attempt_key in covered_snapshots and not (
+                is_focus and snap_ym in focus_priority_set
+            ):
                 print(
                     f"  [{idx}/{len(snapshots)}] {asof_date} already recorded "
                     "in attempt ledger - skipping download."

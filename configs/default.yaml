@@ -12,6 +12,11 @@ output:
 
 wayback:
   max_runtime_minutes: 300
+  # Historical months to fetch first for focus-list stocks.
+  focus_priority_months:
+    - "2026-01"
+    - "2025-06"
+    - "2025-01"
 
 yahoo:
   source_url_template: "https://hk.finance.yahoo.com/quote/{yahoo_symbol}/analysis/"

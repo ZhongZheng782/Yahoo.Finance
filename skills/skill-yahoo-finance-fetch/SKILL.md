@@ -116,6 +116,7 @@ output:
 
 wayback:
   max_runtime_minutes: 300
+  focus_priority_months: ["2026-01", "2025-06", "2025-01"]
 
 yahoo:
   source_url_template: "https://hk.finance.yahoo.com/quote/{yahoo_symbol}/analysis/"
@@ -123,5 +124,7 @@ yahoo:
   taiwan_fallback_suffix: ".TWO"
   rate_limit_seconds: 1.0
 ```
+
+`focus_priority_months` 會讓 focus 清單優先處理指定月份；這些月份先前失敗的快照會重試，已成功收錄的股票月份則會略過。
 
 台股清單 CSV 需含「代號」「名稱」欄位；美股清單 CSV 需含「Ticker」「公司名稱」欄位（`fetch_cli.py` 另需「概念欄位」「process_timestamp」欄位）。
