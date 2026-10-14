@@ -1,7 +1,0 @@
-# .github/sync-to-MarketCostDistribution.yml
-group:
-  - files:
-      - source: data/reports/raw_yahoo_finance_daily_price.csv
-        dest:   data/Yahoo.Finance/raw_yahoo_finance_daily_price.csv
-    repos: |
-      wenchiehlee-investment/MarketCostDistribution
