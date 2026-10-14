@@ -156,6 +156,11 @@ jobs:
             --attempt-start-line "${{ steps.wayback_baseline.outputs.rows || '0' }}"
         continue-on-error: true
 
+      - name: Generate Wayback coverage matrix
+        if: always()
+        run: python scripts/gen_wayback_coverage_matrix.py
+        continue-on-error: true
+
       - name: Commit Wayback progress
         run: |
           if [ -f data/reports/raw_wayback_yahoo_finance_consensus.csv ]; then
@@ -169,6 +174,9 @@ jobs:
           fi
           if [ -f data/reports/raw_yahoo_finance_consensus_history.csv ]; then
             git add data/reports/raw_yahoo_finance_consensus_history.csv
+          fi
+          if [ -f data/reports/raw_wayback_coverage_matrix.csv ]; then
+            git add data/reports/raw_wayback_coverage_matrix.csv
           fi
           if git diff --staged --quiet; then
             echo "No Wayback progress to commit"
