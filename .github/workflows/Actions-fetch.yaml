@@ -51,7 +51,7 @@ jobs:
 
       - name: Validate synced inputs
         run: |
-          if [ ! -f data/ConceptStocks/raw_conceptstock_company_metadata.csv ]; then
+          if [ ! -f data/conceptstocks_raw/raw_conceptstock_company_metadata.csv ]; then
             echo "::warning::ConceptStocks metadata missing; US fetch will be empty"
           fi
           if [ ! -f data/reports/raw_factset_detailed_report.csv ]; then

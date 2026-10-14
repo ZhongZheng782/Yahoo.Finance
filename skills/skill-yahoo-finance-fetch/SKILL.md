@@ -49,7 +49,7 @@ python scripts/fetch_cli.py --market all --tw-list all --output-csv data/reports
 python scripts/fetch_daily_price.py --output-csv data/reports/raw_yahoo_finance_daily_price.csv
 ```
 
-- `--tw-list` / `--us-list`：台股/美股清單 CSV 路徑，預設分別為 `StockID_TWSE_TPEX.csv` 與 `data/ConceptStocks/raw_conceptstock_company_metadata.csv`。
+- `--tw-list` / `--us-list`：台股/美股清單 CSV 路徑，預設分別為 `StockID_TWSE_TPEX.csv` 與 `data/conceptstocks_raw/raw_conceptstock_company_metadata.csv`。
 - `--full-refresh`：忽略既有 CSV，全部代號整段重抓（預設抓 10 年，`BOOTSTRAP_PERIOD`）。
 - 增量邏輯：已有資料的代號只抓「既有最後一筆日期 - 5 天緩衝」到今天，同日以新抓的為準合併，只保留最近 `RETENTION_DAYS`（預設 3650 天）。
 - 台股會依序嘗試 `.TW` 與 `.TWO` 後綴，抓得到的那個視為正確市場別。
@@ -106,7 +106,7 @@ archive.org 已知會對共用雲端 CI（例如 GitHub Actions runner）的來�
 input:
   tw_all_list: StockID_TWSE_TPEX.csv
   tw_focus_list: StockID_TWSE_TPEX_focus.csv
-  us_metadata: data/ConceptStocks/raw_conceptstock_company_metadata.csv
+  us_metadata: data/conceptstocks_raw/raw_conceptstock_company_metadata.csv
 
 output:
   raw_csv: data/reports/raw_yahoo_finance.csv

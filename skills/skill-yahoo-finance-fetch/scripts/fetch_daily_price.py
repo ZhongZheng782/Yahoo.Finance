@@ -226,7 +226,7 @@ def fetch_macro(existing_by_code, sleep_sec):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--tw-list", default=str(REPO_ROOT / "StockID_TWSE_TPEX.csv"))
-    parser.add_argument("--us-list", default=str(REPO_ROOT / "data" / "ConceptStocks" / "raw_conceptstock_company_metadata.csv"))
+    parser.add_argument("--us-list", default=str(REPO_ROOT / "data" / "conceptstocks_raw" / "raw_conceptstock_company_metadata.csv"))
     parser.add_argument("--output-csv", default=str(REPO_ROOT / "data" / "reports" / "raw_yahoo_finance_daily_price.csv"))
     parser.add_argument("--sleep-sec", type=float, default=0.3)
     parser.add_argument("--full-refresh", action="store_true",
