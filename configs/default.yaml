@@ -12,7 +12,10 @@ output:
 
 wayback:
   max_runtime_minutes: 300
-  # Historical months to fetch first for focus-list stocks.
+  # Yahoo daily snapshots are retained from 2026-05 onward; use Wayback only
+  # for older historical months.
+  latest_month_to_fetch: "2026-04"
+  # Historical months to prioritize for focus-list stocks.
   focus_priority_months:
     - "2026-01"
     - "2025-06"

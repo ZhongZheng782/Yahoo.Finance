@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Generate the Yahoo Finance Wayback monthly coverage matrix.
+"""Generate the monthly Yahoo / Wayback snapshot coverage matrix.
 
 Output: data/reports/raw_wayback_coverage_matrix.csv
   - Columns: stock_code, company_name, YYYY-MM (one col per month, 36-month window)
-  - Values:  OK | MISSING
-  - This is a monthly coverage summary for freshness reporting. Yahoo.Finance keeps
-    per-snapshot fetch outcomes in raw_wayback_fetch_attempts.csv.
+  - Values: OK (Wayback) | OK(Y) (Yahoo daily snapshot) | MISSING
+  - Wayback coverage is sourced only from successful entries in the attempt ledger;
+    Yahoo coverage is sourced from dated daily consensus snapshots.
 
 Usage:
   python scripts/gen_wayback_coverage_matrix.py
@@ -18,11 +18,10 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import pandas as pd
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
-HISTORY_CSV    = REPO_ROOT / "data" / "reports" / "raw_yahoo_finance_consensus_history.csv"
+YAHOO_DAILY_CSV = REPO_ROOT / "data" / "reports" / "raw_yahoo_finance_consensus_daily.csv"
+WAYBACK_ATTEMPTS_CSV = REPO_ROOT / "data" / "reports" / "raw_wayback_fetch_attempts.csv"
 STOCK_LIST_CSV = REPO_ROOT / "StockID_TWSE_TPEX.csv"         # populated by scripts/Get觀察名單.py
 FOCUS_LIST_CSV = REPO_ROOT / "StockID_TWSE_TPEX_focus.csv"   # populated by scripts/Get觀察名單.py
 OUTPUT_MATRIX  = REPO_ROOT / "data" / "reports" / "raw_wayback_coverage_matrix.csv"
@@ -32,6 +31,7 @@ CONSENSUS_COLS = ["earnings_0y_avg", "revenue_0y_avg", "earnings_0q_avg", "reven
 
 # How many months back to include in the matrix (from today)
 LOOKBACK_MONTHS = 36
+WAYBACK_LATEST_MONTH = "2026-04"
 
 
 def gen_month_range(lookback_months: int) -> list[str]:
@@ -71,11 +71,35 @@ def load_focus_codes() -> set[str]:
     return codes
 
 
-def main() -> None:
-    if not HISTORY_CSV.exists():
-        print(f"[ERROR] History CSV not found: {HISTORY_CSV}", file=sys.stderr)
-        sys.exit(1)
+def has_consensus_value(row: dict[str, str]) -> bool:
+    return any(
+        (row.get(col) or "").strip().lower() not in {"", "nan", "none", "na", "n/a"}
+        for col in CONSENSUS_COLS
+    )
 
+
+def load_monthly_pairs(path: Path, stock_codes: set[str], *, require_success: bool = False) -> set[tuple[str, str]]:
+    pairs: set[tuple[str, str]] = set()
+    if not path.exists():
+        print(f"[WARN] Coverage source not found: {path}", file=sys.stderr)
+        return pairs
+
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        for row in csv.DictReader(f):
+            code = (row.get("stock_code") or "").strip()
+            forecast_date = (row.get("forecast_asof_date") or "").strip()
+            month = forecast_date[:7]
+            if code not in stock_codes or len(month) != 7 or month[4] != "-":
+                continue
+            if require_success:
+                if (row.get("status") or "").strip().lower() == "success":
+                    pairs.add((code, month))
+            elif has_consensus_value(row):
+                pairs.add((code, month))
+    return pairs
+
+
+def main() -> None:
     if not STOCK_LIST_CSV.exists():
         print(f"[ERROR] Current Taiwan stock list not found: {STOCK_LIST_CSV}", file=sys.stderr)
         sys.exit(1)
@@ -85,41 +109,24 @@ def main() -> None:
         print(f"[ERROR] No stock codes found in: {STOCK_LIST_CSV}", file=sys.stderr)
         sys.exit(1)
 
-    print(f"Loading history from: {HISTORY_CSV}")
-    df = pd.read_csv(HISTORY_CSV, encoding="utf-8")
-    df["stock_code"] = df["stock_code"].astype(str).str.strip()
-    df["forecast_asof_date"] = pd.to_datetime(df["forecast_asof_date"], errors="coerce")
-    df["year_month"] = df["forecast_asof_date"].dt.strftime("%Y-%m")
-
-    # Only TW stocks (4-digit numeric codes)
-    df_tw = df[df["stock_code"].str.match(r"^\d{4}$")].copy()
-
     # The current stock list is authoritative: include newly listed companies,
     # and drop codes no longer present in the list even if history remains.
     all_stocks = sorted(name_map)
+    stock_codes = set(all_stocks)
     month_cols = gen_month_range(LOOKBACK_MONTHS)
-
-    # Build covered set: (stock_code, YYYY-MM) with at least one non-NaN consensus value
-    covered: set[tuple[str, str]] = set()
-    for _, row in df_tw.iterrows():
-        ym = row.get("year_month")
-        if not isinstance(ym, str) or len(ym) != 7:
-            continue
-        has_value = any(
-            col in df_tw.columns
-            and pd.notna(row.get(col))
-            and str(row.get(col)).strip() not in ["", "nan", "NaN"]
-            for col in CONSENSUS_COLS
-        )
-        if has_value:
-            covered.add((row["stock_code"], ym))
+    yahoo_covered = load_monthly_pairs(YAHOO_DAILY_CSV, stock_codes)
+    wayback_covered = {
+        (code, month)
+        for code, month in load_monthly_pairs(WAYBACK_ATTEMPTS_CSV, stock_codes, require_success=True)
+        if month <= WAYBACK_LATEST_MONTH
+    }
 
     focus_codes = load_focus_codes()
     print(f"Focus stocks: {len(focus_codes)} | Full list: {len(all_stocks)}")
 
     # Build matrix rows
     rows: list[dict] = []
-    ok_total = missing_total = 0
+    ok_wayback_total = ok_yahoo_total = missing_total = 0
     now_utc_str = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
     for stock in all_stocks:
@@ -131,9 +138,12 @@ def main() -> None:
             "process_timestamp": now_utc_str,
         }
         for ym in month_cols:
-            if (stock, ym) in covered:
+            if (stock, ym) in wayback_covered:
                 row[ym] = "OK"
-                ok_total += 1
+                ok_wayback_total += 1
+            elif (stock, ym) in yahoo_covered:
+                row[ym] = "OK(Y)"
+                ok_yahoo_total += 1
             else:
                 row[ym] = "MISSING"
                 missing_total += 1
@@ -150,17 +160,19 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(rows)
 
-    total    = ok_total + missing_total
-    pct      = ok_total / total * 100 if total else 0
+    total    = ok_wayback_total + ok_yahoo_total + missing_total
+    pct      = ok_wayback_total / total * 100 if total else 0
     focus_ok = sum(1 for r in rows if r["is_focus"] == "Y"
                    for ym in month_cols if r.get(ym) == "OK")
     print(f"\n=== Coverage Matrix Generated ===")
     print(f"Output  : {OUTPUT_MATRIX}")
     print(f"Stocks  : {len(all_stocks)} ({len(focus_codes)} focus + {len(all_stocks)-len(focus_codes)} standard)")
     print(f"Months  : {len(month_cols)} ({month_cols[0]} ~ {month_cols[-1]})")
-    print(f"OK      : {ok_total} ({pct:.1f}%)")
-    print(f"MISSING : {missing_total} ({100 - pct:.1f}%)")
-    print(f"Focus OK: {focus_ok} / {len(focus_codes) * len(month_cols)} cells")
+    print(f"Wayback : only through {WAYBACK_LATEST_MONTH}")
+    print(f"OK      : {ok_wayback_total} Wayback cells ({pct:.1f}%)")
+    print(f"OK(Y)   : {ok_yahoo_total} Yahoo cells")
+    print(f"MISSING : {missing_total} cells")
+    print(f"Focus Wayback OK: {focus_ok} / {len(focus_codes) * len(month_cols)} cells")
     print("\nThis matrix is synced to biztrends.TW for its freshness report.")
     print(f"Focus stocks (is_focus=Y) get deeper Wayback lookback (28m daily / 48m backfill).")
 

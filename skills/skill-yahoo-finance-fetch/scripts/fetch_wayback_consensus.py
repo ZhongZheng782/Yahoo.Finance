@@ -831,6 +831,9 @@ def main():
 
         snapshots = sorted(list(monthly_snaps.values()), key=lambda x: x["timestamp"])
         snapshots = snapshots[-limit_months:]
+        latest_month_to_fetch = str(config.get("wayback", {}).get("latest_month_to_fetch", "2026-04"))
+        snapshots = [snap for snap in snapshots if snap["timestamp"][:6] <= latest_month_to_fetch.replace("-", "")]
+        print(f"Wayback month cutoff: fetching snapshots through {latest_month_to_fetch} only.")
         print(f"Total unique monthly snapshots after merging: {len(snapshots)}")
 
         for idx, snap in enumerate(snapshots, 1):
