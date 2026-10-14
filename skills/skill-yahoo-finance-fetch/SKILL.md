@@ -83,7 +83,7 @@ python scripts/fetch_wayback_consensus.py --backfill
 - `--no-merge`：只寫 `--output-csv`，不合併進 `--history-csv`。
 - `--output-csv` / `--attempts-csv` (`--coverage-csv` 舊別名) / `--history-csv`：分別覆蓋批次輸出、快照嘗試紀錄、下游合併歷史 CSV 的路徑，預設對應 `configs/default.yaml` 的 `output.wayback_consensus_csv` / `output.wayback_fetch_attempts_csv` / `output.wayback_consensus_history_csv`。
 - **本地化數值單位**：解析器支援 Yahoo Finance 頁面中的繁／簡體中文數值後綴，例如 `746.28十億`、`2.8萬億`，也支援英文 `B` / `M` / `T` / `K`。
-- **頁面診斷留存**：GitHub Actions 會將 `parse_failed`、`empty_metrics`，以及有欄位未解析出的部分結果 HTML 存為該次 run 的 artifact，保留 14 天；每次最多 20 頁、每頁 5 MiB。可從 Actions run 的 Artifacts 下載比對。下載失敗沒有 HTML 可保存。
+- **不落地保存頁面**：Wayback HTML 只由 Chromium CDP 回應讀入記憶體並交給解析器；專用分頁停用 HTTP cache、拒絕瀏覽器下載並停用頁面腳本，workflow 不上傳 HTML artifact。磁碟只會保存設定所指定的 CSV 輸出與執行紀錄，不保存原始頁面。
 
 #### Wayback 連線韌性（透過 runner 的 Chromium CDP）
 

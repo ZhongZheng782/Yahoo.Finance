@@ -132,20 +132,8 @@ jobs:
 
       - name: Fetch Wayback Machine consensus (daily)
         id: wayback_fetch
-        env:
-          WAYBACK_HTML_EVIDENCE_DIR: ${{ runner.temp }}/wayback-html-evidence
         run: |
           python skills/skill-yahoo-finance-fetch/scripts/fetch_wayback_consensus.py --max-runtime-minutes 300
-        continue-on-error: true
-
-      - name: Upload Wayback HTML evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: wayback-html-evidence-${{ github.run_id }}
-          path: ${{ runner.temp }}/wayback-html-evidence/
-          if-no-files-found: ignore
-          retention-days: 14
         continue-on-error: true
 
       - name: Record Wayback scheduled run result

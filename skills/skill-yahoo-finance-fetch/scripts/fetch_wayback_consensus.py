@@ -132,6 +132,7 @@ def parse_val_with_suffix(val_str):
 
 WAYBACK_CDP_PAGE = None
 WAYBACK_PLAYWRIGHT = None
+WAYBACK_CDP_SESSION = None
 
 
 class WaybackRequestError(Exception):
@@ -146,7 +147,7 @@ class WaybackRequestError(Exception):
 
 def connect_wayback_cdp(cdp_url: str) -> None:
     """Attach Playwright to the Chromium instance already exposed by the runner."""
-    global WAYBACK_CDP_PAGE, WAYBACK_PLAYWRIGHT
+    global WAYBACK_CDP_PAGE, WAYBACK_PLAYWRIGHT, WAYBACK_CDP_SESSION
     from playwright.sync_api import sync_playwright
 
     WAYBACK_PLAYWRIGHT = sync_playwright().start()
@@ -154,18 +155,29 @@ def connect_wayback_cdp(cdp_url: str) -> None:
     context = browser.contexts[0] if browser.contexts else browser.new_context()
     # Keep Wayback navigation isolated from the existing GoodInfo/browser tabs.
     WAYBACK_CDP_PAGE = context.new_page()
+    WAYBACK_CDP_SESSION = context.new_cdp_session(WAYBACK_CDP_PAGE)
+    WAYBACK_CDP_SESSION.send("Network.setCacheDisabled", {"cacheDisabled": True})
+    WAYBACK_CDP_SESSION.send("Page.setDownloadBehavior", {"behavior": "deny"})
+    WAYBACK_CDP_SESSION.send("Emulation.setScriptExecutionDisabled", {"value": True})
     print(f"Connected to Chromium Docker over CDP and opened a dedicated Wayback tab: {cdp_url}")
+    print("Wayback tab has browser cache disabled, downloads denied, and page scripts disabled; HTML stays in memory for parsing.")
 
 
 def disconnect_wayback_cdp() -> None:
     """Disconnect this client without shutting down the runner's shared browser."""
-    global WAYBACK_CDP_PAGE, WAYBACK_PLAYWRIGHT
+    global WAYBACK_CDP_PAGE, WAYBACK_PLAYWRIGHT, WAYBACK_CDP_SESSION
     if WAYBACK_CDP_PAGE is not None:
         try:
             WAYBACK_CDP_PAGE.close()
         except Exception:
             pass
         WAYBACK_CDP_PAGE = None
+    if WAYBACK_CDP_SESSION is not None:
+        try:
+            WAYBACK_CDP_SESSION.detach()
+        except Exception:
+            pass
+        WAYBACK_CDP_SESSION = None
     if WAYBACK_PLAYWRIGHT is not None:
         try:
             WAYBACK_PLAYWRIGHT.stop()
