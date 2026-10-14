@@ -161,6 +161,7 @@ jobs:
       - name: Sync raw Yahoo report to Analyzer
         # Runs only when the repo has the cross-repo sync PAT configured.
         if: env.SYNC_PAT_ANALYZER != ''
+        continue-on-error: true
         uses: BetaHuhn/repo-file-sync-action@v1
         with:
           GH_PAT: ${{ env.SYNC_PAT_ANALYZER }}
