@@ -974,8 +974,10 @@ def main():
 
     suffix = config.get("yahoo", {}).get("taiwan_default_suffix", ".TW")
     output_csv.parent.mkdir(parents=True, exist_ok=True)
-    already_covered = load_coverage(history_csv if not args.no_merge else None)
-    already_covered.update(load_coverage(output_csv))
+    # The merged history also contains Yahoo's live/current snapshots. Those
+    # must not count as Wayback coverage: this fetcher fills the independent
+    # archived-snapshot source, even when Yahoo has data for the same month.
+    already_covered = load_coverage(output_csv)
     covered_snapshots = load_covered_snapshots(coverage_csv, args.retry_failed_attempts)
     all_records: list[dict] = []
     network_block_streak = 0
