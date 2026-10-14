@@ -1,8 +1,6 @@
 # .github/sync-to-Analyzer.yml
 group:
   - files:
-      - source: data/reports/raw_yahoo_finance.csv
-        dest:   data/stage1_raw/raw_yahoo_finance.csv
       - source: raw_column_definition_YahooFinance.md
         dest:   definitions/raw_column_definition_YahooFinance.md
     repos: |
