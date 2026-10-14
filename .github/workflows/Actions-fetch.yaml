@@ -5,6 +5,14 @@ on:
     - cron: "30 19 * * *"
   push:
     branches: [main]
+    paths-ignore:
+      - .github/workflows/Actions-fetch.yaml
+      - .github/workflows/Actions-fetch-wayback.yaml
+      - skills/skill-yahoo-finance-fetch/scripts/fetch_wayback_consensus.py
+      - scripts/record_wayback_run.py
+      - scripts/gen_wayback_coverage_matrix.py
+      - skills/skill-yahoo-finance-fetch/SKILL.md
+      - definitions/raw_wayback_cdx_diagnostics.md
   workflow_dispatch:
     inputs:
       market:
@@ -34,7 +42,6 @@ jobs:
       actions: read
     env:
       SYNC_PAT_BIZTRENDS: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_MONEY }}
-      WAYBACK_CDP_URL: "http://192.168.31.101:9222"
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v7
@@ -105,7 +112,6 @@ jobs:
           git add StockID_TWSE_TPEX.csv StockID_TWSE_TPEX_focus.csv
           git add data/reports/raw_yahoo_finance.csv
           git add data/reports/raw_yahoo_finance_summary_latest.csv
-          git add data/reports/raw_wayback_fetch_attempts.csv
           git add data/reports/raw_yahoo_finance_daily_price.csv
           git add data/reports/raw_yahoo_finance_consensus_daily.csv
           git add data/reports/raw_yahoo_finance_consensus_history.csv
@@ -116,87 +122,6 @@ jobs:
             git commit -m "chore: update Yahoo Finance forecasts ($(date -u +%Y-%m-%d))"
             git pull --rebase
             git push
-          fi
-
-      - name: Capture Wayback attempt baseline
-        id: wayback_baseline
-        run: |
-          file="data/reports/raw_wayback_fetch_attempts.csv"
-          if [ -f "$file" ]; then
-            rows=$(wc -l < "$file")
-            rows=$((rows - 1))
-          else
-            rows=0
-          fi
-          echo "rows=$rows" >> "$GITHUB_OUTPUT"
-
-      - name: Fetch Wayback Machine consensus (daily)
-        id: wayback_fetch
-        run: |
-          python skills/skill-yahoo-finance-fetch/scripts/fetch_wayback_consensus.py --max-runtime-minutes 300
-        continue-on-error: true
-
-      - name: Record Wayback scheduled run result
-        if: always()
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          WAYBACK_FETCH_OUTCOME: ${{ steps.wayback_fetch.outcome }}
-        run: |
-          python scripts/record_wayback_run.py \
-            --fetch-outcome "$WAYBACK_FETCH_OUTCOME" \
-            --attempt-start-line "${{ steps.wayback_baseline.outputs.rows || '0' }}"
-        continue-on-error: true
-
-      - name: Generate Wayback coverage matrix
-        if: always()
-        run: python scripts/gen_wayback_coverage_matrix.py
-        continue-on-error: true
-
-      - name: Commit Wayback progress
-        run: |
-          if [ -f data/reports/raw_wayback_yahoo_finance_consensus.csv ]; then
-            git add data/reports/raw_wayback_yahoo_finance_consensus.csv
-          fi
-          if [ -f data/reports/raw_wayback_fetch_attempts.csv ]; then
-            git add data/reports/raw_wayback_fetch_attempts.csv
-          fi
-          if [ -f data/reports/raw_wayback_cdx_queries.csv ]; then
-            git add data/reports/raw_wayback_cdx_queries.csv
-          fi
-          if [ -f data/reports/raw_wayback_cdx_candidates.csv ]; then
-            git add data/reports/raw_wayback_cdx_candidates.csv
-          fi
-          if [ -f data/reports/raw_wayback_run_history.csv ]; then
-            git add data/reports/raw_wayback_run_history.csv
-          fi
-          if [ -f data/reports/raw_yahoo_finance_consensus_history.csv ]; then
-            git add data/reports/raw_yahoo_finance_consensus_history.csv
-          fi
-          if [ -f data/reports/raw_wayback_coverage_matrix.csv ]; then
-            git add data/reports/raw_wayback_coverage_matrix.csv
-          fi
-          if git diff --staged --quiet; then
-            echo "No Wayback progress to commit"
-          else
-            git commit -m "chore: update Yahoo Finance Wayback progress ($(date -u +%Y-%m-%d))"
-            # This step used to hard-fail (and skip every downstream sync step) on the
-            # first rebase conflict against a concurrent push. Retry with --autostash so
-            # a single transient race doesn't throw away up to 5 hours of Wayback progress.
-            pushed=false
-            for attempt in 1 2 3; do
-              if git pull --rebase --autostash && git push; then
-                echo "Pushed Wayback progress on attempt $attempt"
-                pushed=true
-                break
-              fi
-              echo "Push attempt $attempt failed, retrying..."
-              git rebase --abort >/dev/null 2>&1 || true
-              sleep 5
-            done
-            if [ "$pushed" != "true" ]; then
-              echo "::error::Failed to push Wayback progress after 3 attempts"
-              exit 1
-            fi
           fi
 
       - name: Sync Yahoo data to biztrends.TW
@@ -212,10 +137,3 @@ jobs:
       - name: Sync skip notice
         if: env.SYNC_PAT_BIZTRENDS == ''
         run: echo "::warning::REPO_FILE_SYNC_WENCHIEHLEE_MONEY is not configured; skipping biztrends.TW sync."
-
-      - name: Mark Wayback fetch failure
-        if: always() && steps.wayback_fetch.outcome != 'success'
-        run: |
-          echo "## Wayback fetch failed" >> "$GITHUB_STEP_SUMMARY"
-          echo "The Wayback fetch step did not complete successfully. See the connectivity probe rows in data/reports/raw_wayback_cdx_queries.csv and the fetch step log for the failure reason." >> "$GITHUB_STEP_SUMMARY"
-          exit 1

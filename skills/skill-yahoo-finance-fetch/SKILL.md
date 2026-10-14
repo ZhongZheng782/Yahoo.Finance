@@ -79,6 +79,7 @@ python scripts/fetch_wayback_consensus.py --backfill
 - `--limit-months`：覆蓋所有股票的回溯月數（優先於 `--backfill`）。
 - `--max-runtime-minutes`：達到時間預算就優雅中止並提交部分結果（預設讀取 `configs/default.yaml` 的 `wayback.max_runtime_minutes`，即 300 分鐘），適合排進有時間限制的排程工作。
 - `WAYBACK_CDP_URL`：必填的遠端 Chromium CDP endpoint；GitHub Actions 會連到共用 runner 上既有的瀏覽器，不會自行下載或啟動 Chromium。
+- `.github/workflows/Actions-fetch-wayback.yaml`：Wayback 專用排程與手動工作流程；每天單獨回填，手動執行預設只檢查 2330，不會先跑一般 Yahoo Finance 全量抓取。
 - `--retry-failed-attempts`：也重抓先前已成功的快照；一般排程預設只略過成功快照，失敗快照會留待下次自動重試。
 - `--no-merge`：只寫 `--output-csv`，不合併進 `--history-csv`。
 - `--output-csv` / `--attempts-csv` (`--coverage-csv` 舊別名) / `--history-csv`：分別覆蓋批次輸出、快照嘗試紀錄、下游合併歷史 CSV 的路徑，預設對應 `configs/default.yaml` 的 `output.wayback_consensus_csv` / `output.wayback_fetch_attempts_csv` / `output.wayback_consensus_history_csv`。
