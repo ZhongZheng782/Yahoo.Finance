@@ -8,6 +8,8 @@ output:
   summary_csv: data/reports/raw_yahoo_finance_summary_latest.csv
   wayback_consensus_csv: data/reports/raw_wayback_yahoo_finance_consensus.csv
   wayback_fetch_attempts_csv: data/reports/raw_wayback_fetch_attempts.csv
+  wayback_cdx_queries_csv: data/reports/raw_wayback_cdx_queries.csv
+  wayback_cdx_candidates_csv: data/reports/raw_wayback_cdx_candidates.csv
   wayback_consensus_history_csv: data/reports/raw_yahoo_finance_consensus_history.csv
 
 wayback:
@@ -15,6 +17,9 @@ wayback:
   # Yahoo daily snapshots are retained from 2026-05 onward; use Wayback only
   # for older historical months.
   latest_month_to_fetch: "2026-04"
+  # Keep up to 3 candidate captures per month so the fetcher can fall back
+  # when the newest archive copy cannot be downloaded or parsed.
+  max_candidates_per_month: 3
   # Historical months to prioritize for focus-list stocks.
   focus_priority_months:
     - "2026-01"

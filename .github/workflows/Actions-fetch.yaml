@@ -169,6 +169,12 @@ jobs:
           if [ -f data/reports/raw_wayback_fetch_attempts.csv ]; then
             git add data/reports/raw_wayback_fetch_attempts.csv
           fi
+          if [ -f data/reports/raw_wayback_cdx_queries.csv ]; then
+            git add data/reports/raw_wayback_cdx_queries.csv
+          fi
+          if [ -f data/reports/raw_wayback_cdx_candidates.csv ]; then
+            git add data/reports/raw_wayback_cdx_candidates.csv
+          fi
           if [ -f data/reports/raw_wayback_run_history.csv ]; then
             git add data/reports/raw_wayback_run_history.csv
           fi

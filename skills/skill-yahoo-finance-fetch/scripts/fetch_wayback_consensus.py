@@ -20,6 +20,7 @@ import urllib.request
 import urllib.error
 import json
 import argparse
+import hashlib
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -167,63 +168,64 @@ def _retry_delay(attempt: int, exc: BaseException) -> float:
     return min(base + random.uniform(0, base * 0.5), 30.0)
 
 
-def fetch_wayback_snapshots(url, limit_months=24):
+def fetch_wayback_snapshots(url):
     """Query Wayback CDX API for historical snapshot timestamps of the URL.
 
-    Returns (snapshots, network_blocked). network_blocked is True only when
+    Returns (snapshots, network_blocked, query_attempts). network_blocked is True only when
     every retry failed with a network-level error (see
     _is_network_level_error) — i.e. archive.org was unreachable/throttling,
     not merely "no snapshots exist for this URL"."""
     encoded_url = urllib.parse.quote_plus(url)
-    cdx_url = f"https://web.archive.org/cdx/search/cdx?url={encoded_url}&output=json&statuscode=200"
+    cdx_url = (
+        f"https://web.archive.org/cdx/search/cdx?url={encoded_url}&output=json"
+        "&fl=timestamp,original,mimetype,statuscode,digest,length"
+    )
 
     headers = {"User-Agent": WAYBACK_USER_AGENT}
     req = urllib.request.Request(cdx_url, headers=headers)
 
     last_exc = None
+    query_attempts = []
     for attempt in range(3):
         try:
             with urllib.request.urlopen(req, timeout=45) as response:
                 data = json.loads(response.read().decode("utf-8"))
                 if len(data) <= 1:
-                    return [], False
+                    query_attempts.append({"request_attempt": attempt + 1, "result": "empty", "http_status": response.status, "error": ""})
+                    return [], False, query_attempts
 
                 header = data[0]
                 rows = data[1:]
 
-                ts_idx = header.index("timestamp")
-                orig_idx = header.index("original")
-
-                snapshots = []
-                for r in rows:
-                    snapshots.append({
-                        "timestamp": r[ts_idx],
-                        "original": r[orig_idx]
-                    })
-
-                monthly_snapshots = {}
-                for snap in snapshots:
-                    ts = snap["timestamp"]
-                    year_month = ts[:6]
-                    if year_month not in monthly_snapshots or ts > monthly_snapshots[year_month]["timestamp"]:
-                        monthly_snapshots[year_month] = snap
-
-                sorted_snaps = sorted(list(monthly_snapshots.values()), key=lambda x: x["timestamp"])
-                return sorted_snaps[-limit_months:], False
+                snapshots = [dict(zip(header, row)) for row in rows]
+                snapshots = [{
+                    **snap,
+                    "query_url": url,
+                    "timestamp": str(snap.get("timestamp", "")),
+                    "original": str(snap.get("original", "")),
+                } for snap in snapshots]
+                query_attempts.append({"request_attempt": attempt + 1, "result": "success" if snapshots else "empty", "http_status": response.status, "error": ""})
+                return snapshots, False, query_attempts
 
         except Exception as e:
             last_exc = e
+            query_attempts.append({
+                "request_attempt": attempt + 1,
+                "result": "http_error" if isinstance(e, urllib.error.HTTPError) else "network_or_parse_error",
+                "http_status": getattr(e, "code", ""),
+                "error": f"{type(e).__name__}: {e}",
+            })
             print(f"Attempt {attempt+1} failed to call Wayback CDX API: {e}")
             if attempt < 2:
                 time.sleep(_retry_delay(attempt, e))
 
     network_blocked = last_exc is not None and _is_network_level_error(last_exc)
-    return [], network_blocked
+    return [], network_blocked, query_attempts
 
 def download_html(timestamp, original_url):
     """Download archived HTML page from Wayback Machine.
 
-    Returns (html_or_None, network_blocked) — see fetch_wayback_snapshots
+    Returns (html_or_None, network_blocked, metadata) — see fetch_wayback_snapshots
     for what network_blocked means."""
     wayback_url = f"https://web.archive.org/web/{timestamp}/{original_url}"
     headers = {"User-Agent": WAYBACK_USER_AGENT}
@@ -233,7 +235,11 @@ def download_html(timestamp, original_url):
     for attempt in range(3):
         try:
             with urllib.request.urlopen(req, timeout=20) as response:
-                return response.read().decode("utf-8", errors="ignore"), False
+                return response.read().decode("utf-8", errors="ignore"), False, {
+                    "attempt_count": attempt + 1,
+                    "http_status": response.status,
+                    "error": "",
+                }
         except Exception as e:
             last_exc = e
             print(f"Attempt {attempt+1} failed to download snapshot {timestamp}: {e}")
@@ -241,7 +247,11 @@ def download_html(timestamp, original_url):
                 time.sleep(_retry_delay(attempt, e))
 
     network_blocked = last_exc is not None and _is_network_level_error(last_exc)
-    return None, network_blocked
+    return None, network_blocked, {
+        "attempt_count": 3,
+        "http_status": getattr(last_exc, "code", "") if last_exc else "",
+        "error": f"{type(last_exc).__name__}: {last_exc}" if last_exc else "",
+    }
 
 def parse_consensus_from_json(html_text):
     """Fallback parser that extracts and processes window.App.main or window.__PRELOADED_STATE__ JSON."""
@@ -483,6 +493,9 @@ WAYBACK_OUTPUT_COLUMNS = [
 ]
 
 COVERAGE_COLUMNS = [
+    "run_id",
+    "run_attempt",
+    "candidate_id",
     "stock_code",
     "company_name",
     "yahoo_symbol",
@@ -491,7 +504,25 @@ COVERAGE_COLUMNS = [
     "original_url",
     "status",
     "message",
+    "download_attempt_count",
+    "download_http_status",
+    "download_error",
+    "parse_status",
+    "parsed_metric_count",
     "process_timestamp",
+]
+
+CDX_QUERY_COLUMNS = [
+    "run_id", "run_attempt", "query_id", "stock_code", "company_name", "yahoo_symbol",
+    "query_url", "request_attempt", "result", "http_status", "candidate_count",
+    "error", "process_timestamp",
+]
+
+CDX_CANDIDATE_COLUMNS = [
+    "run_id", "run_attempt", "candidate_id", "query_id", "stock_code", "company_name",
+    "yahoo_symbol", "query_url", "snapshot_timestamp", "forecast_month", "original_url",
+    "mimetype", "cdx_statuscode", "digest", "length", "selection_status",
+    "candidate_rank", "selection_reason", "discovered_timestamp",
 ]
 
 
@@ -508,6 +539,39 @@ def resolve_repo_path(path_value: str | None, default_value: str | None = None) 
     if not path.is_absolute():
         path = REPO_ROOT / path
     return path.resolve()
+
+
+def append_csv_row(path: Path | None, columns: list[str], row: dict) -> None:
+    """Append a diagnostic row, upgrading an older CSV header when needed."""
+    if path is None:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    existing_rows: list[dict] = []
+    fieldnames = list(columns)
+    if path.exists() and path.stat().st_size:
+        with path.open(encoding="utf-8-sig", newline="") as f:
+            reader = csv.DictReader(f)
+            old_fields = reader.fieldnames or []
+            existing_rows = list(reader)
+        fieldnames = list(dict.fromkeys([*old_fields, *columns]))
+        if old_fields != fieldnames:
+            temp_path = path.with_suffix(path.suffix + ".tmp")
+            with temp_path.open("w", encoding="utf-8-sig", newline="") as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator="\n")
+                writer.writeheader()
+                writer.writerows(existing_rows)
+            temp_path.replace(path)
+    write_header = not path.exists() or path.stat().st_size == 0
+    with path.open("a", encoding="utf-8-sig", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator="\n")
+        if write_header:
+            writer.writeheader()
+        writer.writerow({col: row.get(col, "") for col in fieldnames})
+
+
+def make_candidate_id(stock_code: str, query_url: str, snapshot: dict) -> str:
+    identity = "|".join((stock_code, query_url, str(snapshot.get("timestamp", "")), str(snapshot.get("original", "")), str(snapshot.get("digest", ""))))
+    return hashlib.sha256(identity.encode("utf-8")).hexdigest()[:20]
 
 
 def filter_specific(targets: list[dict], specific_symbols: str) -> list[dict]:
@@ -555,12 +619,12 @@ def load_coverage(history_csv: Path | None) -> set[tuple[str, str]]:
 
 
 def load_covered_snapshots(coverage_csv: Path | None, retry_failed_attempts: bool) -> set[tuple[str, str]]:
-    """Return (stock_code, snapshot_timestamp) pairs already recorded in previous runs."""
+    """Return only successfully processed snapshot keys; failed snapshots stay retryable."""
     if coverage_csv is None or retry_failed_attempts or not coverage_csv.exists():
         return set()
 
     try:
-        df_attempts = pd.read_csv(coverage_csv, encoding="utf-8")
+        df_attempts = pd.read_csv(coverage_csv, encoding="utf-8-sig")
     except Exception as e:
         print(f"Warning: Failed to load Wayback coverage matrix: {e}")
         return set()
@@ -572,21 +636,15 @@ def load_covered_snapshots(coverage_csv: Path | None, retry_failed_attempts: boo
 
     df_attempts["stock_code"] = df_attempts["stock_code"].astype(str).str.strip()
     df_attempts["snapshot_timestamp"] = df_attempts["snapshot_timestamp"].astype(str).str.strip()
+    if "status" in df_attempts.columns:
+        df_attempts = df_attempts[df_attempts["status"].astype(str).str.strip().str.lower() == "success"]
     attempted = set(zip(df_attempts["stock_code"], df_attempts["snapshot_timestamp"]))
-    print(f"Loaded coverage matrix: {len(attempted)} covered snapshots.")
+    print(f"Loaded attempt ledger: {len(attempted)} successful snapshots; prior failures remain retryable.")
     return attempted
 
 
 def append_coverage_row(coverage_csv: Path | None, row: dict) -> None:
-    if coverage_csv is None:
-        return
-    coverage_csv.parent.mkdir(parents=True, exist_ok=True)
-    write_header = not coverage_csv.exists() or coverage_csv.stat().st_size == 0
-    with coverage_csv.open("a", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=COVERAGE_COLUMNS)
-        if write_header:
-            writer.writeheader()
-        writer.writerow({col: row.get(col, "") for col in COVERAGE_COLUMNS})
+    append_csv_row(coverage_csv, COVERAGE_COLUMNS, row)
 
 
 def merge_history(df_out: pd.DataFrame, history_csv: Path) -> None:
@@ -629,8 +687,19 @@ def make_coverage_row(
     asof_date: str,
     status: str,
     message: str,
+    *,
+    run_id: str = "",
+    run_attempt: str = "1",
+    candidate_id: str = "",
+    download_metadata: dict | None = None,
+    parse_status: str = "",
+    parsed_metric_count: int | str = "",
 ) -> dict:
+    download_metadata = download_metadata or {}
     return {
+        "run_id": run_id,
+        "run_attempt": run_attempt,
+        "candidate_id": candidate_id,
         "stock_code": stock["code"],
         "company_name": stock["name"],
         "yahoo_symbol": yahoo_symbol,
@@ -639,6 +708,11 @@ def make_coverage_row(
         "original_url": snapshot.get("original", ""),
         "status": status,
         "message": message,
+        "download_attempt_count": download_metadata.get("attempt_count", ""),
+        "download_http_status": download_metadata.get("http_status", ""),
+        "download_error": download_metadata.get("error", ""),
+        "parse_status": parse_status,
+        "parsed_metric_count": parsed_metric_count,
         "process_timestamp": utc_now(),
     }
 
@@ -701,7 +775,7 @@ def main():
         help="Comma-separated stock codes to fetch, e.g. 2330,2382",
     )
     parser.add_argument("--output-csv", help="Wayback batch output CSV path")
-    parser.add_argument("--coverage-csv", help="Wayback coverage matrix CSV path")
+    parser.add_argument("--coverage-csv", help="Wayback fetch-attempt ledger CSV path (legacy option name)")
     parser.add_argument("--history-csv", help="Consensus history CSV to use for gap detection and merge")
     parser.add_argument(
         "--max-runtime-minutes",
@@ -727,8 +801,12 @@ def main():
     )
     coverage_csv = resolve_repo_path(
         args.coverage_csv,
-        config.get("output", {}).get("wayback_coverage_matrix_csv"),
+        config.get("output", {}).get("wayback_fetch_attempts_csv"),
     )
+    cdx_queries_csv = resolve_repo_path(None, config.get("output", {}).get("wayback_cdx_queries_csv"))
+    cdx_candidates_csv = resolve_repo_path(None, config.get("output", {}).get("wayback_cdx_candidates_csv"))
+    run_id = os.environ.get("GITHUB_RUN_ID", f"local-{datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')}")
+    run_attempt = os.environ.get("GITHUB_RUN_ATTEMPT", "1")
     history_csv = resolve_repo_path(args.history_csv, config.get("output", {}).get("wayback_consensus_history_csv"))
     max_runtime = args.max_runtime_minutes
     if max_runtime is None:
@@ -802,40 +880,147 @@ def main():
         print("Querying snapshots on Wayback Machine for multiple domains...")
 
         all_snapshots = []
+        queried_urls = set()
+        query_skip_reason = ""
+        latest_month_to_fetch = str(config.get("wayback", {}).get("latest_month_to_fetch", "2026-04"))
+        cutoff_yyyymm = latest_month_to_fetch.replace("-", "")
         for url in candidate_urls:
             if time_budget_exhausted(deadline):
                 print("Runtime budget reached during CDX queries. Exiting gracefully.")
+                query_skip_reason = "runtime_budget_exhausted"
                 break
             print(f"  Querying: {url}")
-            snaps, network_blocked = fetch_wayback_snapshots(url, limit_months=limit_months)
-            print(f"    Found {len(snaps)} snapshots.")
+            queried_urls.add(url)
+            snaps, network_blocked, query_attempts = fetch_wayback_snapshots(url)
+            query_id = hashlib.sha256(f"{run_id}|{run_attempt}|{code}|{url}".encode("utf-8")).hexdigest()[:20]
+            final_query_result = query_attempts[-1] if query_attempts else {"result": "unknown", "http_status": "", "error": ""}
+            for query_attempt in query_attempts:
+                append_csv_row(cdx_queries_csv, CDX_QUERY_COLUMNS, {
+                    "run_id": run_id,
+                    "run_attempt": run_attempt,
+                    "query_id": query_id,
+                    "stock_code": code,
+                    "company_name": name,
+                    "yahoo_symbol": yahoo_symbol,
+                    "query_url": url,
+                    "request_attempt": query_attempt.get("request_attempt", ""),
+                    "result": query_attempt.get("result", ""),
+                    "http_status": query_attempt.get("http_status", ""),
+                    "candidate_count": len(snaps) if query_attempt is query_attempts[-1] else "",
+                    "error": query_attempt.get("error", ""),
+                    "process_timestamp": utc_now(),
+                })
+            print(f"    Found {len(snaps)} CDX candidates (final query: {final_query_result.get('result', 'unknown')}).")
+            for snap in snaps:
+                snap["query_id"] = query_id
             all_snapshots.extend(snaps)
             network_block_streak = network_block_streak + 1 if network_blocked else 0
             if network_block_streak >= NETWORK_BLOCK_STREAK_LIMIT:
+                query_skip_reason = "network_block_streak_limit"
                 break
-            months_so_far = len({snap["timestamp"][:6] for snap in all_snapshots})
+            months_so_far = len({
+                snap["timestamp"][:6] for snap in all_snapshots
+                if snap["timestamp"][:6] <= cutoff_yyyymm
+                and str(snap.get("statuscode", "")) == "200"
+                and str(snap.get("mimetype", "")).startswith("text/html")
+            })
             if months_so_far >= limit_months:
                 # Already have enough monthly coverage from earlier mirror
                 # domain(s) -- skip querying the rest to cut CDX request
                 # volume (this is the traffic pattern most likely to trigger
                 # archive.org's rate limiting in the first place).
+                query_skip_reason = "historical_month_limit_satisfied"
                 break
             time.sleep(1.0)
 
-        monthly_snaps = {}
-        for snap in all_snapshots:
-            ts = snap["timestamp"]
-            ym = ts[:6]
-            if ym not in monthly_snaps or ts > monthly_snaps[ym]["timestamp"]:
-                monthly_snaps[ym] = snap
+        for url in candidate_urls:
+            if url in queried_urls:
+                continue
+            query_id = hashlib.sha256(f"{run_id}|{run_attempt}|{code}|{url}".encode("utf-8")).hexdigest()[:20]
+            append_csv_row(cdx_queries_csv, CDX_QUERY_COLUMNS, {
+                "run_id": run_id, "run_attempt": run_attempt, "query_id": query_id,
+                "stock_code": code, "company_name": name, "yahoo_symbol": yahoo_symbol,
+                "query_url": url, "request_attempt": 0, "result": "skipped",
+                "candidate_count": "", "error": query_skip_reason or "not_queried",
+                "process_timestamp": utc_now(),
+            })
 
-        snapshots = sorted(list(monthly_snaps.values()), key=lambda x: x["timestamp"])
-        snapshots = snapshots[-limit_months:]
-        latest_month_to_fetch = str(config.get("wayback", {}).get("latest_month_to_fetch", "2026-04"))
-        snapshots = [snap for snap in snapshots if snap["timestamp"][:6] <= latest_month_to_fetch.replace("-", "")]
+        valid_snapshots = [
+            snap for snap in all_snapshots
+            if str(snap.get("statuscode", "")) == "200"
+            and str(snap.get("mimetype", "")).startswith("text/html")
+            and str(snap.get("timestamp", ""))[:6] <= cutoff_yyyymm
+        ]
+        monthly_candidates: dict[str, list[dict]] = {}
+        for snap in valid_snapshots:
+            monthly_candidates.setdefault(snap["timestamp"][:6], []).append(snap)
+        selected_months = set(sorted(monthly_candidates)[-limit_months:])
+        max_candidates_per_month = max(1, int(config.get("wayback", {}).get("max_candidates_per_month", 3)))
+        selected_candidate_ranks: dict[str, int] = {}
+        snapshots = []
+        for month in sorted(selected_months):
+            # Try the newest capture first, then fall back to older captures
+            # from the same month if download or parsing fails.
+            ordered_candidates = sorted(
+                monthly_candidates[month], key=lambda item: item["timestamp"], reverse=True
+            )
+            seen_candidate_ids = set()
+            unique_candidates = []
+            for candidate in ordered_candidates:
+                candidate_key = make_candidate_id(code, candidate.get("query_url", ""), candidate)
+                if candidate_key not in seen_candidate_ids:
+                    seen_candidate_ids.add(candidate_key)
+                    unique_candidates.append(candidate)
+            for rank, candidate in enumerate(unique_candidates[:max_candidates_per_month], start=1):
+                candidate_id = make_candidate_id(code, candidate.get("query_url", ""), candidate)
+                selected_candidate_ranks[candidate_id] = rank
+                snapshots.append(candidate)
+        for candidate in all_snapshots:
+            candidate_id = make_candidate_id(code, candidate.get("query_url", ""), candidate)
+            timestamp = str(candidate.get("timestamp", ""))
+            month = timestamp[:6]
+            if timestamp[:6] > cutoff_yyyymm:
+                selection_status, selection_reason = "not_selected", "after_configured_month_cutoff"
+            elif str(candidate.get("statuscode", "")) != "200" or not str(candidate.get("mimetype", "")).startswith("text/html"):
+                selection_status, selection_reason = "not_selected", "not_http_200_html_capture"
+            elif candidate_id in selected_candidate_ranks:
+                if (code, month) in already_covered:
+                    selection_status, selection_reason = "selected_but_skipped", "month_already_has_consensus_data"
+                elif (code, timestamp) in covered_snapshots:
+                    selection_status, selection_reason = "selected_but_skipped", "snapshot_already_succeeded_in_prior_run"
+                else:
+                    rank = selected_candidate_ranks[candidate_id]
+                    selection_status = "selected_primary" if rank == 1 else "selected_fallback"
+                    selection_reason = "newest_valid_capture_for_month" if rank == 1 else "fallback_capture_for_month"
+            elif month not in selected_months:
+                selection_status, selection_reason = "not_selected", "outside_lookback_window"
+            else:
+                selection_status, selection_reason = "not_selected", "per_month_candidate_limit_reached"
+            append_csv_row(cdx_candidates_csv, CDX_CANDIDATE_COLUMNS, {
+                "run_id": run_id,
+                "run_attempt": run_attempt,
+                "candidate_id": candidate_id,
+                "query_id": candidate.get("query_id", ""),
+                "stock_code": code,
+                "company_name": name,
+                "yahoo_symbol": yahoo_symbol,
+                "query_url": candidate.get("query_url", ""),
+                "snapshot_timestamp": timestamp,
+                "forecast_month": f"{timestamp[:4]}-{timestamp[4:6]}" if len(timestamp) >= 6 else "",
+                "original_url": candidate.get("original", ""),
+                "mimetype": candidate.get("mimetype", ""),
+                "cdx_statuscode": candidate.get("statuscode", ""),
+                "digest": candidate.get("digest", ""),
+                "length": candidate.get("length", ""),
+                "selection_status": selection_status,
+                "candidate_rank": selected_candidate_ranks.get(candidate_id, ""),
+                "selection_reason": selection_reason,
+                "discovered_timestamp": utc_now(),
+            })
         print(f"Wayback month cutoff: fetching snapshots through {latest_month_to_fetch} only.")
         print(f"Total unique monthly snapshots after merging: {len(snapshots)}")
 
+        snapshots.sort(key=lambda item: (item["timestamp"][:6], selected_candidate_ranks[make_candidate_id(code, item.get("query_url", ""), item)]))
         for idx, snap in enumerate(snapshots, 1):
             if time_budget_exhausted(deadline):
                 print("Runtime budget reached during snapshot loop. Exiting gracefully.")
@@ -846,6 +1031,7 @@ def main():
             snap_ym = ts[:6]
             asof_date = f"{ts[:4]}-{ts[4:6]}-{ts[6:8]}"
             attempt_key = (code, ts)
+            candidate_id = make_candidate_id(code, snap.get("query_url", ""), snap)
 
             if (code, snap_ym) in already_covered:
                 print(f"  [{idx}/{len(snapshots)}] {asof_date} already covered - skipping download.")
@@ -858,14 +1044,18 @@ def main():
                 continue
 
             print(f"  [{idx}/{len(snapshots)}] Downloading snapshot as of {asof_date} (gap to fill)...")
-            html, network_blocked = download_html(ts, snap["original"])
+            html, network_blocked, download_metadata = download_html(ts, snap["original"])
             network_block_streak = network_block_streak + 1 if network_blocked else 0
             if not html:
                 message = "Failed to download HTML"
                 print(f"    {message}.")
                 append_coverage_row(
                     coverage_csv,
-                    make_coverage_row(t, yahoo_symbol, snap, asof_date, "download_failed", message),
+                    make_coverage_row(
+                        t, yahoo_symbol, snap, asof_date, "download_failed", message,
+                        run_id=run_id, run_attempt=run_attempt, candidate_id=candidate_id,
+                        download_metadata=download_metadata, parse_status="not_run",
+                    ),
                 )
                 covered_snapshots.add(attempt_key)
                 if network_block_streak >= NETWORK_BLOCK_STREAK_LIMIT:
@@ -880,7 +1070,11 @@ def main():
                 print(f"    {message}.")
                 append_coverage_row(
                     coverage_csv,
-                    make_coverage_row(t, yahoo_symbol, snap, asof_date, "parse_failed", message),
+                    make_coverage_row(
+                        t, yahoo_symbol, snap, asof_date, "parse_failed", message,
+                        run_id=run_id, run_attempt=run_attempt, candidate_id=candidate_id,
+                        download_metadata=download_metadata, parse_status="failed",
+                    ),
                 )
                 covered_snapshots.add(attempt_key)
                 continue
@@ -891,7 +1085,12 @@ def main():
                 print(f"    {message}.")
                 append_coverage_row(
                     coverage_csv,
-                    make_coverage_row(t, yahoo_symbol, snap, asof_date, "empty_metrics", message),
+                    make_coverage_row(
+                        t, yahoo_symbol, snap, asof_date, "empty_metrics", message,
+                        run_id=run_id, run_attempt=run_attempt, candidate_id=candidate_id,
+                        download_metadata=download_metadata, parse_status="success_empty_metrics",
+                        parsed_metric_count=0,
+                    ),
                 )
                 covered_snapshots.add(attempt_key)
                 continue
@@ -904,7 +1103,16 @@ def main():
                 "process_timestamp": utc_now(),
             }
             all_records.append(record)
-            append_coverage_row(coverage_csv, make_coverage_row(t, yahoo_symbol, snap, asof_date, "success", ""))
+            parsed_metric_count = sum(not np.isnan(value) for value in metrics.values())
+            append_coverage_row(
+                coverage_csv,
+                make_coverage_row(
+                    t, yahoo_symbol, snap, asof_date, "success", "",
+                    run_id=run_id, run_attempt=run_attempt, candidate_id=candidate_id,
+                    download_metadata=download_metadata, parse_status="success",
+                    parsed_metric_count=parsed_metric_count,
+                ),
+            )
             covered_snapshots.add(attempt_key)
             already_covered.add((code, snap_ym))
             print("    Successfully parsed consensus data.")

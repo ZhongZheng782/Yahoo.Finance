@@ -78,7 +78,7 @@ python scripts/fetch_wayback_consensus.py --backfill
 - `--specific-symbols`：逗號分隔股票代號，覆蓋清單篩選。
 - `--limit-months`：覆蓋所有股票的回溯月數（優先於 `--backfill`）。
 - `--max-runtime-minutes`：達到時間預算就優雅中止並提交部分結果（預設讀取 `configs/default.yaml` 的 `wayback.max_runtime_minutes`，即 300 分鐘），適合排進有時間限制的排程工作。
-- `--retry-failed-attempts`：重試先前已記錄在快照嘗試紀錄中、但抓取失敗的快照。
+- `--retry-failed-attempts`：也重抓先前已成功的快照；一般排程預設只略過成功快照，失敗快照會留待下次自動重試。
 - `--no-merge`：只寫 `--output-csv`，不合併進 `--history-csv`。
 - `--output-csv` / `--attempts-csv` (`--coverage-csv` 舊別名) / `--history-csv`：分別覆蓋批次輸出、快照嘗試紀錄、下游合併歷史 CSV 的路徑，預設對應 `configs/default.yaml` 的 `output.wayback_consensus_csv` / `output.wayback_fetch_attempts_csv` / `output.wayback_consensus_history_csv`。
 - **本地化數值單位**：解析器支援 Yahoo Finance 頁面中的繁／簡體中文數值後綴，例如 `746.28十億`、`2.8萬億`，也支援英文 `B` / `M` / `T` / `K`。
@@ -95,6 +95,7 @@ archive.org 已知會對共用雲端 CI（例如 GitHub Actions runner）的來�
 - **分辨「網路層失敗」vs「合法空結果」**：CDX 查詢回傳格式正確但沒有快照（例如該股票這段期間本來就沒有存檔）不算失敗，不會觸發上述機制；只有 `ConnectionError` / SSL 錯誤 / timeout / HTTP 429 / 503 才算。
 - **重試改用指數退避 + 隨機抖動 + 尊重 `Retry-After`**：CDX 查詢與快照下載的重試間隔從固定 3 秒改為 `3 * 2^attempt` 秒（上限 30 秒）加上隨機抖動；遇到 HTTP 503 且伺服器帶有 `Retry-After` header 時優先採用該值。
 - **降低單支股票的請求量**：原本每支股票固定查詢 3 個 Yahoo 鏡像網域（finance.yahoo.com / hk.finance.yahoo.com / sg.finance.yahoo.com），現在只要累積到的月度快照數已達 `limit_months`，就會提前跳過剩餘網域，減少對 CDX API 的請求量。
+- **保存 CDX 可稽核資料並使用同月備份**：`raw_wayback_cdx_queries.csv` 逐次保存查詢結果、重試錯誤、候選數，以及未查詢鏡像的略過原因；`raw_wayback_cdx_candidates.csv` 保存每個回傳時間戳及其選取／略過原因；每月最多依 `wayback.max_candidates_per_month` 選取 3 份候選，最新候選失敗時依序嘗試同月舊備份。`raw_wayback_fetch_attempts.csv` 保存下載重試次數、HTTP 狀態、解析結果及非空指標數。三者以 `run_id`、`query_id`、`candidate_id` 關聯，並同步到 biztrends.TW。
 
 這些機制解決的是「讓失敗立即可見、減少無謂的請求量」；如果 archive.org 真的是針對 GitHub Actions 的 IP 段做硬性封鎖，唯一保證有效的做法是把這個步驟改到不同來源 IP 的環境執行（例如 self-hosted runner 或透過 proxy）。
 
@@ -112,10 +113,13 @@ output:
   raw_csv: data/reports/raw_yahoo_finance.csv
   wayback_consensus_csv: data/reports/raw_wayback_yahoo_finance_consensus.csv
   wayback_fetch_attempts_csv: data/reports/raw_wayback_fetch_attempts.csv
+  wayback_cdx_queries_csv: data/reports/raw_wayback_cdx_queries.csv
+  wayback_cdx_candidates_csv: data/reports/raw_wayback_cdx_candidates.csv
   wayback_consensus_history_csv: data/reports/raw_yahoo_finance_consensus_history.csv
 
 wayback:
   max_runtime_minutes: 300
+  max_candidates_per_month: 3
   focus_priority_months: ["2026-01", "2025-06", "2025-01"]
 
 yahoo:

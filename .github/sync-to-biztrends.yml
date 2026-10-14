@@ -15,6 +15,10 @@ group:
         dest:   data/Yahoo.Finance/wayback_yahoo_finance_consensus.csv
       - source: data/reports/raw_wayback_fetch_attempts.csv
         dest:   data/Yahoo.Finance/raw_wayback_fetch_attempts.csv
+      - source: data/reports/raw_wayback_cdx_queries.csv
+        dest:   data/Yahoo.Finance/raw_wayback_cdx_queries.csv
+      - source: data/reports/raw_wayback_cdx_candidates.csv
+        dest:   data/Yahoo.Finance/raw_wayback_cdx_candidates.csv
       - source: data/reports/raw_wayback_run_history.csv
         dest:   data/Yahoo.Finance/raw_wayback_run_history.csv
       - source: data/reports/raw_yahoo_finance_consensus_history.csv
@@ -29,5 +33,7 @@ group:
         dest:   definitions/raw_column_definition_YahooFinance.md
       - source: definitions/raw_yahoo_finance_consensus_history_definition.md
         dest:   definitions/raw_yahoo_finance_consensus_history_definition.md
+      - source: definitions/raw_wayback_cdx_diagnostics.md
+        dest:   definitions/raw_wayback_cdx_diagnostics.md
     repos: |
       wenchiehlee-money/biztrends.TW
