@@ -159,8 +159,10 @@ destination: downstream definitions/raw_column_definition_YahooFinance.md
 |---|---|
 | `success` | Snapshot downloaded, parsed, and produced at least one consensus value |
 | `download_failed` | Snapshot HTML could not be downloaded after retries |
-| `parse_failed` | Snapshot downloaded but no usable consensus tables were parsed |
-| `empty_metrics` | Tables parsed but all target consensus values were empty or NaN |
+| `parse_failed` | Snapshot downloaded but no usable consensus values were parsed; the HTML is attached to the GitHub Actions run artifact when within the evidence size/count limits |
+| `empty_metrics` | Tables parsed but all target consensus values were empty or NaN; the HTML is attached to the GitHub Actions run artifact when within the evidence size/count limits |
+
+**Page evidence:** Parse failures, empty results, and partially populated results save their HTML in the GitHub Actions run artifact when within the evidence size/count limits. The artifact is retained for 14 days; partially populated results may still have attempt status `success` if at least one metric was extracted.
 
 ### Columns
 

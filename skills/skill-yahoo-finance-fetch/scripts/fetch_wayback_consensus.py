@@ -108,22 +108,22 @@ def load_stocks() -> list[dict]:
 def parse_val_with_suffix(val_str):
     if pd.isna(val_str) or not val_str or str(val_str).strip() == "N/A" or str(val_str).strip() == "-":
         return np.nan
-    val_str = str(val_str).strip().replace(",", "")
+    val_str = str(val_str).strip().replace(",", "").replace(" ", "")
     
-    # Check for unit suffixes
+    # Yahoo Finance localizes large-number units in archived pages. Check
+    # longer Traditional/Simplified Chinese suffixes before their suffixes.
     multiplier = 1.0
-    if val_str.endswith("B"):
-        multiplier = 1e9
-        val_str = val_str[:-1]
-    elif val_str.endswith("M"):
-        multiplier = 1e6
-        val_str = val_str[:-1]
-    elif val_str.endswith("T"):
-        multiplier = 1e12
-        val_str = val_str[:-1]
-    elif val_str.endswith("k") or val_str.endswith("K"):
-        multiplier = 1e3
-        val_str = val_str[:-1]
+    suffixes = (
+        ("萬億", 1e12), ("万亿", 1e12), ("十億", 1e9), ("十亿", 1e9),
+        ("百萬", 1e6), ("百万", 1e6), ("兆", 1e12),
+        ("億", 1e8), ("亿", 1e8), ("萬", 1e4), ("万", 1e4), ("千", 1e3),
+        ("T", 1e12), ("B", 1e9), ("M", 1e6), ("K", 1e3), ("k", 1e3),
+    )
+    for suffix, suffix_multiplier in suffixes:
+        if val_str.endswith(suffix):
+            multiplier = suffix_multiplier
+            val_str = val_str[:-len(suffix)]
+            break
         
     try:
         return float(val_str) * multiplier
@@ -493,6 +493,40 @@ COVERAGE_COLUMNS = [
     "message",
     "process_timestamp",
 ]
+
+MAX_FAILURE_HTML_ARTIFACTS = 20
+MAX_FAILURE_HTML_BYTES = 5 * 1024 * 1024
+
+
+def save_failure_html(html_text: str, stock_code: str, snapshot_timestamp: str, status: str) -> None:
+    """Save a bounded sample of unparsed pages for short-lived CI diagnostics."""
+    evidence_dir = os.environ.get("WAYBACK_HTML_EVIDENCE_DIR")
+    if not evidence_dir or not html_text:
+        return
+
+    payload = html_text.encode("utf-8")
+    if len(payload) > MAX_FAILURE_HTML_BYTES:
+        print(
+            f"Skipping HTML evidence for {stock_code}/{snapshot_timestamp}: "
+            f"page is {len(payload)} bytes (limit {MAX_FAILURE_HTML_BYTES})."
+        )
+        return
+
+    directory = Path(evidence_dir)
+    try:
+        directory.mkdir(parents=True, exist_ok=True)
+        existing = list(directory.glob("*.html"))
+        if len(existing) >= MAX_FAILURE_HTML_ARTIFACTS:
+            print(f"HTML evidence limit reached ({MAX_FAILURE_HTML_ARTIFACTS}); not saving more pages.")
+            return
+
+        safe_code = re.sub(r"[^A-Za-z0-9_-]", "_", str(stock_code))
+        filename = f"{safe_code}_{snapshot_timestamp}_{status}.html"
+        path = directory / filename
+        path.write_bytes(payload)
+        print(f"Saved HTML evidence: {path.name} ({len(payload)} bytes)")
+    except OSError as exc:
+        print(f"Warning: Could not save Wayback HTML evidence: {exc}")
 
 
 def utc_now() -> str:
@@ -925,6 +959,7 @@ def main():
             if not metrics:
                 message = "Failed to parse tables from HTML"
                 print(f"    {message}.")
+                save_failure_html(html, code, ts, "parse_failed")
                 append_coverage_row(
                     coverage_csv,
                     make_coverage_row(t, yahoo_symbol, snap, asof_date, "parse_failed", message),
@@ -936,12 +971,18 @@ def main():
             if not has_data:
                 message = "Parse succeeded but all metrics were NaN"
                 print(f"    {message}.")
+                save_failure_html(html, code, ts, "empty_metrics")
                 append_coverage_row(
                     coverage_csv,
                     make_coverage_row(t, yahoo_symbol, snap, asof_date, "empty_metrics", message),
                 )
                 covered_snapshots.add(attempt_key)
                 continue
+
+            if any(np.isnan(v) for v in metrics.values()):
+                missing = [key for key, value in metrics.items() if np.isnan(value)]
+                print(f"    Partial metrics; missing values: {', '.join(missing)}.")
+                save_failure_html(html, code, ts, "partial_metrics")
 
             record = {
                 "stock_code": code,
