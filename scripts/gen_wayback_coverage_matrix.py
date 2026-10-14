@@ -14,7 +14,6 @@ Usage:
 from __future__ import annotations
 
 import csv
-import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -77,6 +76,15 @@ def main() -> None:
         print(f"[ERROR] History CSV not found: {HISTORY_CSV}", file=sys.stderr)
         sys.exit(1)
 
+    if not STOCK_LIST_CSV.exists():
+        print(f"[ERROR] Current Taiwan stock list not found: {STOCK_LIST_CSV}", file=sys.stderr)
+        sys.exit(1)
+
+    name_map = load_stock_names()
+    if not name_map:
+        print(f"[ERROR] No stock codes found in: {STOCK_LIST_CSV}", file=sys.stderr)
+        sys.exit(1)
+
     print(f"Loading history from: {HISTORY_CSV}")
     df = pd.read_csv(HISTORY_CSV, encoding="utf-8")
     df["stock_code"] = df["stock_code"].astype(str).str.strip()
@@ -86,7 +94,9 @@ def main() -> None:
     # Only TW stocks (4-digit numeric codes)
     df_tw = df[df["stock_code"].str.match(r"^\d{4}$")].copy()
 
-    all_stocks = sorted(df_tw["stock_code"].unique())
+    # The current stock list is authoritative: include newly listed companies,
+    # and drop codes no longer present in the list even if history remains.
+    all_stocks = sorted(name_map)
     month_cols = gen_month_range(LOOKBACK_MONTHS)
 
     # Build covered set: (stock_code, YYYY-MM) with at least one non-NaN consensus value
@@ -104,7 +114,6 @@ def main() -> None:
         if has_value:
             covered.add((row["stock_code"], ym))
 
-    name_map    = load_stock_names()
     focus_codes = load_focus_codes()
     print(f"Focus stocks: {len(focus_codes)} | Full list: {len(all_stocks)}")
 
