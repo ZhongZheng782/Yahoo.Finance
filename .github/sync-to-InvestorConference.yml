@@ -1,9 +1,0 @@
-# .github/sync-to-InvestorConference.yml
-group:
-  - files:
-      - source: data/reports/raw_yahoo_finance_consensus_history.csv
-        dest:   data/Yahoo.Finance/raw_yahoo_finance_consensus_history.csv
-      - source: definitions/raw_yahoo_finance_consensus_history_definition.md
-        dest:   definitions/raw_yahoo_finance_consensus_history_definition.md
-    repos: |
-      wenchiehlee-money/InvestorConference
