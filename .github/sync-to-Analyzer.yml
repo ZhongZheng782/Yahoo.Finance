@@ -1,7 +1,0 @@
-# .github/sync-to-Analyzer.yml
-group:
-  - files:
-      - source: raw_column_definition_YahooFinance.md
-        dest:   definitions/raw_column_definition_YahooFinance.md
-    repos: |
-      wenchiehlee-investment/Python-Actions.GoodInfo.Analyzer
