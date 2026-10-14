@@ -1,43 +1,43 @@
 ﻿stock_code,company_name,yahoo_symbol,snapshot_timestamp,forecast_asof_date,original_url,status,message,process_timestamp
-2412,中華電,2412.TW,20211208080737,2021-12-08,https://finance.yahoo.com/quote/2412.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 03:17:18
-2454,聯發科,2454.TW,20240528193741,2024-05-28,https://hk.finance.yahoo.com/quote/2454.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21 03:25:39
-2303,聯電,2303.TW,20240723023333,2024-07-23,https://finance.yahoo.com/quote/2303.TW/analysis,download_failed,Failed to download HTML,2026-06-21 03:35:06
-2303,聯電,2303.TW,20250504224011,2025-05-04,https://finance.yahoo.com/quote/2303.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 03:35:07
-2308,台達電,2308.TW,20240909123215,2024-09-09,https://finance.yahoo.com/quote/2308.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 03:39:16
-2317,鴻海,2317.TW,20220527020201,2022-05-27,https://finance.yahoo.com/quote/2317.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 03:42:14
-2317,鴻海,2317.TW,20221227173931,2022-12-27,https://finance.yahoo.com/quote/2317.TW/analysis/,download_failed,Failed to download HTML,2026-06-21 03:43:24
-2317,鴻海,2317.TW,20240505102204,2024-05-05,https://finance.yahoo.com/quote/2317.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21 03:44:31
-2317,鴻海,2317.TW,20240618012738,2024-06-18,https://finance.yahoo.com/quote/2317.TW/analysis/,download_failed,Failed to download HTML,2026-06-21 03:45:47
-2356,英業達,2356.TW,20250429211332,2025-04-29,https://finance.yahoo.com/quote/2356.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 03:56:40
-4938,和碩,4938.TW,20240419145100,2024-04-19,https://finance.yahoo.com/quote/4938.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21 04:34:36
-2347,聯強,2347.TW,20250619142921,2025-06-19,https://finance.yahoo.com/quote/2347.TW/analysis/,download_failed,Failed to download HTML,2026-06-21 05:09:47
-2395,研華,2395.TW,20230124170607,2023-01-24,https://finance.yahoo.com/quote/2395.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 05:14:49
-2474,可成,2474.TW,20240718183844,2024-07-18,https://hk.finance.yahoo.com/quote/2474.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 05:23:41
-5269,祥碩,5269.TW,20240613005808,2024-06-13,https://sg.finance.yahoo.com/quote/5269.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 05:51:33
-2330,台積電,2330.TW,20260208030224,2026-02-08,https://hk.finance.yahoo.com/quote/2330.TW/analysis/,download_failed,Failed to download HTML,2026-06-21 13:01:48
-2454,聯發科,2454.TW,20220219204744,2022-02-19,https://finance.yahoo.com/quote/2454.TW/analysis/,success,,2026-06-21 13:32:40
-2454,聯發科,2454.TW,20231118080734,2023-11-18,https://finance.yahoo.com/quote/2454.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 13:32:44
-2454,聯發科,2454.TW,20240502125509,2024-05-02,https://finance.yahoo.com/quote/2454.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21 13:33:04
-2454,聯發科,2454.TW,20250108084744,2025-01-08,https://finance.yahoo.com/quote/2454.TW/analysis/,download_failed,Failed to download HTML,2026-06-21 13:34:11
-2308,台達電,2308.TW,20240416010829,2024-04-16,https://hk.finance.yahoo.com/quote/2308.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21 13:42:52
-2308,台達電,2308.TW,20240527084717,2024-05-27,https://hk.finance.yahoo.com/quote/2308.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 13:42:55
-2354,鴻準,2354.TW,20240217195404,2024-02-17,https://finance.yahoo.com/quote/2354.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 13:52:23
-3231,緯創,3231.TW,20250425084726,2025-04-25,https://finance.yahoo.com/quote/3231.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 14:27:33
-2330,台積電,2330.TW,20220408211155,2022-04-08,https://finance.yahoo.com/quote/2330.TW/analysis/,download_failed,Failed to download HTML,2026-06-21 20:28:40
-2330,台積電,2330.TW,20240416033147,2024-04-16,https://finance.yahoo.com/quote/2330.TW/analysis,download_failed,Failed to download HTML,2026-06-21 20:30:08
-2330,台積電,2330.TW,20240621231936,2024-06-21,https://hk.finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 20:30:15
-2330,台積電,2330.TW,20240729220941,2024-07-29,https://finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 20:30:17
-2330,台積電,2330.TW,20240926212205,2024-09-26,https://finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 20:30:21
-2330,台積電,2330.TW,20241013180351,2024-10-13,https://hk.finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 20:30:23
-2330,台積電,2330.TW,20260128171733,2026-01-28,https://finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 20:30:38
-2382,廣達,2382.TW,20240810044655,2024-08-10,https://hk.finance.yahoo.com/quote/2382.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21 20:45:03
-2357,華碩,2357.TW,20240422181704,2024-04-22,https://finance.yahoo.com/quote/2357.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21 21:26:51
-4938,和碩,4938.TW,20220120131929,2022-01-20,https://sg.finance.yahoo.com/quote/4938.TW/analysis/,download_failed,Failed to download HTML,2026-06-21 21:46:28
-4938,和碩,4938.TW,20240424024711,2024-04-24,https://sg.finance.yahoo.com/quote/4938.TW/analysis/,download_failed,Failed to download HTML,2026-06-21 21:47:37
-2337,旺宏,2337.TW,20220122062843,2022-01-22,https://sg.finance.yahoo.com/quote/2337.TW/analysis/,download_failed,Failed to download HTML,2026-06-23 02:10:32
-2337,旺宏,2337.TW,20220628134044,2022-06-28,https://sg.finance.yahoo.com/quote/2337.TW/analysis/,download_failed,Failed to download HTML,2026-06-23 02:11:28
-2337,旺宏,2337.TW,20221205222411,2022-12-05,https://sg.finance.yahoo.com/quote/2337.TW/analysis/,success,,2026-06-23 02:11:58
-2308,台達電,2308.TW,20240812070910,2024-08-12,https://hk.finance.yahoo.com/quote/2308.TW/analysis/,success,,2026-09-23 14:29:24
-2337,旺宏,2337.TW,20240625183121,2024-06-25,https://sg.finance.yahoo.com/quote/2337.TW/analysis/,success,,2026-10-01 20:29:10
-2357,華碩,2357.TW,20261001234010,2026-10-01,https://sg.finance.yahoo.com/quote/2357.TW/analysis/,success,,2026-10-03 14:16:43
-2354,鴻準,2354.TW,20261006225851,2026-10-06,https://hk.finance.yahoo.com/quote/2354.TW/analysis/,download_failed,Failed to download HTML,2026-10-09 16:15:13
+2412,中華電,2412.TW,20211208080737,2021-12-08,https://finance.yahoo.com/quote/2412.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T03:17:18Z
+2454,聯發科,2454.TW,20240528193741,2024-05-28,https://hk.finance.yahoo.com/quote/2454.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21T03:25:39Z
+2303,聯電,2303.TW,20240723023333,2024-07-23,https://finance.yahoo.com/quote/2303.TW/analysis,download_failed,Failed to download HTML,2026-06-21T03:35:06Z
+2303,聯電,2303.TW,20250504224011,2025-05-04,https://finance.yahoo.com/quote/2303.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T03:35:07Z
+2308,台達電,2308.TW,20240909123215,2024-09-09,https://finance.yahoo.com/quote/2308.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T03:39:16Z
+2317,鴻海,2317.TW,20220527020201,2022-05-27,https://finance.yahoo.com/quote/2317.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T03:42:14Z
+2317,鴻海,2317.TW,20221227173931,2022-12-27,https://finance.yahoo.com/quote/2317.TW/analysis/,download_failed,Failed to download HTML,2026-06-21T03:43:24Z
+2317,鴻海,2317.TW,20240505102204,2024-05-05,https://finance.yahoo.com/quote/2317.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21T03:44:31Z
+2317,鴻海,2317.TW,20240618012738,2024-06-18,https://finance.yahoo.com/quote/2317.TW/analysis/,download_failed,Failed to download HTML,2026-06-21T03:45:47Z
+2356,英業達,2356.TW,20250429211332,2025-04-29,https://finance.yahoo.com/quote/2356.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T03:56:40Z
+4938,和碩,4938.TW,20240419145100,2024-04-19,https://finance.yahoo.com/quote/4938.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21T04:34:36Z
+2347,聯強,2347.TW,20250619142921,2025-06-19,https://finance.yahoo.com/quote/2347.TW/analysis/,download_failed,Failed to download HTML,2026-06-21T05:09:47Z
+2395,研華,2395.TW,20230124170607,2023-01-24,https://finance.yahoo.com/quote/2395.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T05:14:49Z
+2474,可成,2474.TW,20240718183844,2024-07-18,https://hk.finance.yahoo.com/quote/2474.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T05:23:41Z
+5269,祥碩,5269.TW,20240613005808,2024-06-13,https://sg.finance.yahoo.com/quote/5269.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T05:51:33Z
+2330,台積電,2330.TW,20260208030224,2026-02-08,https://hk.finance.yahoo.com/quote/2330.TW/analysis/,download_failed,Failed to download HTML,2026-06-21T13:01:48Z
+2454,聯發科,2454.TW,20220219204744,2022-02-19,https://finance.yahoo.com/quote/2454.TW/analysis/,success,,2026-06-21T13:32:40Z
+2454,聯發科,2454.TW,20231118080734,2023-11-18,https://finance.yahoo.com/quote/2454.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T13:32:44Z
+2454,聯發科,2454.TW,20240502125509,2024-05-02,https://finance.yahoo.com/quote/2454.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21T13:33:04Z
+2454,聯發科,2454.TW,20250108084744,2025-01-08,https://finance.yahoo.com/quote/2454.TW/analysis/,download_failed,Failed to download HTML,2026-06-21T13:34:11Z
+2308,台達電,2308.TW,20240416010829,2024-04-16,https://hk.finance.yahoo.com/quote/2308.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21T13:42:52Z
+2308,台達電,2308.TW,20240527084717,2024-05-27,https://hk.finance.yahoo.com/quote/2308.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T13:42:55Z
+2354,鴻準,2354.TW,20240217195404,2024-02-17,https://finance.yahoo.com/quote/2354.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T13:52:23Z
+3231,緯創,3231.TW,20250425084726,2025-04-25,https://finance.yahoo.com/quote/3231.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T14:27:33Z
+2330,台積電,2330.TW,20220408211155,2022-04-08,https://finance.yahoo.com/quote/2330.TW/analysis/,download_failed,Failed to download HTML,2026-06-21T20:28:40Z
+2330,台積電,2330.TW,20240416033147,2024-04-16,https://finance.yahoo.com/quote/2330.TW/analysis,download_failed,Failed to download HTML,2026-06-21T20:30:08Z
+2330,台積電,2330.TW,20240621231936,2024-06-21,https://hk.finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T20:30:15Z
+2330,台積電,2330.TW,20240729220941,2024-07-29,https://finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T20:30:17Z
+2330,台積電,2330.TW,20240926212205,2024-09-26,https://finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T20:30:21Z
+2330,台積電,2330.TW,20241013180351,2024-10-13,https://hk.finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T20:30:23Z
+2330,台積電,2330.TW,20260128171733,2026-01-28,https://finance.yahoo.com/quote/2330.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T20:30:38Z
+2382,廣達,2382.TW,20240810044655,2024-08-10,https://hk.finance.yahoo.com/quote/2382.TW/analysis/,parse_failed,Failed to parse tables from HTML,2026-06-21T20:45:03Z
+2357,華碩,2357.TW,20240422181704,2024-04-22,https://finance.yahoo.com/quote/2357.TW/analysis,parse_failed,Failed to parse tables from HTML,2026-06-21T21:26:51Z
+4938,和碩,4938.TW,20220120131929,2022-01-20,https://sg.finance.yahoo.com/quote/4938.TW/analysis/,download_failed,Failed to download HTML,2026-06-21T21:46:28Z
+4938,和碩,4938.TW,20240424024711,2024-04-24,https://sg.finance.yahoo.com/quote/4938.TW/analysis/,download_failed,Failed to download HTML,2026-06-21T21:47:37Z
+2337,旺宏,2337.TW,20220122062843,2022-01-22,https://sg.finance.yahoo.com/quote/2337.TW/analysis/,download_failed,Failed to download HTML,2026-06-23T02:10:32Z
+2337,旺宏,2337.TW,20220628134044,2022-06-28,https://sg.finance.yahoo.com/quote/2337.TW/analysis/,download_failed,Failed to download HTML,2026-06-23T02:11:28Z
+2337,旺宏,2337.TW,20221205222411,2022-12-05,https://sg.finance.yahoo.com/quote/2337.TW/analysis/,success,,2026-06-23T02:11:58Z
+2308,台達電,2308.TW,20240812070910,2024-08-12,https://hk.finance.yahoo.com/quote/2308.TW/analysis/,success,,2026-09-23T14:29:24Z
+2337,旺宏,2337.TW,20240625183121,2024-06-25,https://sg.finance.yahoo.com/quote/2337.TW/analysis/,success,,2026-10-01T20:29:10Z
+2357,華碩,2357.TW,20261001234010,2026-10-01,https://sg.finance.yahoo.com/quote/2357.TW/analysis/,success,,2026-10-03T14:16:43Z
+2354,鴻準,2354.TW,20261006225851,2026-10-06,https://hk.finance.yahoo.com/quote/2354.TW/analysis/,download_failed,Failed to download HTML,2026-10-09T16:15:13Z
