@@ -29,6 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: read
     env:
       SYNC_PAT_BIZTRENDS: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_MONEY }}
     timeout-minutes: 360
@@ -114,9 +115,33 @@ jobs:
             git push
           fi
 
+      - name: Capture Wayback attempt baseline
+        id: wayback_baseline
+        run: |
+          file="data/reports/raw_wayback_coverage_matrix.csv"
+          if [ -f "$file" ]; then
+            rows=$(wc -l < "$file")
+            rows=$((rows - 1))
+          else
+            rows=0
+          fi
+          echo "rows=$rows" >> "$GITHUB_OUTPUT"
+
       - name: Fetch Wayback Machine consensus (daily)
+        id: wayback_fetch
         run: |
           python skills/skill-yahoo-finance-fetch/scripts/fetch_wayback_consensus.py --max-runtime-minutes 300
+        continue-on-error: true
+
+      - name: Record Wayback scheduled run result
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          WAYBACK_FETCH_OUTCOME: ${{ steps.wayback_fetch.outcome }}
+        run: |
+          python scripts/record_wayback_run.py \
+            --fetch-outcome "$WAYBACK_FETCH_OUTCOME" \
+            --attempt-start-line "${{ steps.wayback_baseline.outputs.rows || '0' }}"
         continue-on-error: true
 
       - name: Commit Wayback progress
@@ -126,6 +151,9 @@ jobs:
           fi
           if [ -f data/reports/raw_wayback_coverage_matrix.csv ]; then
             git add data/reports/raw_wayback_coverage_matrix.csv
+          fi
+          if [ -f data/reports/raw_wayback_run_history.csv ]; then
+            git add data/reports/raw_wayback_run_history.csv
           fi
           if [ -f data/reports/raw_yahoo_finance_consensus_history.csv ]; then
             git add data/reports/raw_yahoo_finance_consensus_history.csv

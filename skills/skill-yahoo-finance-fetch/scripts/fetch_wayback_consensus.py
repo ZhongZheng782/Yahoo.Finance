@@ -554,8 +554,14 @@ def load_coverage(history_csv: Path | None) -> set[tuple[str, str]]:
     return already_covered
 
 
+WAYBACK_FAILURE_RETRY_DAYS = {
+    "download_failed": 1,
+    "parse_failed": 30,
+}
+
+
 def load_covered_snapshots(coverage_csv: Path | None, retry_failed_attempts: bool) -> set[tuple[str, str]]:
-    """Return (stock_code, snapshot_timestamp) pairs already recorded in previous runs."""
+    """Return snapshots to skip, while allowing old failures to be retried."""
     if coverage_csv is None or retry_failed_attempts or not coverage_csv.exists():
         return set()
 
@@ -572,8 +578,33 @@ def load_covered_snapshots(coverage_csv: Path | None, retry_failed_attempts: boo
 
     df_attempts["stock_code"] = df_attempts["stock_code"].astype(str).str.strip()
     df_attempts["snapshot_timestamp"] = df_attempts["snapshot_timestamp"].astype(str).str.strip()
-    attempted = set(zip(df_attempts["stock_code"], df_attempts["snapshot_timestamp"]))
-    print(f"Loaded coverage matrix: {len(attempted)} covered snapshots.")
+    now = datetime.datetime.now(datetime.timezone.utc)
+    attempted: set[tuple[str, str]] = set()
+    retryable_failures = 0
+
+    for _, row in df_attempts.iterrows():
+        status = str(row.get("status", "")).strip().lower()
+        key = (row["stock_code"], row["snapshot_timestamp"])
+        if not all(key):
+            continue
+
+        retry_after_days = WAYBACK_FAILURE_RETRY_DAYS.get(status)
+        if retry_after_days is not None:
+            attempted_at = pd.to_datetime(row.get("process_timestamp"), errors="coerce", utc=True)
+            if pd.isna(attempted_at) or (now - attempted_at.to_pydatetime()).total_seconds() >= retry_after_days * 86400:
+                retryable_failures += 1
+                continue
+        elif status not in {"success", "empty_metrics"}:
+            # Unknown statuses should not become permanent skip entries.
+            retryable_failures += 1
+            continue
+
+        attempted.add(key)
+
+    print(
+        f"Loaded coverage matrix: {len(attempted)} snapshots still skipped; "
+        f"{retryable_failures} failed/unknown attempts are eligible for retry."
+    )
     return attempted
 
 
