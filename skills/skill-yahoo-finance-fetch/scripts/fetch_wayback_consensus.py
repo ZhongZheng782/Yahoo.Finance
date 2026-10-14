@@ -108,22 +108,22 @@ def load_stocks() -> list[dict]:
 def parse_val_with_suffix(val_str):
     if pd.isna(val_str) or not val_str or str(val_str).strip() == "N/A" or str(val_str).strip() == "-":
         return np.nan
-    val_str = str(val_str).strip().replace(",", "").replace(" ", "")
+    val_str = str(val_str).strip().replace(",", "")
     
-    # Yahoo Finance localizes large-number units in archived pages. Check
-    # longer Traditional/Simplified Chinese suffixes before their suffixes.
+    # Check for unit suffixes
     multiplier = 1.0
-    suffixes = (
-        ("萬億", 1e12), ("万亿", 1e12), ("十億", 1e9), ("十亿", 1e9),
-        ("百萬", 1e6), ("百万", 1e6), ("兆", 1e12),
-        ("億", 1e8), ("亿", 1e8), ("萬", 1e4), ("万", 1e4), ("千", 1e3),
-        ("T", 1e12), ("B", 1e9), ("M", 1e6), ("K", 1e3), ("k", 1e3),
-    )
-    for suffix, suffix_multiplier in suffixes:
-        if val_str.endswith(suffix):
-            multiplier = suffix_multiplier
-            val_str = val_str[:-len(suffix)]
-            break
+    if val_str.endswith("B"):
+        multiplier = 1e9
+        val_str = val_str[:-1]
+    elif val_str.endswith("M"):
+        multiplier = 1e6
+        val_str = val_str[:-1]
+    elif val_str.endswith("T"):
+        multiplier = 1e12
+        val_str = val_str[:-1]
+    elif val_str.endswith("k") or val_str.endswith("K"):
+        multiplier = 1e3
+        val_str = val_str[:-1]
         
     try:
         return float(val_str) * multiplier
@@ -167,19 +167,15 @@ def _retry_delay(attempt: int, exc: BaseException) -> float:
     return min(base + random.uniform(0, base * 0.5), 30.0)
 
 
-def fetch_wayback_snapshots(url, limit_months=24, from_date=None, to_date=None):
+def fetch_wayback_snapshots(url, limit_months=24):
     """Query Wayback CDX API for historical snapshot timestamps of the URL.
 
     Returns (snapshots, network_blocked). network_blocked is True only when
     every retry failed with a network-level error (see
     _is_network_level_error) — i.e. archive.org was unreachable/throttling,
     not merely "no snapshots exist for this URL"."""
-    params = {"url": url, "output": "json", "statuscode": "200"}
-    if from_date:
-        params["from"] = from_date
-    if to_date:
-        params["to"] = to_date
-    cdx_url = f"https://web.archive.org/cdx/search/cdx?{urllib.parse.urlencode(params)}"
+    encoded_url = urllib.parse.quote_plus(url)
+    cdx_url = f"https://web.archive.org/cdx/search/cdx?url={encoded_url}&output=json&statuscode=200"
 
     headers = {"User-Agent": WAYBACK_USER_AGENT}
     req = urllib.request.Request(cdx_url, headers=headers)
@@ -498,61 +494,9 @@ COVERAGE_COLUMNS = [
     "process_timestamp",
 ]
 
-MAX_FAILURE_HTML_ARTIFACTS = 20
-MAX_FAILURE_HTML_BYTES = 5 * 1024 * 1024
-
-
-def save_failure_html(html_text: str, stock_code: str, snapshot_timestamp: str, status: str) -> None:
-    """Save a bounded sample of unparsed pages for short-lived CI diagnostics."""
-    evidence_dir = os.environ.get("WAYBACK_HTML_EVIDENCE_DIR")
-    if not evidence_dir or not html_text:
-        return
-
-    payload = html_text.encode("utf-8")
-    if len(payload) > MAX_FAILURE_HTML_BYTES:
-        print(
-            f"Skipping HTML evidence for {stock_code}/{snapshot_timestamp}: "
-            f"page is {len(payload)} bytes (limit {MAX_FAILURE_HTML_BYTES})."
-        )
-        return
-
-    directory = Path(evidence_dir)
-    try:
-        directory.mkdir(parents=True, exist_ok=True)
-        existing = list(directory.glob("*.html"))
-        if len(existing) >= MAX_FAILURE_HTML_ARTIFACTS:
-            print(f"HTML evidence limit reached ({MAX_FAILURE_HTML_ARTIFACTS}); not saving more pages.")
-            return
-
-        safe_code = re.sub(r"[^A-Za-z0-9_-]", "_", str(stock_code))
-        filename = f"{safe_code}_{snapshot_timestamp}_{status}.html"
-        path = directory / filename
-        path.write_bytes(payload)
-        print(f"Saved HTML evidence: {path.name} ({len(payload)} bytes)")
-    except OSError as exc:
-        print(f"Warning: Could not save Wayback HTML evidence: {exc}")
-
 
 def utc_now() -> str:
-    return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
-
-
-def normalize_attempt_timestamps(attempts_csv: Path | None) -> None:
-    """Migrate legacy naive UTC attempt timestamps to ISO 8601 Z format."""
-    if attempts_csv is None or not attempts_csv.exists():
-        return
-    try:
-        df = pd.read_csv(attempts_csv, encoding="utf-8-sig", dtype=str, keep_default_na=False)
-        if "process_timestamp" not in df.columns:
-            return
-        parsed = pd.to_datetime(df["process_timestamp"], errors="coerce", utc=True)
-        valid = parsed.notna()
-        if not valid.any():
-            return
-        df.loc[valid, "process_timestamp"] = parsed.loc[valid].dt.strftime("%Y-%m-%dT%H:%M:%SZ")
-        df.to_csv(attempts_csv, index=False, encoding="utf-8-sig", lineterminator="\n")
-    except Exception as exc:
-        print(f"Warning: Could not normalize Wayback attempt timestamps: {exc}")
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def resolve_repo_path(path_value: str | None, default_value: str | None = None) -> Path | None:
@@ -610,57 +554,26 @@ def load_coverage(history_csv: Path | None) -> set[tuple[str, str]]:
     return already_covered
 
 
-WAYBACK_FAILURE_RETRY_DAYS = {
-    "download_failed": 1,
-    "parse_failed": 30,
-}
-
-
 def load_covered_snapshots(coverage_csv: Path | None, retry_failed_attempts: bool) -> set[tuple[str, str]]:
-    """Return snapshots to skip, while allowing old failures to be retried."""
+    """Return (stock_code, snapshot_timestamp) pairs already recorded in previous runs."""
     if coverage_csv is None or retry_failed_attempts or not coverage_csv.exists():
         return set()
 
     try:
-        df_attempts = pd.read_csv(coverage_csv, encoding="utf-8-sig", dtype=str, keep_default_na=False)
+        df_attempts = pd.read_csv(coverage_csv, encoding="utf-8")
     except Exception as e:
-        print(f"Warning: Failed to load Wayback snapshot-attempt ledger: {e}")
+        print(f"Warning: Failed to load Wayback coverage matrix: {e}")
         return set()
 
     required = {"stock_code", "snapshot_timestamp"}
     if not required.issubset(df_attempts.columns):
-        print(f"Warning: Wayback snapshot-attempt ledger lacks required columns: {coverage_csv}")
+        print(f"Warning: Wayback coverage matrix lacks required columns: {coverage_csv}")
         return set()
 
     df_attempts["stock_code"] = df_attempts["stock_code"].astype(str).str.strip()
     df_attempts["snapshot_timestamp"] = df_attempts["snapshot_timestamp"].astype(str).str.strip()
-    now = datetime.datetime.now(datetime.timezone.utc)
-    attempted: set[tuple[str, str]] = set()
-    retryable_failures = 0
-
-    for _, row in df_attempts.iterrows():
-        status = str(row.get("status", "")).strip().lower()
-        key = (row["stock_code"], row["snapshot_timestamp"])
-        if not all(key):
-            continue
-
-        retry_after_days = WAYBACK_FAILURE_RETRY_DAYS.get(status)
-        if retry_after_days is not None:
-            attempted_at = pd.to_datetime(row.get("process_timestamp"), errors="coerce", utc=True)
-            if pd.isna(attempted_at) or (now - attempted_at.to_pydatetime()).total_seconds() >= retry_after_days * 86400:
-                retryable_failures += 1
-                continue
-        elif status not in {"success", "empty_metrics"}:
-            # Unknown statuses should not become permanent skip entries.
-            retryable_failures += 1
-            continue
-
-        attempted.add(key)
-
-    print(
-        f"Loaded snapshot-attempt ledger: {len(attempted)} snapshots still skipped; "
-        f"{retryable_failures} failed/unknown attempts are eligible for retry."
-    )
+    attempted = set(zip(df_attempts["stock_code"], df_attempts["snapshot_timestamp"]))
+    print(f"Loaded coverage matrix: {len(attempted)} covered snapshots.")
     return attempted
 
 
@@ -670,7 +583,7 @@ def append_coverage_row(coverage_csv: Path | None, row: dict) -> None:
     coverage_csv.parent.mkdir(parents=True, exist_ok=True)
     write_header = not coverage_csv.exists() or coverage_csv.stat().st_size == 0
     with coverage_csv.open("a", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=COVERAGE_COLUMNS, lineterminator="\n")
+        writer = csv.DictWriter(f, fieldnames=COVERAGE_COLUMNS)
         if write_header:
             writer.writeheader()
         writer.writerow({col: row.get(col, "") for col in COVERAGE_COLUMNS})
@@ -788,7 +701,7 @@ def main():
         help="Comma-separated stock codes to fetch, e.g. 2330,2382",
     )
     parser.add_argument("--output-csv", help="Wayback batch output CSV path")
-    parser.add_argument("--attempts-csv", "--coverage-csv", dest="attempts_csv", help="Wayback snapshot-attempt ledger CSV path")
+    parser.add_argument("--coverage-csv", help="Wayback coverage matrix CSV path")
     parser.add_argument("--history-csv", help="Consensus history CSV to use for gap detection and merge")
     parser.add_argument(
         "--max-runtime-minutes",
@@ -798,7 +711,7 @@ def main():
     parser.add_argument(
         "--retry-failed-attempts",
         action="store_true",
-        help="Retry snapshots already present in the attempt ledger",
+        help="Retry snapshots already present in the coverage matrix",
     )
     parser.add_argument(
         "--no-merge",
@@ -813,19 +726,13 @@ def main():
         config.get("output", {}).get("wayback_consensus_csv") or OUTPUT_CSV,
     )
     coverage_csv = resolve_repo_path(
-        args.attempts_csv,
-        config.get("output", {}).get("wayback_fetch_attempts_csv"),
+        args.coverage_csv,
+        config.get("output", {}).get("wayback_coverage_matrix_csv"),
     )
-    normalize_attempt_timestamps(coverage_csv)
     history_csv = resolve_repo_path(args.history_csv, config.get("output", {}).get("wayback_consensus_history_csv"))
     max_runtime = args.max_runtime_minutes
     if max_runtime is None:
         max_runtime = float(config.get("wayback", {}).get("max_runtime_minutes", 300))
-    focus_priority_months = [
-        str(month).replace("-", "")
-        for month in config.get("wayback", {}).get("focus_priority_months", [])
-    ]
-    focus_priority_set = set(focus_priority_months)
     deadline = time.monotonic() + max_runtime * 60 if max_runtime > 0 else None
 
     print("Checking Wayback Machine connectivity before starting...")
@@ -915,56 +822,6 @@ def main():
                 break
             time.sleep(1.0)
 
-        if is_focus and focus_priority_months:
-            found_months = {snap["timestamp"][:6] for snap in all_snapshots}
-            missing_priority_months = [
-                month for month in focus_priority_months if month not in found_months
-            ]
-            if missing_priority_months:
-                range_start = min(missing_priority_months) + "01"
-                range_end_month = datetime.datetime.strptime(
-                    max(missing_priority_months), "%Y%m"
-                ).date()
-                next_month = range_end_month.replace(day=28) + datetime.timedelta(days=4)
-                range_end = (next_month.replace(day=1) - datetime.timedelta(days=1)).strftime(
-                    "%Y%m%d"
-                )
-                print(
-                    "Priority months missing from broad CDX results; querying date range "
-                    f"{range_start}..{range_end}: "
-                    + ", ".join(
-                        f"{month[:4]}-{month[4:]}" for month in missing_priority_months
-                    )
-                )
-                for url in candidate_urls:
-                    if time_budget_exhausted(deadline):
-                        print("Runtime budget reached during priority-month CDX queries.")
-                        break
-                    print(f"  Querying priority range: {url}")
-                    snaps, network_blocked = fetch_wayback_snapshots(
-                        url,
-                        limit_months=limit_months,
-                        from_date=range_start,
-                        to_date=range_end,
-                    )
-                    print(f"    Found {len(snaps)} snapshots in priority date range.")
-                    all_snapshots.extend(snaps)
-                    network_block_streak = network_block_streak + 1 if network_blocked else 0
-                    found_months.update(snap["timestamp"][:6] for snap in snaps)
-                    missing_priority_months = [
-                        month for month in focus_priority_months if month not in found_months
-                    ]
-                    if not missing_priority_months or network_block_streak >= NETWORK_BLOCK_STREAK_LIMIT:
-                        break
-                    time.sleep(1.0)
-                if missing_priority_months:
-                    print(
-                        "No CDX snapshots found for priority month(s): "
-                        + ", ".join(
-                            f"{month[:4]}-{month[4:]}" for month in missing_priority_months
-                        )
-                    )
-
         monthly_snaps = {}
         for snap in all_snapshots:
             ts = snap["timestamp"]
@@ -974,20 +831,6 @@ def main():
 
         snapshots = sorted(list(monthly_snaps.values()), key=lambda x: x["timestamp"])
         snapshots = snapshots[-limit_months:]
-        if is_focus and focus_priority_months:
-            priority_order = {month: index for index, month in enumerate(focus_priority_months)}
-            snapshots.sort(
-                key=lambda snap: (
-                    0,
-                    priority_order[snap["timestamp"][:6]],
-                )
-                if snap["timestamp"][:6] in priority_order
-                else (1, snap["timestamp"])
-            )
-            print(
-                "Focus priority months (attempted first; prior failures retried): "
-                + ", ".join(f"{month[:4]}-{month[4:]}" for month in focus_priority_months)
-            )
         print(f"Total unique monthly snapshots after merging: {len(snapshots)}")
 
         for idx, snap in enumerate(snapshots, 1):
@@ -1004,12 +847,10 @@ def main():
             if (code, snap_ym) in already_covered:
                 print(f"  [{idx}/{len(snapshots)}] {asof_date} already covered - skipping download.")
                 continue
-            if attempt_key in covered_snapshots and not (
-                is_focus and snap_ym in focus_priority_set
-            ):
+            if attempt_key in covered_snapshots:
                 print(
                     f"  [{idx}/{len(snapshots)}] {asof_date} already recorded "
-                    "in attempt ledger - skipping download."
+                    "in coverage matrix - skipping download."
                 )
                 continue
 
@@ -1034,7 +875,6 @@ def main():
             if not metrics:
                 message = "Failed to parse tables from HTML"
                 print(f"    {message}.")
-                save_failure_html(html, code, ts, "parse_failed")
                 append_coverage_row(
                     coverage_csv,
                     make_coverage_row(t, yahoo_symbol, snap, asof_date, "parse_failed", message),
@@ -1046,18 +886,12 @@ def main():
             if not has_data:
                 message = "Parse succeeded but all metrics were NaN"
                 print(f"    {message}.")
-                save_failure_html(html, code, ts, "empty_metrics")
                 append_coverage_row(
                     coverage_csv,
                     make_coverage_row(t, yahoo_symbol, snap, asof_date, "empty_metrics", message),
                 )
                 covered_snapshots.add(attempt_key)
                 continue
-
-            if any(np.isnan(v) for v in metrics.values()):
-                missing = [key for key, value in metrics.items() if np.isnan(value)]
-                print(f"    Partial metrics; missing values: {', '.join(missing)}.")
-                save_failure_html(html, code, ts, "partial_metrics")
 
             record = {
                 "stock_code": code,

@@ -12,7 +12,7 @@ from typing import Dict, List, Optional, Tuple
 
 
 def utc_now() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def to_float(value: str) -> Optional[float]:

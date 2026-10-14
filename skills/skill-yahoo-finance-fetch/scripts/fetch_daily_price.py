@@ -71,7 +71,7 @@ RETENTION_DAYS = 3650         # 只保留最近這麼多天（約10年）——2
 
 
 def utc_now() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def read_csv_rows(path: Path):
