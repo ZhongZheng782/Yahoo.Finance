@@ -3,3 +3,4 @@ pyyaml>=6.0
 requests>=2.31
 yfinance>=0.2.40
 python-dotenv>=1.0.0
+playwright>=1.48.0

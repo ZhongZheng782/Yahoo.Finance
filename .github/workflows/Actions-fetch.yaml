@@ -26,12 +26,15 @@ on:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    runs-on:
+      group: ZhongZheng782
+      labels: [self-hosted, Linux, X64, gpu]
     permissions:
       contents: write
       actions: read
     env:
       SYNC_PAT_BIZTRENDS: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_MONEY }}
+      WAYBACK_CDP_URL: "http://192.168.31.101:9222"
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v7
@@ -221,3 +224,10 @@ jobs:
       - name: Sync skip notice
         if: env.SYNC_PAT_BIZTRENDS == ''
         run: echo "::warning::REPO_FILE_SYNC_WENCHIEHLEE_MONEY is not configured; skipping biztrends.TW sync."
+
+      - name: Mark Wayback fetch failure
+        if: always() && steps.wayback_fetch.outcome != 'success'
+        run: |
+          echo "## Wayback fetch failed" >> "$GITHUB_STEP_SUMMARY"
+          echo "The Wayback fetch step did not complete successfully. See the connectivity probe rows in data/reports/raw_wayback_cdx_queries.csv and the fetch step log for the failure reason." >> "$GITHUB_STEP_SUMMARY"
+          exit 1

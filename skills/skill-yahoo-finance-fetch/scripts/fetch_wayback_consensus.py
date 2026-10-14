@@ -16,7 +16,6 @@ import random
 import socket
 import ssl
 import urllib.parse
-import urllib.request
 import urllib.error
 import json
 import argparse
@@ -131,7 +130,84 @@ def parse_val_with_suffix(val_str):
     except ValueError:
         return np.nan
 
-WAYBACK_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+WAYBACK_CDP_PAGE = None
+WAYBACK_PLAYWRIGHT = None
+
+
+class WaybackRequestError(Exception):
+    """HTTP or browser-network error from a Wayback page loaded over CDP."""
+
+    def __init__(self, message, *, status=None, network_level=False, headers=None):
+        super().__init__(message)
+        self.code = status
+        self.network_level = network_level
+        self.headers = headers or {}
+
+
+def connect_wayback_cdp(cdp_url: str) -> None:
+    """Attach Playwright to the Chromium instance already exposed by the runner."""
+    global WAYBACK_CDP_PAGE, WAYBACK_PLAYWRIGHT
+    from playwright.sync_api import sync_playwright
+
+    WAYBACK_PLAYWRIGHT = sync_playwright().start()
+    browser = WAYBACK_PLAYWRIGHT.chromium.connect_over_cdp(cdp_url, timeout=15000)
+    context = browser.contexts[0] if browser.contexts else browser.new_context()
+    WAYBACK_CDP_PAGE = context.new_page()
+    print(f"Connected to shared Chromium over CDP: {cdp_url}")
+
+
+def disconnect_wayback_cdp() -> None:
+    """Disconnect this client without shutting down the runner's shared browser."""
+    global WAYBACK_CDP_PAGE, WAYBACK_PLAYWRIGHT
+    if WAYBACK_CDP_PAGE is not None:
+        try:
+            WAYBACK_CDP_PAGE.close()
+        except Exception:
+            pass
+        WAYBACK_CDP_PAGE = None
+    if WAYBACK_PLAYWRIGHT is not None:
+        try:
+            WAYBACK_PLAYWRIGHT.stop()
+        except Exception:
+            pass
+        WAYBACK_PLAYWRIGHT = None
+
+
+def wayback_browser_get(url: str, timeout: int = 45) -> tuple[str, int, dict]:
+    """Load a URL in the attached Chromium so CDX and snapshots share its network path."""
+    if WAYBACK_CDP_PAGE is None:
+        raise WaybackRequestError("CDP browser is not connected", network_level=True)
+    try:
+        response = WAYBACK_CDP_PAGE.goto(
+            url,
+            wait_until="domcontentloaded",
+            timeout=timeout * 1000,
+        )
+        if response is None:
+            raise WaybackRequestError("Chromium navigation returned no HTTP response", network_level=True)
+        status = response.status
+        headers = response.all_headers()
+        body = response.text()
+        if status >= 400:
+            raise WaybackRequestError(
+                f"HTTP {status} while loading {url}",
+                status=status,
+                network_level=status in (429, 503),
+                headers=headers,
+            )
+        return body, status, headers
+    except WaybackRequestError:
+        raise
+    except Exception as exc:
+        message = f"{type(exc).__name__}: {exc}"
+        lowered = message.lower()
+        network_level = any(token in lowered for token in (
+            "err_connection_refused", "err_connection_reset", "err_connection_closed",
+            "err_connection_aborted", "err_connection_timed_out", "err_address_unreachable",
+            "err_internet_disconnected", "err_tunnel_connection_failed", "err_proxy_connection_failed",
+            "err_timed_out", "err_ssl", "name_not_resolved", "net::err_",
+        ))
+        raise WaybackRequestError(message, network_level=network_level) from exc
 
 
 def _is_network_level_error(exc: BaseException) -> bool:
@@ -142,6 +218,8 @@ def _is_network_level_error(exc: BaseException) -> bool:
     means retrying the same request from the same IP is pointless and the
     run should fail fast; the latter is normal and should not be treated as
     an outage."""
+    if getattr(exc, "network_level", False):
+        return True
     if isinstance(exc, (ConnectionError, socket.timeout, TimeoutError, ssl.SSLError)):
         return True
     if isinstance(exc, urllib.error.HTTPError):
@@ -157,8 +235,11 @@ def _retry_delay(attempt: int, exc: BaseException) -> float:
     """Exponential backoff with jitter, honoring Retry-After on 503s so we
     give archive.org's rate limiter a real chance to reset instead of
     hammering it again after a fixed 3s."""
-    if isinstance(exc, urllib.error.HTTPError) and exc.code == 503:
-        retry_after = exc.headers.get("Retry-After") if exc.headers else None
+    if getattr(exc, "code", None) in (429, 503):
+        error_headers = getattr(exc, "headers", None)
+        retry_after = (
+            error_headers.get("Retry-After") or error_headers.get("retry-after")
+        ) if error_headers else None
         if retry_after:
             try:
                 return min(float(retry_after), 30.0)
@@ -181,37 +262,34 @@ def fetch_wayback_snapshots(url):
         "&fl=timestamp,original,mimetype,statuscode,digest,length"
     )
 
-    headers = {"User-Agent": WAYBACK_USER_AGENT}
-    req = urllib.request.Request(cdx_url, headers=headers)
-
     last_exc = None
     query_attempts = []
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=45) as response:
-                data = json.loads(response.read().decode("utf-8"))
-                if len(data) <= 1:
-                    query_attempts.append({"request_attempt": attempt + 1, "result": "empty", "http_status": response.status, "error": ""})
-                    return [], False, query_attempts
+            body, http_status, _ = wayback_browser_get(cdx_url, timeout=45)
+            data = json.loads(body)
+            if len(data) <= 1:
+                query_attempts.append({"request_attempt": attempt + 1, "result": "empty", "http_status": http_status, "error": ""})
+                return [], False, query_attempts
 
-                header = data[0]
-                rows = data[1:]
+            header = data[0]
+            rows = data[1:]
 
-                snapshots = [dict(zip(header, row)) for row in rows]
-                snapshots = [{
-                    **snap,
-                    "query_url": url,
-                    "timestamp": str(snap.get("timestamp", "")),
-                    "original": str(snap.get("original", "")),
-                } for snap in snapshots]
-                query_attempts.append({"request_attempt": attempt + 1, "result": "success" if snapshots else "empty", "http_status": response.status, "error": ""})
-                return snapshots, False, query_attempts
+            snapshots = [dict(zip(header, row)) for row in rows]
+            snapshots = [{
+                **snap,
+                "query_url": url,
+                "timestamp": str(snap.get("timestamp", "")),
+                "original": str(snap.get("original", "")),
+            } for snap in snapshots]
+            query_attempts.append({"request_attempt": attempt + 1, "result": "success" if snapshots else "empty", "http_status": http_status, "error": ""})
+            return snapshots, False, query_attempts
 
         except Exception as e:
             last_exc = e
             query_attempts.append({
                 "request_attempt": attempt + 1,
-                "result": "http_error" if isinstance(e, urllib.error.HTTPError) else "network_or_parse_error",
+                "result": "http_error" if getattr(e, "code", None) else "network_or_parse_error",
                 "http_status": getattr(e, "code", ""),
                 "error": f"{type(e).__name__}: {e}",
             })
@@ -228,18 +306,15 @@ def download_html(timestamp, original_url):
     Returns (html_or_None, network_blocked, metadata) — see fetch_wayback_snapshots
     for what network_blocked means."""
     wayback_url = f"https://web.archive.org/web/{timestamp}/{original_url}"
-    headers = {"User-Agent": WAYBACK_USER_AGENT}
-    req = urllib.request.Request(wayback_url, headers=headers)
-
     last_exc = None
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=20) as response:
-                return response.read().decode("utf-8", errors="ignore"), False, {
-                    "attempt_count": attempt + 1,
-                    "http_status": response.status,
-                    "error": "",
-                }
+            html, http_status, _ = wayback_browser_get(wayback_url, timeout=45)
+            return html, False, {
+                "attempt_count": attempt + 1,
+                "http_status": http_status,
+                "error": "",
+            }
         except Exception as e:
             last_exc = e
             print(f"Attempt {attempt+1} failed to download snapshot {timestamp}: {e}")
@@ -734,33 +809,35 @@ def _emit_gh_error(message: str) -> None:
     print(message)
 
 
-def check_wayback_connectivity() -> bool:
-    """One cheap CDX probe before looping over the whole stock list.
+def check_wayback_connectivity() -> tuple[bool, list[dict]]:
+    """One cheap CDX probe through the same remote Chromium used for fetching.
 
-    archive.org is known to rate-limit/block requests from shared cloud CI
-    IP ranges (connection refused / SSL handshake timeout / HTTP 503) — when
+    archive.org may rate-limit or block a runner's source network
+    (connection refused / SSL handshake timeout / HTTP 503) — when
     that happens every single per-stock query fails the same way, so there's
     no point burning the full multi-hour runtime budget rediscovering that
     on every stock. Returns False only when the failure is network-level
     (see _is_network_level_error); a well-formed response (even an
-    unexpected one) counts as reachable."""
+    unexpected one) counts as reachable. Return probe attempts so failures can
+    be retained in the CDX diagnostics CSV instead of only in Actions logs."""
     probe_url = "https://web.archive.org/cdx/search/cdx?url=example.com&output=json&limit=1"
-    headers = {"User-Agent": WAYBACK_USER_AGENT}
+    attempts = []
     for attempt in range(3):
         try:
-            req = urllib.request.Request(probe_url, headers=headers)
-            with urllib.request.urlopen(req, timeout=20) as resp:
-                resp.read()
-            return True
+            _, http_status, _ = wayback_browser_get(probe_url, timeout=20)
+            attempts.append({"request_attempt": attempt + 1, "result": "probe_success", "http_status": http_status, "error": ""})
+            return True, attempts
         except Exception as e:
             if not _is_network_level_error(e):
-                return True
+                attempts.append({"request_attempt": attempt + 1, "result": "probe_response", "http_status": getattr(e, "code", ""), "error": f"{type(e).__name__}: {e}"})
+                return True, attempts
+            attempts.append({"request_attempt": attempt + 1, "result": "probe_failed", "http_status": getattr(e, "code", ""), "error": f"{type(e).__name__}: {e}"})
             print(f"Connectivity probe attempt {attempt+1} failed: {e}")
             if attempt < 2:
                 time.sleep(_retry_delay(attempt, e))
     # All 3 attempts failed with a network-level error (connection
-    # refused/SSL timeout/429/503) — treat as unreachable from this runner.
-    return False
+    # refused/SSL timeout/429/503) — treat as unreachable from the browser.
+    return False, attempts
 
 
 def main():
@@ -813,8 +890,51 @@ def main():
         max_runtime = float(config.get("wayback", {}).get("max_runtime_minutes", 300))
     deadline = time.monotonic() + max_runtime * 60 if max_runtime > 0 else None
 
-    print("Checking Wayback Machine connectivity before starting...")
-    if not check_wayback_connectivity():
+    cdp_url = os.environ.get("WAYBACK_CDP_URL") or config.get("wayback", {}).get("cdp_url", "")
+    if not cdp_url:
+        _emit_gh_error("WAYBACK_CDP_URL is not configured; cannot attach to the runner's Chromium over CDP.")
+        sys.exit(1)
+    try:
+        connect_wayback_cdp(cdp_url)
+    except Exception as exc:
+        append_csv_row(cdx_queries_csv, CDX_QUERY_COLUMNS, {
+            "run_id": run_id,
+            "run_attempt": run_attempt,
+            "query_id": hashlib.sha256(f"{run_id}|{run_attempt}|cdp-connect".encode("utf-8")).hexdigest()[:20],
+            "stock_code": "GLOBAL",
+            "company_name": "Wayback CDP 連線",
+            "yahoo_symbol": "",
+            "query_url": cdp_url,
+            "request_attempt": 1,
+            "result": "cdp_connect_failed",
+            "http_status": "",
+            "candidate_count": "",
+            "error": f"{type(exc).__name__}: {exc}",
+            "process_timestamp": utc_now(),
+        })
+        _emit_gh_error(f"Could not connect to the runner's Chromium over CDP at {cdp_url}: {exc}")
+        sys.exit(1)
+
+    print("Checking Wayback Machine connectivity through remote Chromium before starting...")
+    reachable, probe_attempts = check_wayback_connectivity()
+    probe_query_id = hashlib.sha256(f"{run_id}|{run_attempt}|connectivity-probe".encode("utf-8")).hexdigest()[:20]
+    for probe_attempt in probe_attempts:
+        append_csv_row(cdx_queries_csv, CDX_QUERY_COLUMNS, {
+            "run_id": run_id,
+            "run_attempt": run_attempt,
+            "query_id": probe_query_id,
+            "stock_code": "GLOBAL",
+            "company_name": "Wayback 連線探測",
+            "yahoo_symbol": "",
+            "query_url": "https://web.archive.org/cdx/search/cdx?url=example.com&output=json&limit=1",
+            "request_attempt": probe_attempt.get("request_attempt", ""),
+            "result": probe_attempt.get("result", ""),
+            "http_status": probe_attempt.get("http_status", ""),
+            "candidate_count": "",
+            "error": probe_attempt.get("error", ""),
+            "process_timestamp": utc_now(),
+        })
+    if not reachable:
         _emit_gh_error(
             "Wayback Machine (archive.org) is unreachable from this runner "
             "(connection refused / SSL timeout / 429 / 503 on every probe attempt). "
@@ -955,10 +1075,21 @@ def main():
         for snap in valid_snapshots:
             monthly_candidates.setdefault(snap["timestamp"][:6], []).append(snap)
         selected_months = set(sorted(monthly_candidates)[-limit_months:])
+        priority_months = [
+            str(month).replace("-", "")
+            for month in config.get("wayback", {}).get("focus_priority_months", [])
+        ] if is_focus else []
+        ordered_months = [month for month in priority_months if month in selected_months]
+        ordered_months.extend(sorted(selected_months - set(ordered_months)))
+        if priority_months:
+            prioritized = [f"{month[:4]}-{month[4:6]}" for month in ordered_months if month in priority_months]
+            if prioritized:
+                print(f"Focus priority months attempted first: {', '.join(prioritized)}")
         max_candidates_per_month = max(1, int(config.get("wayback", {}).get("max_candidates_per_month", 3)))
         selected_candidate_ranks: dict[str, int] = {}
         snapshots = []
-        for month in sorted(selected_months):
+        month_order = {month: index for index, month in enumerate(ordered_months)}
+        for month in ordered_months:
             # Try the newest capture first, then fall back to older captures
             # from the same month if download or parsing fails.
             ordered_candidates = sorted(
@@ -1020,7 +1151,7 @@ def main():
         print(f"Wayback month cutoff: fetching snapshots through {latest_month_to_fetch} only.")
         print(f"Total unique monthly snapshots after merging: {len(snapshots)}")
 
-        snapshots.sort(key=lambda item: (item["timestamp"][:6], selected_candidate_ranks[make_candidate_id(code, item.get("query_url", ""), item)]))
+        snapshots.sort(key=lambda item: (month_order.get(item["timestamp"][:6], len(month_order)), selected_candidate_ranks[make_candidate_id(code, item.get("query_url", ""), item)]))
         for idx, snap in enumerate(snapshots, 1):
             if time_budget_exhausted(deadline):
                 print("Runtime budget reached during snapshot loop. Exiting gracefully.")
@@ -1137,4 +1268,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:
+        disconnect_wayback_cdp()

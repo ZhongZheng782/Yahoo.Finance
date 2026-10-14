@@ -4,7 +4,7 @@ Yahoo.Finance 每日 Wayback 工作流程會把 CDX 查詢、CDX 候選快照與
 
 | 檔案 | 一列代表 | 用途 |
 | --- | --- | --- |
-| `raw_wayback_cdx_queries.csv` | 一次 CDX HTTP 請求；每次重試各一列。未查詢的鏡像網址也會以 `result=skipped` 記錄。 | 區分查詢成功、合法空結果、HTTP/網路錯誤，以及因月數上限而略過的網域。 |
+| `raw_wayback_cdx_queries.csv` | 一次 CDX HTTP 請求；每次重試各一列。全域連線探測以 `stock_code=GLOBAL` 記錄；未查詢的鏡像網址也會以 `result=skipped` 記錄。 | 區分連線探測失敗、查詢成功、合法空結果、HTTP/網路錯誤，以及因月數上限而略過的網域。 |
 | `raw_wayback_cdx_candidates.csv` | CDX 回傳的一個存檔時間戳。 | 保存候選 URL、月份、MIME type、原始存檔狀態碼、digest、長度，以及候選是否被選中與原因。 |
 | `raw_wayback_fetch_attempts.csv` | 一次候選頁面的下載及解析結果。 | 保存下載重試數、最終 HTTP 狀態、錯誤、解析結果與非空指標數。失敗候選在後續排程仍可重試。 |
 

@@ -1,5 +1,5 @@
 ---
-source: https://raw.githubusercontent.com/wenchiehlee/Yahoo.Finance/refs/heads/main/raw_column_definition.md
+source: Yahoo.Finance private repository, file raw_column_definition.md
 destination: downstream definitions/raw_column_definition_YahooFinance.md
 ---
 

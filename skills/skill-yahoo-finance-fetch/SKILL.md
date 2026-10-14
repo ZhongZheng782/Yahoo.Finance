@@ -78,21 +78,22 @@ python scripts/fetch_wayback_consensus.py --backfill
 - `--specific-symbols`：逗號分隔股票代號，覆蓋清單篩選。
 - `--limit-months`：覆蓋所有股票的回溯月數（優先於 `--backfill`）。
 - `--max-runtime-minutes`：達到時間預算就優雅中止並提交部分結果（預設讀取 `configs/default.yaml` 的 `wayback.max_runtime_minutes`，即 300 分鐘），適合排進有時間限制的排程工作。
+- `WAYBACK_CDP_URL`：必填的遠端 Chromium CDP endpoint；GitHub Actions 會連到共用 runner 上既有的瀏覽器，不會自行下載或啟動 Chromium。
 - `--retry-failed-attempts`：也重抓先前已成功的快照；一般排程預設只略過成功快照，失敗快照會留待下次自動重試。
 - `--no-merge`：只寫 `--output-csv`，不合併進 `--history-csv`。
 - `--output-csv` / `--attempts-csv` (`--coverage-csv` 舊別名) / `--history-csv`：分別覆蓋批次輸出、快照嘗試紀錄、下游合併歷史 CSV 的路徑，預設對應 `configs/default.yaml` 的 `output.wayback_consensus_csv` / `output.wayback_fetch_attempts_csv` / `output.wayback_consensus_history_csv`。
 - **本地化數值單位**：解析器支援 Yahoo Finance 頁面中的繁／簡體中文數值後綴，例如 `746.28十億`、`2.8萬億`，也支援英文 `B` / `M` / `T` / `K`。
 - **頁面診斷留存**：GitHub Actions 會將 `parse_failed`、`empty_metrics`，以及有欄位未解析出的部分結果 HTML 存為該次 run 的 artifact，保留 14 天；每次最多 20 頁、每頁 5 MiB。可從 Actions run 的 Artifacts 下載比對。下載失敗沒有 HTML 可保存。
 
-#### Wayback 連線韌性（archive.org 對雲端 CI IP 的節流/封鎖）
+#### Wayback 連線韌性（透過 runner 的 Chromium CDP）
 
-archive.org 已知會對共用雲端 CI（例如 GitHub Actions runner）的來源 IP 做節流或封鎖（`Connection refused` / SSL handshake timeout / HTTP 429 / 503）。這種情況下重試同一個請求沒有意義——同一個 IP 打過去還是會被拒絕，過去曾發生過整支腳本連續數週在 GitHub Actions 上跑滿 5 小時、實際上一筆資料都沒抓到，卻因為 `continue-on-error: true` 加上「找不到新資料就順手更新歷史 CSV 最後一列 process_timestamp」的 fallback，讓每天的 commit 看起來像有成功執行。
+archive.org 曾對 GitHub-hosted runner 回應 `Connection refused`、SSL handshake timeout、HTTP 429/503。Wayback 工作流程現在應在 `ZhongZheng782` self-hosted runner 上執行，並透過 `WAYBACK_CDP_URL` 連接既有 Chromium；CDX 連線探測、CDX 查詢與快照頁面下載都走同一個瀏覽器網路路徑。若仍使用 `urllib` 做 CDX 探測，失敗時會在啟動 Chromium 前退出，無法利用 CDP。
 
-從 v1.1.0 起加入以下機制：
+目前包含以下機制：
 
-- **啟動前連線探測**：`main()` 執行前會先對 CDX API 做一次探測（`check_wayback_connectivity()`）。如果連續 3 次都是網路層錯誤（非「合法的空結果」），會印出 `::error::` GitHub Actions annotation 並以 exit code 1 結束，不會跑完整份股票清單、也不會產生假的「成功」commit。
+- **啟動前 CDP 連線與連線探測**：先透過 `WAYBACK_CDP_URL` 連上 runner 的 Chromium，再經由瀏覽器對 CDX API 探測。若 CDP 連線失敗或連續 3 次探測都發生網路層錯誤，會把錯誤寫入 `raw_wayback_cdx_queries.csv`、印出 `::error::` annotation，並以 exit code 1 結束。
 - **執行中斷路器**：即使探測時連線正常，若執行途中連續 `NETWORK_BLOCK_STREAK_LIMIT`（預設 15）次請求都是網路層錯誤，會視為連線在執行途中被節流，提前中止並 checkpoint 已抓到的資料，同樣印出 `::error::` annotation。
-- **分辨「網路層失敗」vs「合法空結果」**：CDX 查詢回傳格式正確但沒有快照（例如該股票這段期間本來就沒有存檔）不算失敗，不會觸發上述機制；只有 `ConnectionError` / SSL 錯誤 / timeout / HTTP 429 / 503 才算。
+- **分辨「網路層失敗」vs「合法空結果」**：CDX 查詢回傳格式正確但沒有快照（例如該股票這段期間本來就沒有存檔）不算失敗，不會觸發上述機制；連線錯誤、SSL 錯誤、timeout、HTTP 429/503 才算。
 - **重試改用指數退避 + 隨機抖動 + 尊重 `Retry-After`**：CDX 查詢與快照下載的重試間隔從固定 3 秒改為 `3 * 2^attempt` 秒（上限 30 秒）加上隨機抖動；遇到 HTTP 503 且伺服器帶有 `Retry-After` header 時優先採用該值。
 - **降低單支股票的請求量**：原本每支股票固定查詢 3 個 Yahoo 鏡像網域（finance.yahoo.com / hk.finance.yahoo.com / sg.finance.yahoo.com），現在只要累積到的月度快照數已達 `limit_months`，就會提前跳過剩餘網域，減少對 CDX API 的請求量。
 - **保存 CDX 可稽核資料並使用同月備份**：`raw_wayback_cdx_queries.csv` 逐次保存查詢結果、重試錯誤、候選數，以及未查詢鏡像的略過原因；`raw_wayback_cdx_candidates.csv` 保存每個回傳時間戳及其選取／略過原因；每月最多依 `wayback.max_candidates_per_month` 選取 3 份候選，最新候選失敗時依序嘗試同月舊備份。`raw_wayback_fetch_attempts.csv` 保存下載重試次數、HTTP 狀態、解析結果及非空指標數。三者以 `run_id`、`query_id`、`candidate_id` 關聯，並同步到 biztrends.TW。
