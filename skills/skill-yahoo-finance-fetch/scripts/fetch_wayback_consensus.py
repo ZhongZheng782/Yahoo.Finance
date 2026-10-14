@@ -152,8 +152,9 @@ def connect_wayback_cdp(cdp_url: str) -> None:
     WAYBACK_PLAYWRIGHT = sync_playwright().start()
     browser = WAYBACK_PLAYWRIGHT.chromium.connect_over_cdp(cdp_url, timeout=15000)
     context = browser.contexts[0] if browser.contexts else browser.new_context()
+    # Keep Wayback navigation isolated from the existing GoodInfo/browser tabs.
     WAYBACK_CDP_PAGE = context.new_page()
-    print(f"Connected to shared Chromium over CDP: {cdp_url}")
+    print(f"Connected to Chromium Docker over CDP and opened a dedicated Wayback tab: {cdp_url}")
 
 
 def disconnect_wayback_cdp() -> None:
