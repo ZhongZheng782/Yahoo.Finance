@@ -7,3 +7,8 @@
 38597556101,1,7b5c334dfe3f6886c713,2330,台積電,2330.TW,https://finance.yahoo.com/quote/2330.TW/analysis,1,success,200,7,,2026-10-14T16:23:54Z
 38597556101,1,6c5b531b7e72b4f071fa,2330,台積電,2330.TW,https://hk.finance.yahoo.com/quote/2330.TW/analysis,1,success,200,5,,2026-10-14T16:24:05Z
 38597556101,1,4a822447d6058fba38a6,2330,台積電,2330.TW,https://sg.finance.yahoo.com/quote/2330.TW/analysis,1,empty,200,0,,2026-10-14T16:24:13Z
+38598930337,1,7a71e9652da57573d648,GLOBAL,Wayback 連線探測,,https://web.archive.org/cdx/search/cdx?url=example.com&output=json&limit=1,1,probe_success,200,,,2026-10-14T16:33:20Z
+38598930337,1,9caefe3e17255d851118,2330,台積電,2330.TW,https://finance.yahoo.com/quote/2330.TW/analysis,1,success,200,7,,2026-10-14T16:33:29Z
+38598930337,1,acdcdc826f37c1347807,2330,台積電,2330.TW,https://hk.finance.yahoo.com/quote/2330.TW/analysis,1,http_error,503,,"WaybackRequestError: HTTP 503 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2330.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-14T16:33:49Z
+38598930337,1,acdcdc826f37c1347807,2330,台積電,2330.TW,https://hk.finance.yahoo.com/quote/2330.TW/analysis,2,success,200,5,,2026-10-14T16:33:49Z
+38598930337,1,fb128a10955be56df0ae,2330,台積電,2330.TW,https://sg.finance.yahoo.com/quote/2330.TW/analysis,1,empty,200,0,,2026-10-14T16:33:58Z
