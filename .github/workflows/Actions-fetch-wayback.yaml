@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       specific_symbols:
-        description: "Optional comma-separated stock codes; default manual run checks 2330"
+        description: "Optional comma-separated stock codes; leave blank to fetch all stocks"
         required: false
-        default: "2330"
+        default: ""
         type: string
       max_runtime_minutes:
         description: "Maximum fetch runtime in minutes"
