@@ -23,8 +23,9 @@ on:
         type: boolean
 
 concurrency:
-  group: yahoo-wayback-fetch
+  group: yahoo-finance-serial
   cancel-in-progress: false
+  queue: max
 
 jobs:
   wayback:

@@ -24,8 +24,9 @@ on:
       - .github/workflows/sync-up-forecast.yml
 
 concurrency:
-  group: sync-yahoo-forecast
+  group: yahoo-finance-serial
   cancel-in-progress: false
+  queue: max
 
 jobs:
   sync:

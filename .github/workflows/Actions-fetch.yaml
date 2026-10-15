@@ -8,6 +8,7 @@ on:
     paths-ignore:
       - .github/workflows/Actions-fetch.yaml
       - .github/workflows/Actions-fetch-wayback.yaml
+      - .github/workflows/sync-up-forecast.yml
       - skills/skill-yahoo-finance-fetch/scripts/fetch_wayback_consensus.py
       - scripts/record_wayback_run.py
       - scripts/gen_wayback_coverage_matrix.py
@@ -31,6 +32,11 @@ on:
         description: "Optional comma-separated symbols, e.g. 2330,2454,NVDA"
         required: false
         default: ""
+
+concurrency:
+  group: yahoo-finance-serial
+  cancel-in-progress: false
+  queue: max
 
 jobs:
   fetch:
