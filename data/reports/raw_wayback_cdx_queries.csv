@@ -12,3 +12,8 @@
 38598930337,1,acdcdc826f37c1347807,2330,台積電,2330.TW,https://hk.finance.yahoo.com/quote/2330.TW/analysis,1,http_error,503,,"WaybackRequestError: HTTP 503 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2330.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-14T16:33:49Z
 38598930337,1,acdcdc826f37c1347807,2330,台積電,2330.TW,https://hk.finance.yahoo.com/quote/2330.TW/analysis,2,success,200,5,,2026-10-14T16:33:49Z
 38598930337,1,fb128a10955be56df0ae,2330,台積電,2330.TW,https://sg.finance.yahoo.com/quote/2330.TW/analysis,1,empty,200,0,,2026-10-14T16:33:58Z
+38676057061,1,6b5af974ccecf7b663af,GLOBAL,Wayback 連線探測,,https://web.archive.org/cdx/search/cdx?url=example.com&output=json&limit=1,1,probe_success,200,,,2026-10-15T03:25:11Z
+38676057061,1,e986e93697ed21f5c94c,2330,台積電,2330.TW,https://finance.yahoo.com/quote/2330.TW/analysis,1,http_error,503,,"WaybackRequestError: HTTP 503 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2330.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-15T03:25:29Z
+38676057061,1,e986e93697ed21f5c94c,2330,台積電,2330.TW,https://finance.yahoo.com/quote/2330.TW/analysis,2,success,200,7,,2026-10-15T03:25:29Z
+38676057061,1,df25fa2ae0bfb36457c8,2330,台積電,2330.TW,https://hk.finance.yahoo.com/quote/2330.TW/analysis,1,success,200,5,,2026-10-15T03:25:38Z
+38676057061,1,56bf07854b4f08ad509d,2330,台積電,2330.TW,https://sg.finance.yahoo.com/quote/2330.TW/analysis,1,empty,200,0,,2026-10-15T03:25:51Z
