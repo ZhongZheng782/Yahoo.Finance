@@ -760,6 +760,25 @@ def checkpoint_records(records: list[dict], output_csv: Path, history_csv: Path 
         return
     output_csv.parent.mkdir(parents=True, exist_ok=True)
     df_out = pd.DataFrame(records)[WAYBACK_OUTPUT_COLUMNS]
+    if output_csv.exists():
+        # Keep prior Wayback snapshots across runs. This CSV is also the
+        # source of truth for Wayback-only coverage, so replacing it with
+        # just this run's records would make older successful months appear
+        # missing and cause them to be fetched again.
+        df_existing = pd.read_csv(
+            output_csv,
+            encoding="utf-8-sig",
+            dtype={"stock_code": str},
+        )
+        missing_columns = [column for column in WAYBACK_OUTPUT_COLUMNS if column not in df_existing.columns]
+        if missing_columns:
+            raise ValueError(
+                f"Existing Wayback output is missing columns: {', '.join(missing_columns)}"
+            )
+        df_out = pd.concat(
+            [df_existing[WAYBACK_OUTPUT_COLUMNS], df_out],
+            ignore_index=True,
+        )
     df_out = df_out.drop_duplicates(subset=["stock_code", "forecast_asof_date"], keep="last")
     df_out = df_out.sort_values(by=["stock_code", "forecast_asof_date"])
     df_out.to_csv(output_csv, index=False, encoding="utf-8-sig")

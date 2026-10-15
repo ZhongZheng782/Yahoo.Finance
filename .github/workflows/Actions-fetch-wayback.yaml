@@ -43,7 +43,13 @@ jobs:
       WAYBACK_BACKFILL: ${{ github.event.inputs.backfill || 'false' }}
     timeout-minutes: 360
     steps:
+      # Scheduled runs use the workflow event's SHA by default. That SHA can
+      # be stale when a queued run starts after an earlier run pushed data.
+      # Always start from the current main branch so generated CSVs include
+      # the latest ledger and do not rebase against their own prior version.
       - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-python@v7
         with:
