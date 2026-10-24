@@ -4845,3 +4845,847 @@ Call log:
 39904253164,1,22b8ff0aa3438813cc3f,8050,廣積,8050.TW,https://finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-10-23T05:33:12Z
 39904253164,1,7fc6b3844cc477700389,8050,廣積,8050.TW,https://hk.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-10-23T05:33:14Z
 39904253164,1,648f98d5f8318e1f902f,8050,廣積,8050.TW,https://sg.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-10-23T05:33:16Z
+40064098348,1,94c1fb79dd2b8812f3b9,GLOBAL,Wayback 連線探測,,https://web.archive.org/cdx/search/cdx?url=example.com&output=json&limit=1,1,probe_success,200,,,2026-10-24T04:54:41Z
+40064098348,1,55f30d459b47ed04c627,2330,台積電,2330.TW,https://finance.yahoo.com/quote/2330.TW/analysis,1,success,200,7,,2026-10-24T04:54:44Z
+40064098348,1,f75997580dd7ca17d085,2330,台積電,2330.TW,https://hk.finance.yahoo.com/quote/2330.TW/analysis,1,success,200,5,,2026-10-24T04:54:46Z
+40064098348,1,23643d3150a3c82608e0,2330,台積電,2330.TW,https://sg.finance.yahoo.com/quote/2330.TW/analysis,1,empty,200,0,,2026-10-24T04:54:47Z
+40064098348,1,c1988e6f4fbd92acbfc4,8299,群聯,8299.TW,https://finance.yahoo.com/quote/8299.TW/analysis,1,empty,200,0,,2026-10-24T04:54:50Z
+40064098348,1,6969adfe7e7467798d6e,8299,群聯,8299.TW,https://hk.finance.yahoo.com/quote/8299.TW/analysis,1,empty,200,0,,2026-10-24T04:54:57Z
+40064098348,1,7430c31411d9ce3fddcc,8299,群聯,8299.TW,https://sg.finance.yahoo.com/quote/8299.TW/analysis,1,empty,200,0,,2026-10-24T04:54:59Z
+40064098348,1,5959989abfe741ee4e37,8272,全景軟體,8272.TW,https://finance.yahoo.com/quote/8272.TW/analysis,1,empty,200,0,,2026-10-24T04:55:01Z
+40064098348,1,b79a7637f2b2657e5c40,8272,全景軟體,8272.TW,https://hk.finance.yahoo.com/quote/8272.TW/analysis,1,empty,200,0,,2026-10-24T04:55:03Z
+40064098348,1,a2b6132e885bfdfbad39,8272,全景軟體,8272.TW,https://sg.finance.yahoo.com/quote/8272.TW/analysis,1,empty,200,0,,2026-10-24T04:55:04Z
+40064098348,1,a7d467fe9532bcb1a343,7722,LINEPAY,7722.TW,https://finance.yahoo.com/quote/7722.TW/analysis,1,empty,200,0,,2026-10-24T04:55:06Z
+40064098348,1,475613ee60f191c2e0c4,7722,LINEPAY,7722.TW,https://hk.finance.yahoo.com/quote/7722.TW/analysis,1,empty,200,0,,2026-10-24T04:55:07Z
+40064098348,1,e5ee428dbb60881a4cc9,7722,LINEPAY,7722.TW,https://sg.finance.yahoo.com/quote/7722.TW/analysis,1,empty,200,0,,2026-10-24T04:55:09Z
+40064098348,1,805d4d9a215e0686398d,2382,廣達,2382.TW,https://finance.yahoo.com/quote/2382.TW/analysis,1,empty,200,0,,2026-10-24T04:55:11Z
+40064098348,1,eb248c7b4163ef2bf81b,2382,廣達,2382.TW,https://hk.finance.yahoo.com/quote/2382.TW/analysis,1,success,200,1,,2026-10-24T04:55:12Z
+40064098348,1,13be214d3e20c9794395,2382,廣達,2382.TW,https://sg.finance.yahoo.com/quote/2382.TW/analysis,1,empty,200,0,,2026-10-24T04:55:14Z
+40064098348,1,3e904911f15d4144cf25,2412,中華電,2412.TW,https://finance.yahoo.com/quote/2412.TW/analysis,1,success,200,1,,2026-10-24T04:55:15Z
+40064098348,1,348f880addc359590383,2412,中華電,2412.TW,https://hk.finance.yahoo.com/quote/2412.TW/analysis,1,empty,200,0,,2026-10-24T04:55:16Z
+40064098348,1,dc1d4e8be221387cd206,2412,中華電,2412.TW,https://sg.finance.yahoo.com/quote/2412.TW/analysis,1,empty,200,0,,2026-10-24T04:55:18Z
+40064098348,1,7d35ef83a74876473fd1,3034,聯詠,3034.TW,https://finance.yahoo.com/quote/3034.TW/analysis,1,empty,200,0,,2026-10-24T04:55:20Z
+40064098348,1,9d93f0e90f614bc099a3,3034,聯詠,3034.TW,https://hk.finance.yahoo.com/quote/3034.TW/analysis,1,empty,200,0,,2026-10-24T04:55:22Z
+40064098348,1,d4a956f940f8095233c4,3034,聯詠,3034.TW,https://sg.finance.yahoo.com/quote/3034.TW/analysis,1,empty,200,0,,2026-10-24T04:55:23Z
+40064098348,1,7711a53756ccc56d5639,2379,瑞昱,2379.TW,https://finance.yahoo.com/quote/2379.TW/analysis,1,empty,200,0,,2026-10-24T04:55:26Z
+40064098348,1,32a9f2124337fb01ceb0,2379,瑞昱,2379.TW,https://hk.finance.yahoo.com/quote/2379.TW/analysis,1,empty,200,0,,2026-10-24T04:55:27Z
+40064098348,1,30e3e17dd125c1943f08,2379,瑞昱,2379.TW,https://sg.finance.yahoo.com/quote/2379.TW/analysis,1,empty,200,0,,2026-10-24T04:55:29Z
+40064098348,1,fb859be95a6a6964ce87,2454,聯發科,2454.TW,https://finance.yahoo.com/quote/2454.TW/analysis,1,success,200,5,,2026-10-24T04:55:33Z
+40064098348,1,e8fb45e0e9768c7a85bf,2454,聯發科,2454.TW,https://hk.finance.yahoo.com/quote/2454.TW/analysis,1,success,200,1,,2026-10-24T04:55:34Z
+40064098348,1,336236e9558ba13e100b,2454,聯發科,2454.TW,https://sg.finance.yahoo.com/quote/2454.TW/analysis,1,empty,200,0,,2026-10-24T04:55:36Z
+40064098348,1,5a9b1c9cf0cbccfcdde2,2480,敦陽科,2480.TW,https://finance.yahoo.com/quote/2480.TW/analysis,1,empty,200,0,,2026-10-24T04:55:37Z
+40064098348,1,5ce4b6a8214ea3cb4991,2480,敦陽科,2480.TW,https://hk.finance.yahoo.com/quote/2480.TW/analysis,1,empty,200,0,,2026-10-24T04:55:41Z
+40064098348,1,f176bae437d8501f8cbb,2480,敦陽科,2480.TW,https://sg.finance.yahoo.com/quote/2480.TW/analysis,1,empty,200,0,,2026-10-24T04:55:43Z
+40064098348,1,4782fe98e23e441aaa2e,2301,光寶科,2301.TW,https://finance.yahoo.com/quote/2301.TW/analysis,1,empty,200,0,,2026-10-24T04:55:44Z
+40064098348,1,703d7ac653decbb87b5b,2301,光寶科,2301.TW,https://hk.finance.yahoo.com/quote/2301.TW/analysis,1,empty,200,0,,2026-10-24T04:55:47Z
+40064098348,1,09308e059629a5125783,2301,光寶科,2301.TW,https://sg.finance.yahoo.com/quote/2301.TW/analysis,1,empty,200,0,,2026-10-24T04:55:49Z
+40064098348,1,5157dcd93468f12d8c35,2303,聯電,2303.TW,https://finance.yahoo.com/quote/2303.TW/analysis,1,success,200,2,,2026-10-24T04:55:53Z
+40064098348,1,961f2cb07d9cb2391054,2303,聯電,2303.TW,https://hk.finance.yahoo.com/quote/2303.TW/analysis,1,empty,200,0,,2026-10-24T04:55:54Z
+40064098348,1,3c85bab14798cefe08dc,2303,聯電,2303.TW,https://sg.finance.yahoo.com/quote/2303.TW/analysis,1,empty,200,0,,2026-10-24T04:55:58Z
+40064098348,1,ce35398ea00c6d25cae4,2308,台達電,2308.TW,https://finance.yahoo.com/quote/2308.TW/analysis,1,success,200,1,,2026-10-24T04:55:59Z
+40064098348,1,47f14a8ca45bc38b7200,2308,台達電,2308.TW,https://hk.finance.yahoo.com/quote/2308.TW/analysis,1,success,200,3,,2026-10-24T04:56:00Z
+40064098348,1,411a06a42ca05e2aa6d6,2308,台達電,2308.TW,https://sg.finance.yahoo.com/quote/2308.TW/analysis,1,empty,200,0,,2026-10-24T04:56:02Z
+40064098348,1,c267048a799cfcdd1a84,2317,鴻海,2317.TW,https://finance.yahoo.com/quote/2317.TW/analysis,1,success,200,4,,2026-10-24T04:56:03Z
+40064098348,1,d716ede1c62f675b007a,2317,鴻海,2317.TW,https://hk.finance.yahoo.com/quote/2317.TW/analysis,1,empty,200,0,,2026-10-24T04:56:06Z
+40064098348,1,7499f43a9348b61128f6,2317,鴻海,2317.TW,https://sg.finance.yahoo.com/quote/2317.TW/analysis,1,empty,200,0,,2026-10-24T04:56:07Z
+40064098348,1,336bc7c5784ad515ea8b,2324,仁寶,2324.TW,https://finance.yahoo.com/quote/2324.TW/analysis,1,empty,200,0,,2026-10-24T04:56:10Z
+40064098348,1,3b406a14a1cf73975e74,2324,仁寶,2324.TW,https://hk.finance.yahoo.com/quote/2324.TW/analysis,1,empty,200,0,,2026-10-24T04:56:12Z
+40064098348,1,b9fe94804f40ce054fc2,2324,仁寶,2324.TW,https://sg.finance.yahoo.com/quote/2324.TW/analysis,1,empty,200,0,,2026-10-24T04:56:15Z
+40064098348,1,241cb5040c927ba3d667,2354,鴻準,2354.TW,https://finance.yahoo.com/quote/2354.TW/analysis,1,success,200,2,,2026-10-24T04:56:16Z
+40064098348,1,ebadb9cf773acb946e95,2354,鴻準,2354.TW,https://hk.finance.yahoo.com/quote/2354.TW/analysis,1,success,200,1,,2026-10-24T04:56:18Z
+40064098348,1,9beb259c4a652bf56128,2354,鴻準,2354.TW,https://sg.finance.yahoo.com/quote/2354.TW/analysis,1,empty,200,0,,2026-10-24T04:56:19Z
+40064098348,1,3521eb4e421ef4426780,2356,英業達,2356.TW,https://finance.yahoo.com/quote/2356.TW/analysis,1,success,200,1,,2026-10-24T04:56:21Z
+40064098348,1,d8c2188988bf6ec1283d,2356,英業達,2356.TW,https://hk.finance.yahoo.com/quote/2356.TW/analysis,1,empty,200,0,,2026-10-24T04:56:22Z
+40064098348,1,e4db5cb95deab1986b10,2356,英業達,2356.TW,https://sg.finance.yahoo.com/quote/2356.TW/analysis,1,empty,200,0,,2026-10-24T04:56:24Z
+40064098348,1,76f464aec7434ac0131f,2357,華碩,2357.TW,https://finance.yahoo.com/quote/2357.TW/analysis,1,success,200,1,,2026-10-24T04:56:25Z
+40064098348,1,3949288d1be2ed449291,2357,華碩,2357.TW,https://hk.finance.yahoo.com/quote/2357.TW/analysis,1,empty,200,0,,2026-10-24T04:56:27Z
+40064098348,1,5f69fe10a674b833d6fc,2357,華碩,2357.TW,https://sg.finance.yahoo.com/quote/2357.TW/analysis,1,success,200,1,,2026-10-24T04:56:28Z
+40064098348,1,6760206808e3f40382d3,2376,技嘉,2376.TW,https://finance.yahoo.com/quote/2376.TW/analysis,1,empty,200,0,,2026-10-24T04:56:29Z
+40064098348,1,32a65132fb94835bad79,2376,技嘉,2376.TW,https://hk.finance.yahoo.com/quote/2376.TW/analysis,1,empty,200,0,,2026-10-24T04:56:31Z
+40064098348,1,0ccded61d0c815e95856,2376,技嘉,2376.TW,https://sg.finance.yahoo.com/quote/2376.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2376.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:56:36Z
+40064098348,1,0ccded61d0c815e95856,2376,技嘉,2376.TW,https://sg.finance.yahoo.com/quote/2376.TW/analysis,2,empty,200,0,,2026-10-24T04:56:36Z
+40064098348,1,253cc1d2627b9c2be2e8,2377,微星,2377.TW,https://finance.yahoo.com/quote/2377.TW/analysis,1,empty,200,0,,2026-10-24T04:56:37Z
+40064098348,1,7bb4774203affd7216c9,2377,微星,2377.TW,https://hk.finance.yahoo.com/quote/2377.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2377.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:56:42Z
+40064098348,1,7bb4774203affd7216c9,2377,微星,2377.TW,https://hk.finance.yahoo.com/quote/2377.TW/analysis,2,empty,200,0,,2026-10-24T04:56:42Z
+40064098348,1,0d84785114014cfa9d8d,2377,微星,2377.TW,https://sg.finance.yahoo.com/quote/2377.TW/analysis,1,empty,200,0,,2026-10-24T04:56:46Z
+40064098348,1,b3a3ad53f66ad6c75f2e,2458,義隆,2458.TW,https://finance.yahoo.com/quote/2458.TW/analysis,1,empty,200,0,,2026-10-24T04:56:47Z
+40064098348,1,e31495a4a89858201906,2458,義隆,2458.TW,https://hk.finance.yahoo.com/quote/2458.TW/analysis,1,empty,200,0,,2026-10-24T04:56:49Z
+40064098348,1,a6eafd595abe188efaf2,2458,義隆,2458.TW,https://sg.finance.yahoo.com/quote/2458.TW/analysis,1,empty,200,0,,2026-10-24T04:56:50Z
+40064098348,1,4c5c5fc323e0fee2bb46,3014,聯陽,3014.TW,https://finance.yahoo.com/quote/3014.TW/analysis,1,empty,200,0,,2026-10-24T04:56:51Z
+40064098348,1,12958300398966520fe7,3014,聯陽,3014.TW,https://hk.finance.yahoo.com/quote/3014.TW/analysis,1,empty,200,0,,2026-10-24T04:56:53Z
+40064098348,1,89934db3e55f6f87ef01,3014,聯陽,3014.TW,https://sg.finance.yahoo.com/quote/3014.TW/analysis,1,empty,200,0,,2026-10-24T04:56:54Z
+40064098348,1,eddb37a59eb7aac8481c,3022,威強電,3022.TW,https://finance.yahoo.com/quote/3022.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3022.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:57:01Z
+40064098348,1,eddb37a59eb7aac8481c,3022,威強電,3022.TW,https://finance.yahoo.com/quote/3022.TW/analysis,2,empty,200,0,,2026-10-24T04:57:01Z
+40064098348,1,1f603414dba4df720dda,3022,威強電,3022.TW,https://hk.finance.yahoo.com/quote/3022.TW/analysis,1,empty,200,0,,2026-10-24T04:57:03Z
+40064098348,1,1c79d51251e17d26f481,3022,威強電,3022.TW,https://sg.finance.yahoo.com/quote/3022.TW/analysis,1,empty,200,0,,2026-10-24T04:57:06Z
+40064098348,1,b3edbd0efce9146c8f52,3035,智原,3035.TW,https://finance.yahoo.com/quote/3035.TW/analysis,1,empty,200,0,,2026-10-24T04:57:07Z
+40064098348,1,add20fd99c17a475381c,3035,智原,3035.TW,https://hk.finance.yahoo.com/quote/3035.TW/analysis,1,empty,200,0,,2026-10-24T04:57:08Z
+40064098348,1,2ed12888751c006ebdef,3035,智原,3035.TW,https://sg.finance.yahoo.com/quote/3035.TW/analysis,1,empty,200,0,,2026-10-24T04:57:10Z
+40064098348,1,a1d88653d4ea5367d759,3045,台灣大,3045.TW,https://finance.yahoo.com/quote/3045.TW/analysis,1,empty,200,0,,2026-10-24T04:57:11Z
+40064098348,1,cd8aff717dab4774b734,3045,台灣大,3045.TW,https://hk.finance.yahoo.com/quote/3045.TW/analysis,1,empty,200,0,,2026-10-24T04:57:12Z
+40064098348,1,a91de11290fd0d30fc0c,3045,台灣大,3045.TW,https://sg.finance.yahoo.com/quote/3045.TW/analysis,1,empty,200,0,,2026-10-24T04:57:14Z
+40064098348,1,cc5b3cb205e9bb1a80b1,3231,緯創,3231.TW,https://finance.yahoo.com/quote/3231.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3231.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:57:19Z
+40064098348,1,cc5b3cb205e9bb1a80b1,3231,緯創,3231.TW,https://finance.yahoo.com/quote/3231.TW/analysis,2,success,200,1,,2026-10-24T04:57:19Z
+40064098348,1,a1a14c7f653b4006a7d6,3231,緯創,3231.TW,https://hk.finance.yahoo.com/quote/3231.TW/analysis,1,empty,200,0,,2026-10-24T04:57:21Z
+40064098348,1,469ecb47144b188ed771,3231,緯創,3231.TW,https://sg.finance.yahoo.com/quote/3231.TW/analysis,1,empty,200,0,,2026-10-24T04:57:22Z
+40064098348,1,7d6975b35627925a465e,4938,和碩,4938.TW,https://finance.yahoo.com/quote/4938.TW/analysis,1,success,200,1,,2026-10-24T04:57:26Z
+40064098348,1,4508fab303dcb2c7294d,4938,和碩,4938.TW,https://hk.finance.yahoo.com/quote/4938.TW/analysis,1,empty,200,0,,2026-10-24T04:57:28Z
+40064098348,1,3d605723ab427e307920,4938,和碩,4938.TW,https://sg.finance.yahoo.com/quote/4938.TW/analysis,1,success,200,3,,2026-10-24T04:57:29Z
+40064098348,1,04da8cbe1893f83f7509,6214,精誠,6214.TW,https://finance.yahoo.com/quote/6214.TW/analysis,1,empty,200,0,,2026-10-24T04:57:31Z
+40064098348,1,533e619d31a348d64681,6214,精誠,6214.TW,https://hk.finance.yahoo.com/quote/6214.TW/analysis,1,empty,200,0,,2026-10-24T04:57:37Z
+40064098348,1,eaf506c14b5441610d54,6214,精誠,6214.TW,https://sg.finance.yahoo.com/quote/6214.TW/analysis,1,empty,200,0,,2026-10-24T04:57:39Z
+40064098348,1,7ddc8214072f78d59bd0,6231,系微,6231.TW,https://finance.yahoo.com/quote/6231.TW/analysis,1,empty,200,0,,2026-10-24T04:57:40Z
+40064098348,1,caf1a36a10065617bc3d,6231,系微,6231.TW,https://hk.finance.yahoo.com/quote/6231.TW/analysis,1,empty,200,0,,2026-10-24T04:57:41Z
+40064098348,1,15a206751529c360d925,6231,系微,6231.TW,https://sg.finance.yahoo.com/quote/6231.TW/analysis,1,empty,200,0,,2026-10-24T04:57:44Z
+40064098348,1,b7abf3322ff0ec46c787,6285,啟碁,6285.TW,https://finance.yahoo.com/quote/6285.TW/analysis,1,empty,200,0,,2026-10-24T04:57:47Z
+40064098348,1,0c9d0efc07876e274d01,6285,啟碁,6285.TW,https://hk.finance.yahoo.com/quote/6285.TW/analysis,1,empty,200,0,,2026-10-24T04:57:48Z
+40064098348,1,831c173efb3c0ce6ed3e,6285,啟碁,6285.TW,https://sg.finance.yahoo.com/quote/6285.TW/analysis,1,empty,200,0,,2026-10-24T04:57:49Z
+40064098348,1,41af0f87e75beeeb2dac,6669,緯穎,6669.TW,https://finance.yahoo.com/quote/6669.TW/analysis,1,empty,200,0,,2026-10-24T04:57:51Z
+40064098348,1,994759f38b57492ad9ea,6669,緯穎,6669.TW,https://hk.finance.yahoo.com/quote/6669.TW/analysis,1,empty,200,0,,2026-10-24T04:57:52Z
+40064098348,1,1c87dff1b318b3f456fd,6669,緯穎,6669.TW,https://sg.finance.yahoo.com/quote/6669.TW/analysis,1,empty,200,0,,2026-10-24T04:57:54Z
+40064098348,1,21313b6e13142d72ec40,7728,光焱科技,7728.TW,https://finance.yahoo.com/quote/7728.TW/analysis,1,empty,200,0,,2026-10-24T04:57:55Z
+40064098348,1,47a8ce108048f4d01d0e,7728,光焱科技,7728.TW,https://hk.finance.yahoo.com/quote/7728.TW/analysis,1,empty,200,0,,2026-10-24T04:57:56Z
+40064098348,1,f9fe2c78c248361723b2,7728,光焱科技,7728.TW,https://sg.finance.yahoo.com/quote/7728.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7728.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:58:02Z
+40064098348,1,f9fe2c78c248361723b2,7728,光焱科技,7728.TW,https://sg.finance.yahoo.com/quote/7728.TW/analysis,2,empty,200,0,,2026-10-24T04:58:02Z
+40064098348,1,44e727db9db276937126,7734,印能科技,7734.TW,https://finance.yahoo.com/quote/7734.TW/analysis,1,empty,200,0,,2026-10-24T04:58:03Z
+40064098348,1,cf8f2e5d61f33e8f8e3f,7734,印能科技,7734.TW,https://hk.finance.yahoo.com/quote/7734.TW/analysis,1,empty,200,0,,2026-10-24T04:58:07Z
+40064098348,1,51a8d635b927d53dea7d,7734,印能科技,7734.TW,https://sg.finance.yahoo.com/quote/7734.TW/analysis,1,empty,200,0,,2026-10-24T04:58:08Z
+40064098348,1,3a55c55d38976f79f6b9,7765,中華資安,7765.TW,https://finance.yahoo.com/quote/7765.TW/analysis,1,empty,200,0,,2026-10-24T04:58:09Z
+40064098348,1,30916ea48e9a054d48d5,7765,中華資安,7765.TW,https://hk.finance.yahoo.com/quote/7765.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7765.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:58:16Z
+40064098348,1,30916ea48e9a054d48d5,7765,中華資安,7765.TW,https://hk.finance.yahoo.com/quote/7765.TW/analysis,2,empty,200,0,,2026-10-24T04:58:16Z
+40064098348,1,25b6feabf26774f47378,7765,中華資安,7765.TW,https://sg.finance.yahoo.com/quote/7765.TW/analysis,1,empty,200,0,,2026-10-24T04:58:20Z
+40064098348,1,6c87ef876e7c8d0c853e,2395,研華,2395.TW,https://finance.yahoo.com/quote/2395.TW/analysis,1,success,200,1,,2026-10-24T04:58:22Z
+40064098348,1,bb33259402f146fdaafb,2395,研華,2395.TW,https://hk.finance.yahoo.com/quote/2395.TW/analysis,1,empty,200,0,,2026-10-24T04:58:24Z
+40064098348,1,09601e99ebc54a1e2ea2,2395,研華,2395.TW,https://sg.finance.yahoo.com/quote/2395.TW/analysis,1,empty,200,0,,2026-10-24T04:58:26Z
+40064098348,1,ef28f271e043bece2265,5347,世界,5347.TW,https://finance.yahoo.com/quote/5347.TW/analysis,1,empty,200,0,,2026-10-24T04:58:28Z
+40064098348,1,052587eee5ee9400952b,5347,世界,5347.TW,https://hk.finance.yahoo.com/quote/5347.TW/analysis,1,empty,200,0,,2026-10-24T04:58:29Z
+40064098348,1,1e8e733157e51d112594,5347,世界,5347.TW,https://sg.finance.yahoo.com/quote/5347.TW/analysis,1,empty,200,0,,2026-10-24T04:58:31Z
+40064098348,1,3dc68f7b02c4c2788855,6770,力積電,6770.TW,https://finance.yahoo.com/quote/6770.TW/analysis,1,empty,200,0,,2026-10-24T04:58:32Z
+40064098348,1,1136d72286245c205d41,6770,力積電,6770.TW,https://hk.finance.yahoo.com/quote/6770.TW/analysis,1,empty,200,0,,2026-10-24T04:58:34Z
+40064098348,1,9675f4762008911fa5d4,6770,力積電,6770.TW,https://sg.finance.yahoo.com/quote/6770.TW/analysis,1,empty,200,0,,2026-10-24T04:58:37Z
+40064098348,1,6ed65db6f1e717c41791,2347,聯強,2347.TW,https://finance.yahoo.com/quote/2347.TW/analysis,1,success,200,3,,2026-10-24T04:58:38Z
+40064098348,1,69b80b99061323580371,2347,聯強,2347.TW,https://hk.finance.yahoo.com/quote/2347.TW/analysis,1,empty,200,0,,2026-10-24T04:58:40Z
+40064098348,1,3f811a92daf9d2e4ec10,2347,聯強,2347.TW,https://sg.finance.yahoo.com/quote/2347.TW/analysis,1,empty,200,0,,2026-10-24T04:58:41Z
+40064098348,1,45d029fbf33a98376ef8,2405,輔信,2405.TW,https://finance.yahoo.com/quote/2405.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2405.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:58:47Z
+40064098348,1,45d029fbf33a98376ef8,2405,輔信,2405.TW,https://finance.yahoo.com/quote/2405.TW/analysis,2,empty,200,0,,2026-10-24T04:58:47Z
+40064098348,1,462286a2a4c67bc26d9d,2405,輔信,2405.TW,https://hk.finance.yahoo.com/quote/2405.TW/analysis,1,empty,200,0,,2026-10-24T04:58:48Z
+40064098348,1,bcb010ef6bf74683e3c8,2405,輔信,2405.TW,https://sg.finance.yahoo.com/quote/2405.TW/analysis,1,empty,200,0,,2026-10-24T04:58:50Z
+40064098348,1,972203ace6bb9a067b92,2451,創見,2451.TW,https://finance.yahoo.com/quote/2451.TW/analysis,1,empty,200,0,,2026-10-24T04:58:52Z
+40064098348,1,a5f9431ed9aa0dae316d,2451,創見,2451.TW,https://hk.finance.yahoo.com/quote/2451.TW/analysis,1,empty,200,0,,2026-10-24T04:58:53Z
+40064098348,1,769201433849f3a972fc,2451,創見,2451.TW,https://sg.finance.yahoo.com/quote/2451.TW/analysis,1,empty,200,0,,2026-10-24T04:58:55Z
+40064098348,1,68fc858fd679ea7c6777,2474,可成,2474.TW,https://finance.yahoo.com/quote/2474.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2474.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:59:02Z
+40064098348,1,68fc858fd679ea7c6777,2474,可成,2474.TW,https://finance.yahoo.com/quote/2474.TW/analysis,2,empty,200,0,,2026-10-24T04:59:02Z
+40064098348,1,db3a6120ca8636c5b123,2474,可成,2474.TW,https://hk.finance.yahoo.com/quote/2474.TW/analysis,1,success,200,1,,2026-10-24T04:59:03Z
+40064098348,1,4f7255b20d5ed52ae732,2474,可成,2474.TW,https://sg.finance.yahoo.com/quote/2474.TW/analysis,1,empty,200,0,,2026-10-24T04:59:06Z
+40064098348,1,f3330ad44ed6fe12ea0e,3026,禾伸堂,3026.TW,https://finance.yahoo.com/quote/3026.TW/analysis,1,empty,200,0,,2026-10-24T04:59:08Z
+40064098348,1,f7f65e6de23db842ee15,3026,禾伸堂,3026.TW,https://hk.finance.yahoo.com/quote/3026.TW/analysis,1,empty,200,0,,2026-10-24T04:59:09Z
+40064098348,1,cb39245a8bcad1ba4f5d,3026,禾伸堂,3026.TW,https://sg.finance.yahoo.com/quote/3026.TW/analysis,1,empty,200,0,,2026-10-24T04:59:11Z
+40064098348,1,d623789eeca2dccc77d3,3048,益登,3048.TW,https://finance.yahoo.com/quote/3048.TW/analysis,1,empty,200,0,,2026-10-24T04:59:13Z
+40064098348,1,013af031dd415b6f4913,3048,益登,3048.TW,https://hk.finance.yahoo.com/quote/3048.TW/analysis,1,empty,200,0,,2026-10-24T04:59:14Z
+40064098348,1,fc1e694d01f910a42721,3048,益登,3048.TW,https://sg.finance.yahoo.com/quote/3048.TW/analysis,1,empty,200,0,,2026-10-24T04:59:16Z
+40064098348,1,e9398a949b5527cacb2b,3356,奇偶,3356.TW,https://finance.yahoo.com/quote/3356.TW/analysis,1,empty,200,0,,2026-10-24T04:59:17Z
+40064098348,1,72381bf1221b8068b202,3356,奇偶,3356.TW,https://hk.finance.yahoo.com/quote/3356.TW/analysis,1,empty,200,0,,2026-10-24T04:59:19Z
+40064098348,1,fa3c5238ee26e5feee63,3356,奇偶,3356.TW,https://sg.finance.yahoo.com/quote/3356.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3356.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:59:24Z
+40064098348,1,fa3c5238ee26e5feee63,3356,奇偶,3356.TW,https://sg.finance.yahoo.com/quote/3356.TW/analysis,2,empty,200,0,,2026-10-24T04:59:24Z
+40064098348,1,aaf000d326ef2de93499,5203,訊連,5203.TW,https://finance.yahoo.com/quote/5203.TW/analysis,1,empty,200,0,,2026-10-24T04:59:25Z
+40064098348,1,dc6706a2c93ee26e6585,5203,訊連,5203.TW,https://hk.finance.yahoo.com/quote/5203.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5203.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:59:31Z
+40064098348,1,dc6706a2c93ee26e6585,5203,訊連,5203.TW,https://hk.finance.yahoo.com/quote/5203.TW/analysis,2,empty,200,0,,2026-10-24T04:59:31Z
+40064098348,1,16029b7a04072d7691db,5203,訊連,5203.TW,https://sg.finance.yahoo.com/quote/5203.TW/analysis,1,empty,200,0,,2026-10-24T04:59:32Z
+40064098348,1,dbecd4128398557be30a,6462,神盾,6462.TW,https://finance.yahoo.com/quote/6462.TW/analysis,1,empty,200,0,,2026-10-24T04:59:33Z
+40064098348,1,f734f601fc2dd199a1f9,6462,神盾,6462.TW,https://hk.finance.yahoo.com/quote/6462.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6462.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T04:59:39Z
+40064098348,1,f734f601fc2dd199a1f9,6462,神盾,6462.TW,https://hk.finance.yahoo.com/quote/6462.TW/analysis,2,empty,200,0,,2026-10-24T04:59:39Z
+40064098348,1,f70a01b3d9055d6e9c32,6462,神盾,6462.TW,https://sg.finance.yahoo.com/quote/6462.TW/analysis,1,empty,200,0,,2026-10-24T04:59:40Z
+40064098348,1,63f9764e46e6118a812b,9914,美利達,9914.TW,https://finance.yahoo.com/quote/9914.TW/analysis,1,empty,200,0,,2026-10-24T04:59:44Z
+40064098348,1,3503668f240ac50ca556,9914,美利達,9914.TW,https://hk.finance.yahoo.com/quote/9914.TW/analysis,1,empty,200,0,,2026-10-24T04:59:45Z
+40064098348,1,5cad6e70f130655a1ab0,9914,美利達,9914.TW,https://sg.finance.yahoo.com/quote/9914.TW/analysis,1,empty,200,0,,2026-10-24T04:59:47Z
+40064098348,1,4fa98a2fc24a5817bc06,9921,巨大,9921.TW,https://finance.yahoo.com/quote/9921.TW/analysis,1,empty,200,0,,2026-10-24T04:59:49Z
+40064098348,1,2bfd5799e4b4166f828d,9921,巨大,9921.TW,https://hk.finance.yahoo.com/quote/9921.TW/analysis,1,empty,200,0,,2026-10-24T04:59:50Z
+40064098348,1,fe9a4e3a33a1bd4f833a,9921,巨大,9921.TW,https://sg.finance.yahoo.com/quote/9921.TW/analysis,1,empty,200,0,,2026-10-24T04:59:52Z
+40064098348,1,37e1d918960af894066b,5434,崇越,5434.TW,https://finance.yahoo.com/quote/5434.TW/analysis,1,empty,200,0,,2026-10-24T04:59:53Z
+40064098348,1,3400299006a3795928e3,5434,崇越,5434.TW,https://hk.finance.yahoo.com/quote/5434.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5434.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:00:02Z
+40064098348,1,3400299006a3795928e3,5434,崇越,5434.TW,https://hk.finance.yahoo.com/quote/5434.TW/analysis,2,empty,200,0,,2026-10-24T05:00:02Z
+40064098348,1,b562cbb512cf589a488f,5434,崇越,5434.TW,https://sg.finance.yahoo.com/quote/5434.TW/analysis,1,empty,200,0,,2026-10-24T05:00:06Z
+40064098348,1,1b3a3d323accd36c0cb8,6526,達發,6526.TW,https://finance.yahoo.com/quote/6526.TW/analysis,1,empty,200,0,,2026-10-24T05:00:07Z
+40064098348,1,96373af2cf3779fa63e8,6526,達發,6526.TW,https://hk.finance.yahoo.com/quote/6526.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:02:33Z
+40064098348,1,96373af2cf3779fa63e8,6526,達發,6526.TW,https://hk.finance.yahoo.com/quote/6526.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:02:33Z
+40064098348,1,96373af2cf3779fa63e8,6526,達發,6526.TW,https://hk.finance.yahoo.com/quote/6526.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:02:33Z
+40064098348,1,bdf6d2934a7ba66013c4,6526,達發,6526.TW,https://sg.finance.yahoo.com/quote/6526.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:04:10Z
+40064098348,1,bdf6d2934a7ba66013c4,6526,達發,6526.TW,https://sg.finance.yahoo.com/quote/6526.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:04:10Z
+40064098348,1,bdf6d2934a7ba66013c4,6526,達發,6526.TW,https://sg.finance.yahoo.com/quote/6526.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6526.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:04:11Z
+40064098348,1,6d1d551d91202cdfb20b,5269,祥碩,5269.TW,https://finance.yahoo.com/quote/5269.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:06:03Z
+40064098348,1,6d1d551d91202cdfb20b,5269,祥碩,5269.TW,https://finance.yahoo.com/quote/5269.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:06:03Z
+40064098348,1,6d1d551d91202cdfb20b,5269,祥碩,5269.TW,https://finance.yahoo.com/quote/5269.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:06:03Z
+40064098348,1,b697144e27adab5314a1,5269,祥碩,5269.TW,https://hk.finance.yahoo.com/quote/5269.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:07:30Z
+40064098348,1,b697144e27adab5314a1,5269,祥碩,5269.TW,https://hk.finance.yahoo.com/quote/5269.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:07:30Z
+40064098348,1,b697144e27adab5314a1,5269,祥碩,5269.TW,https://hk.finance.yahoo.com/quote/5269.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:07:31Z
+40064098348,1,bf5907396c41691727a2,5269,祥碩,5269.TW,https://sg.finance.yahoo.com/quote/5269.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:08:28Z
+40064098348,1,bf5907396c41691727a2,5269,祥碩,5269.TW,https://sg.finance.yahoo.com/quote/5269.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:08:28Z
+40064098348,1,bf5907396c41691727a2,5269,祥碩,5269.TW,https://sg.finance.yahoo.com/quote/5269.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:08:28Z
+40064098348,1,5e96871b032e4cd18f05,6695,芯鼎,6695.TW,https://finance.yahoo.com/quote/6695.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:10:20Z
+40064098348,1,5e96871b032e4cd18f05,6695,芯鼎,6695.TW,https://finance.yahoo.com/quote/6695.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:10:20Z
+40064098348,1,5e96871b032e4cd18f05,6695,芯鼎,6695.TW,https://finance.yahoo.com/quote/6695.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:10:20Z
+40064098348,1,302f6137ca4eb42debb1,6695,芯鼎,6695.TW,https://hk.finance.yahoo.com/quote/6695.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:11:47Z
+40064098348,1,302f6137ca4eb42debb1,6695,芯鼎,6695.TW,https://hk.finance.yahoo.com/quote/6695.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:11:47Z
+40064098348,1,302f6137ca4eb42debb1,6695,芯鼎,6695.TW,https://hk.finance.yahoo.com/quote/6695.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:11:47Z
+40064098348,1,b54b0b5e843797ddec9d,6695,芯鼎,6695.TW,https://sg.finance.yahoo.com/quote/6695.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:12:45Z
+40064098348,1,b54b0b5e843797ddec9d,6695,芯鼎,6695.TW,https://sg.finance.yahoo.com/quote/6695.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:12:45Z
+40064098348,1,b54b0b5e843797ddec9d,6695,芯鼎,6695.TW,https://sg.finance.yahoo.com/quote/6695.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6695.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:12:45Z
+40064098348,1,fc6cd4e8a572599df4dd,6561,是方,6561.TW,https://finance.yahoo.com/quote/6561.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:13:55Z
+40064098348,1,fc6cd4e8a572599df4dd,6561,是方,6561.TW,https://finance.yahoo.com/quote/6561.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:13:55Z
+40064098348,1,fc6cd4e8a572599df4dd,6561,是方,6561.TW,https://finance.yahoo.com/quote/6561.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:13:55Z
+40064098348,1,0dfa9d162f098b1c0683,6561,是方,6561.TW,https://hk.finance.yahoo.com/quote/6561.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:14:37Z
+40064098348,1,0dfa9d162f098b1c0683,6561,是方,6561.TW,https://hk.finance.yahoo.com/quote/6561.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:14:37Z
+40064098348,1,0dfa9d162f098b1c0683,6561,是方,6561.TW,https://hk.finance.yahoo.com/quote/6561.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:14:37Z
+40064098348,1,681abb1445aae9ed2b5b,6561,是方,6561.TW,https://sg.finance.yahoo.com/quote/6561.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:16:04Z
+40064098348,1,681abb1445aae9ed2b5b,6561,是方,6561.TW,https://sg.finance.yahoo.com/quote/6561.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:16:04Z
+40064098348,1,681abb1445aae9ed2b5b,6561,是方,6561.TW,https://sg.finance.yahoo.com/quote/6561.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6561.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:16:04Z
+40064098348,1,4e429d1c437644c387a4,4953,緯軟,4953.TW,https://finance.yahoo.com/quote/4953.TW/analysis,1,empty,200,0,,2026-10-24T05:16:09Z
+40064098348,1,087db74158246dcee6cd,4953,緯軟,4953.TW,https://hk.finance.yahoo.com/quote/4953.TW/analysis,1,empty,200,0,,2026-10-24T05:16:10Z
+40064098348,1,e1034e7c3062a422ab1a,4953,緯軟,4953.TW,https://sg.finance.yahoo.com/quote/4953.TW/analysis,1,empty,200,0,,2026-10-24T05:16:12Z
+40064098348,1,b9e10ab9c0adde117679,9917,中保科,9917.TW,https://finance.yahoo.com/quote/9917.TW/analysis,1,empty,200,0,,2026-10-24T05:16:13Z
+40064098348,1,9e6fa20b287909bbd981,9917,中保科,9917.TW,https://hk.finance.yahoo.com/quote/9917.TW/analysis,1,empty,200,0,,2026-10-24T05:16:15Z
+40064098348,1,9f1219efe78ff362152b,9917,中保科,9917.TW,https://sg.finance.yahoo.com/quote/9917.TW/analysis,1,empty,200,0,,2026-10-24T05:16:18Z
+40064098348,1,2aae1b50b820eeec7b7e,3558,神準,3558.TW,https://finance.yahoo.com/quote/3558.TW/analysis,1,empty,200,0,,2026-10-24T05:16:19Z
+40064098348,1,42eae63a5f02cea5bb11,3558,神準,3558.TW,https://hk.finance.yahoo.com/quote/3558.TW/analysis,1,empty,200,0,,2026-10-24T05:16:21Z
+40064098348,1,2841cd285f1e23a1883b,3558,神準,3558.TW,https://sg.finance.yahoo.com/quote/3558.TW/analysis,1,empty,200,0,,2026-10-24T05:16:22Z
+40064098348,1,3a41377e88fe6c612f7f,2450,神腦,2450.TW,https://finance.yahoo.com/quote/2450.TW/analysis,1,empty,200,0,,2026-10-24T05:16:24Z
+40064098348,1,8ed6313d04c6a116e977,2450,神腦,2450.TW,https://hk.finance.yahoo.com/quote/2450.TW/analysis,1,empty,200,0,,2026-10-24T05:16:30Z
+40064098348,1,ab6c7518153c255a402a,2450,神腦,2450.TW,https://sg.finance.yahoo.com/quote/2450.TW/analysis,1,empty,200,0,,2026-10-24T05:16:32Z
+40064098348,1,d23e43449672901957c0,6613,朋億,6613.TW,https://finance.yahoo.com/quote/6613.TW/analysis,1,empty,200,0,,2026-10-24T05:16:34Z
+40064098348,1,35c26f13a2ca10912f88,6613,朋億,6613.TW,https://hk.finance.yahoo.com/quote/6613.TW/analysis,1,empty,200,0,,2026-10-24T05:16:35Z
+40064098348,1,2c5f41048e77780f75e8,6613,朋億,6613.TW,https://sg.finance.yahoo.com/quote/6613.TW/analysis,1,empty,200,0,,2026-10-24T05:16:37Z
+40064098348,1,f7c6d082dc29cfca0e13,7703,銳澤,7703.TW,https://finance.yahoo.com/quote/7703.TW/analysis,1,empty,200,0,,2026-10-24T05:16:38Z
+40064098348,1,41312f5340ac4d9e23bc,7703,銳澤,7703.TW,https://hk.finance.yahoo.com/quote/7703.TW/analysis,1,empty,200,0,,2026-10-24T05:16:39Z
+40064098348,1,93fbde9698c88779bfcb,7703,銳澤,7703.TW,https://sg.finance.yahoo.com/quote/7703.TW/analysis,1,empty,200,0,,2026-10-24T05:16:41Z
+40064098348,1,c9be46d6399d0ef3f3e1,3158,嘉實,3158.TW,https://finance.yahoo.com/quote/3158.TW/analysis,1,empty,200,0,,2026-10-24T05:16:43Z
+40064098348,1,b47ced555832bdf3bb92,3158,嘉實,3158.TW,https://hk.finance.yahoo.com/quote/3158.TW/analysis,1,empty,200,0,,2026-10-24T05:16:45Z
+40064098348,1,11e6aa5d1d0b1900ca52,3158,嘉實,3158.TW,https://sg.finance.yahoo.com/quote/3158.TW/analysis,1,empty,200,0,,2026-10-24T05:16:48Z
+40064098348,1,ff7e2e56a72c1da0edcb,6035,悠遊卡,6035.TW,https://finance.yahoo.com/quote/6035.TW/analysis,1,empty,200,0,,2026-10-24T05:16:49Z
+40064098348,1,f24c7260139da4a3470e,6035,悠遊卡,6035.TW,https://hk.finance.yahoo.com/quote/6035.TW/analysis,1,empty,200,0,,2026-10-24T05:16:51Z
+40064098348,1,39190e207bdc448cf45e,6035,悠遊卡,6035.TW,https://sg.finance.yahoo.com/quote/6035.TW/analysis,1,empty,200,0,,2026-10-24T05:16:52Z
+40064098348,1,b83a89c47db4df041662,5904,寶雅,5904.TW,https://finance.yahoo.com/quote/5904.TW/analysis,1,empty,200,0,,2026-10-24T05:16:54Z
+40064098348,1,b174ec4ad8f1da3b7ca4,5904,寶雅,5904.TW,https://hk.finance.yahoo.com/quote/5904.TW/analysis,1,empty,200,0,,2026-10-24T05:16:55Z
+40064098348,1,fec727b3ad59d7c7a9aa,5904,寶雅,5904.TW,https://sg.finance.yahoo.com/quote/5904.TW/analysis,1,empty,200,0,,2026-10-24T05:16:57Z
+40064098348,1,04eab00ca90d99cea427,6182,合晶,6182.TW,https://finance.yahoo.com/quote/6182.TW/analysis,1,empty,200,0,,2026-10-24T05:16:58Z
+40064098348,1,d413ae49d7ae88ebed72,6182,合晶,6182.TW,https://hk.finance.yahoo.com/quote/6182.TW/analysis,1,empty,200,0,,2026-10-24T05:17:00Z
+40064098348,1,c30dfb0eedc2c333e99c,6182,合晶,6182.TW,https://sg.finance.yahoo.com/quote/6182.TW/analysis,1,empty,200,0,,2026-10-24T05:17:01Z
+40064098348,1,a724e6d914bfb46c6f48,6962,奕力-KY,6962.TW,https://finance.yahoo.com/quote/6962.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6962.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:17:14Z
+40064098348,1,a724e6d914bfb46c6f48,6962,奕力-KY,6962.TW,https://finance.yahoo.com/quote/6962.TW/analysis,2,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6962.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:17:14Z
+40064098348,1,a724e6d914bfb46c6f48,6962,奕力-KY,6962.TW,https://finance.yahoo.com/quote/6962.TW/analysis,3,empty,200,0,,2026-10-24T05:17:14Z
+40064098348,1,851224b98beed8ff3143,6962,奕力-KY,6962.TW,https://hk.finance.yahoo.com/quote/6962.TW/analysis,1,empty,200,0,,2026-10-24T05:17:16Z
+40064098348,1,044423a2aade6bcd650a,6962,奕力-KY,6962.TW,https://sg.finance.yahoo.com/quote/6962.TW/analysis,1,empty,200,0,,2026-10-24T05:17:17Z
+40064098348,1,698ad91a977c4d78e6c6,6757,台灣虎航,6757.TW,https://finance.yahoo.com/quote/6757.TW/analysis,1,empty,200,0,,2026-10-24T05:17:18Z
+40064098348,1,19484b27ea2a3d375075,6757,台灣虎航,6757.TW,https://hk.finance.yahoo.com/quote/6757.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6757.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:17:25Z
+40064098348,1,19484b27ea2a3d375075,6757,台灣虎航,6757.TW,https://hk.finance.yahoo.com/quote/6757.TW/analysis,2,empty,200,0,,2026-10-24T05:17:25Z
+40064098348,1,9353c894e7fe4abe2eac,6757,台灣虎航,6757.TW,https://sg.finance.yahoo.com/quote/6757.TW/analysis,1,empty,200,0,,2026-10-24T05:17:26Z
+40064098348,1,699f8e7c6a0a8e3e8144,7794,宏碁智新,7794.TW,https://finance.yahoo.com/quote/7794.TW/analysis,1,empty,200,0,,2026-10-24T05:17:29Z
+40064098348,1,341ece75f867adf1feae,7794,宏碁智新,7794.TW,https://hk.finance.yahoo.com/quote/7794.TW/analysis,1,empty,200,0,,2026-10-24T05:17:30Z
+40064098348,1,c78192bf966e48836c52,7794,宏碁智新,7794.TW,https://sg.finance.yahoo.com/quote/7794.TW/analysis,1,empty,200,0,,2026-10-24T05:17:33Z
+40064098348,1,79cb5ff6faa6a4a54db5,6996,力領科技,6996.TW,https://finance.yahoo.com/quote/6996.TW/analysis,1,empty,200,0,,2026-10-24T05:17:37Z
+40064098348,1,f09a1f9d61a312284a98,6996,力領科技,6996.TW,https://hk.finance.yahoo.com/quote/6996.TW/analysis,1,empty,200,0,,2026-10-24T05:17:38Z
+40064098348,1,a2b79f57ae6fcf05a211,6996,力領科技,6996.TW,https://sg.finance.yahoo.com/quote/6996.TW/analysis,1,empty,200,0,,2026-10-24T05:17:40Z
+40064098348,1,96537792daed5a6e0c34,8016,矽創,8016.TW,https://finance.yahoo.com/quote/8016.TW/analysis,1,empty,200,0,,2026-10-24T05:17:41Z
+40064098348,1,45dea5d32aa84ff4c335,8016,矽創,8016.TW,https://hk.finance.yahoo.com/quote/8016.TW/analysis,1,empty,200,0,,2026-10-24T05:17:43Z
+40064098348,1,01d407a5a0ccd831cc59,8016,矽創,8016.TW,https://sg.finance.yahoo.com/quote/8016.TW/analysis,1,empty,200,0,,2026-10-24T05:17:44Z
+40064098348,1,619224c9676539705c41,8045,達運光電,8045.TW,https://finance.yahoo.com/quote/8045.TW/analysis,1,empty,200,0,,2026-10-24T05:17:45Z
+40064098348,1,7f7210b2a317fde5db2c,8045,達運光電,8045.TW,https://hk.finance.yahoo.com/quote/8045.TW/analysis,1,empty,200,0,,2026-10-24T05:17:48Z
+40064098348,1,c03edf4d71fd774b7635,8045,達運光電,8045.TW,https://sg.finance.yahoo.com/quote/8045.TW/analysis,1,empty,200,0,,2026-10-24T05:17:49Z
+40064098348,1,c9a5645ac5fba1274de2,7704,明遠精密,7704.TW,https://finance.yahoo.com/quote/7704.TW/analysis,1,empty,200,0,,2026-10-24T05:17:51Z
+40064098348,1,52bf4054e1268e1dda4c,7704,明遠精密,7704.TW,https://hk.finance.yahoo.com/quote/7704.TW/analysis,1,empty,200,0,,2026-10-24T05:17:52Z
+40064098348,1,7f8cc3e1fd87273502ab,7704,明遠精密,7704.TW,https://sg.finance.yahoo.com/quote/7704.TW/analysis,1,empty,200,0,,2026-10-24T05:17:53Z
+40064098348,1,3d62840beb220f5d3e8f,6997,博弘,6997.TW,https://finance.yahoo.com/quote/6997.TW/analysis,1,empty,200,0,,2026-10-24T05:17:55Z
+40064098348,1,7c4d5f16990c9fd11d17,6997,博弘,6997.TW,https://hk.finance.yahoo.com/quote/6997.TW/analysis,1,empty,200,0,,2026-10-24T05:17:56Z
+40064098348,1,e0ed114f5730a273b7ee,6997,博弘,6997.TW,https://sg.finance.yahoo.com/quote/6997.TW/analysis,1,empty,200,0,,2026-10-24T05:17:58Z
+40064098348,1,09187c5c8d194b799514,4749,新應材,4749.TW,https://finance.yahoo.com/quote/4749.TW/analysis,1,empty,200,0,,2026-10-24T05:17:59Z
+40064098348,1,aacb4b574cee328cd140,4749,新應材,4749.TW,https://hk.finance.yahoo.com/quote/4749.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F4749.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:18:05Z
+40064098348,1,aacb4b574cee328cd140,4749,新應材,4749.TW,https://hk.finance.yahoo.com/quote/4749.TW/analysis,2,empty,200,0,,2026-10-24T05:18:05Z
+40064098348,1,144596900e46bd7d35eb,4749,新應材,4749.TW,https://sg.finance.yahoo.com/quote/4749.TW/analysis,1,empty,200,0,,2026-10-24T05:18:06Z
+40064098348,1,135e449575c66f8445eb,7747,昕奇雲端,7747.TW,https://finance.yahoo.com/quote/7747.TW/analysis,1,empty,200,0,,2026-10-24T05:18:10Z
+40064098348,1,265e1538b03074bd29be,7747,昕奇雲端,7747.TW,https://hk.finance.yahoo.com/quote/7747.TW/analysis,1,empty,200,0,,2026-10-24T05:18:12Z
+40064098348,1,8be7309a8a799d609007,7747,昕奇雲端,7747.TW,https://sg.finance.yahoo.com/quote/7747.TW/analysis,1,empty,200,0,,2026-10-24T05:18:14Z
+40064098348,1,05faf29ef412b66b683c,6425,易發,6425.TW,https://finance.yahoo.com/quote/6425.TW/analysis,1,empty,200,0,,2026-10-24T05:18:15Z
+40064098348,1,89dbbd3f12c98be81b22,6425,易發,6425.TW,https://hk.finance.yahoo.com/quote/6425.TW/analysis,1,empty,200,0,,2026-10-24T05:18:17Z
+40064098348,1,d3dfb6f041e5e6819dbe,6425,易發,6425.TW,https://sg.finance.yahoo.com/quote/6425.TW/analysis,1,empty,200,0,,2026-10-24T05:18:18Z
+40064098348,1,d5d677834a36e5d527e5,7712,博盛半導體,7712.TW,https://finance.yahoo.com/quote/7712.TW/analysis,1,empty,200,0,,2026-10-24T05:18:21Z
+40064098348,1,c9bd0df62b8111889166,7712,博盛半導體,7712.TW,https://hk.finance.yahoo.com/quote/7712.TW/analysis,1,empty,200,0,,2026-10-24T05:18:23Z
+40064098348,1,d4c020ef670e9c0b0196,7712,博盛半導體,7712.TW,https://sg.finance.yahoo.com/quote/7712.TW/analysis,1,empty,200,0,,2026-10-24T05:18:24Z
+40064098348,1,22992650d9d5caf71ba6,6811,宏碁資訊,6811.TW,https://finance.yahoo.com/quote/6811.TW/analysis,1,empty,200,0,,2026-10-24T05:18:26Z
+40064098348,1,d4466139cf5e96d96bd7,6811,宏碁資訊,6811.TW,https://hk.finance.yahoo.com/quote/6811.TW/analysis,1,empty,200,0,,2026-10-24T05:18:27Z
+40064098348,1,c72a9487d56c5f33f1e6,6811,宏碁資訊,6811.TW,https://sg.finance.yahoo.com/quote/6811.TW/analysis,1,empty,200,0,,2026-10-24T05:18:29Z
+40064098348,1,e126176ecfa7f0acb393,3029,零壹,3029.TW,https://finance.yahoo.com/quote/3029.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3029.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:18:34Z
+40064098348,1,e126176ecfa7f0acb393,3029,零壹,3029.TW,https://finance.yahoo.com/quote/3029.TW/analysis,2,empty,200,0,,2026-10-24T05:18:34Z
+40064098348,1,c789d326564145b097da,3029,零壹,3029.TW,https://hk.finance.yahoo.com/quote/3029.TW/analysis,1,empty,200,0,,2026-10-24T05:18:35Z
+40064098348,1,b29a9034ac488d1f41da,3029,零壹,3029.TW,https://sg.finance.yahoo.com/quote/3029.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3029.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:18:40Z
+40064098348,1,b29a9034ac488d1f41da,3029,零壹,3029.TW,https://sg.finance.yahoo.com/quote/3029.TW/analysis,2,empty,200,0,,2026-10-24T05:18:40Z
+40064098348,1,604d7a5fbfa970462572,6690,安碁資訊,6690.TW,https://finance.yahoo.com/quote/6690.TW/analysis,1,empty,200,0,,2026-10-24T05:18:42Z
+40064098348,1,a73edff5fe367004ef2b,6690,安碁資訊,6690.TW,https://hk.finance.yahoo.com/quote/6690.TW/analysis,1,empty,200,0,,2026-10-24T05:18:43Z
+40064098348,1,a7a17e2e7e60d656b66e,6690,安碁資訊,6690.TW,https://sg.finance.yahoo.com/quote/6690.TW/analysis,1,empty,200,0,,2026-10-24T05:18:45Z
+40064098348,1,b66606377a2f7bab7ddd,6763,綠界科技,6763.TW,https://finance.yahoo.com/quote/6763.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6763.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:18:50Z
+40064098348,1,b66606377a2f7bab7ddd,6763,綠界科技,6763.TW,https://finance.yahoo.com/quote/6763.TW/analysis,2,empty,200,0,,2026-10-24T05:18:50Z
+40064098348,1,544dd3010314a193426d,6763,綠界科技,6763.TW,https://hk.finance.yahoo.com/quote/6763.TW/analysis,1,empty,200,0,,2026-10-24T05:18:52Z
+40064098348,1,aed6df561a06c734c944,6763,綠界科技,6763.TW,https://sg.finance.yahoo.com/quote/6763.TW/analysis,1,empty,200,0,,2026-10-24T05:18:54Z
+40064098348,1,fce258d210855839d3ab,6751,智聯服務,6751.TW,https://finance.yahoo.com/quote/6751.TW/analysis,1,empty,200,0,,2026-10-24T05:18:55Z
+40064098348,1,077017b90288252e2ad9,6751,智聯服務,6751.TW,https://hk.finance.yahoo.com/quote/6751.TW/analysis,1,empty,200,0,,2026-10-24T05:18:57Z
+40064098348,1,c7021217b62ceca983a0,6751,智聯服務,6751.TW,https://sg.finance.yahoo.com/quote/6751.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6751.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:19:03Z
+40064098348,1,c7021217b62ceca983a0,6751,智聯服務,6751.TW,https://sg.finance.yahoo.com/quote/6751.TW/analysis,2,empty,200,0,,2026-10-24T05:19:03Z
+40064098348,1,f588ef8d99603a3171fc,6442,光聖,6442.TW,https://finance.yahoo.com/quote/6442.TW/analysis,1,empty,200,0,,2026-10-24T05:19:04Z
+40064098348,1,efa39127794059c38bb0,6442,光聖,6442.TW,https://hk.finance.yahoo.com/quote/6442.TW/analysis,1,empty,200,0,,2026-10-24T05:19:06Z
+40064098348,1,4f3c8dd346dc2e8494d6,6442,光聖,6442.TW,https://sg.finance.yahoo.com/quote/6442.TW/analysis,1,empty,200,0,,2026-10-24T05:19:07Z
+40064098348,1,a8f1528496d322df7506,8454,富邦媒,8454.TW,https://finance.yahoo.com/quote/8454.TW/analysis,1,empty,200,0,,2026-10-24T05:19:09Z
+40064098348,1,fa290f9c8c3446641799,8454,富邦媒,8454.TW,https://hk.finance.yahoo.com/quote/8454.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F8454.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:19:14Z
+40064098348,1,fa290f9c8c3446641799,8454,富邦媒,8454.TW,https://hk.finance.yahoo.com/quote/8454.TW/analysis,2,empty,200,0,,2026-10-24T05:19:14Z
+40064098348,1,ac6579e0978f50d6cd9d,8454,富邦媒,8454.TW,https://sg.finance.yahoo.com/quote/8454.TW/analysis,1,empty,200,0,,2026-10-24T05:19:16Z
+40064098348,1,5d836983447c30625476,2332,友訊,2332.TW,https://finance.yahoo.com/quote/2332.TW/analysis,1,empty,200,0,,2026-10-24T05:19:18Z
+40064098348,1,f2d276422af2e1304961,2332,友訊,2332.TW,https://hk.finance.yahoo.com/quote/2332.TW/analysis,1,empty,200,0,,2026-10-24T05:19:19Z
+40064098348,1,9aadd49b3e44303fca6f,2332,友訊,2332.TW,https://sg.finance.yahoo.com/quote/2332.TW/analysis,1,empty,200,0,,2026-10-24T05:19:21Z
+40064098348,1,564ee5c589b68f3de070,7805,威聯通,7805.TW,https://finance.yahoo.com/quote/7805.TW/analysis,1,empty,200,0,,2026-10-24T05:19:23Z
+40064098348,1,fdf4feb72b2b18f791c6,7805,威聯通,7805.TW,https://hk.finance.yahoo.com/quote/7805.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7805.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:19:29Z
+40064098348,1,fdf4feb72b2b18f791c6,7805,威聯通,7805.TW,https://hk.finance.yahoo.com/quote/7805.TW/analysis,2,empty,200,0,,2026-10-24T05:19:29Z
+40064098348,1,c86ff18b0bab81df36b6,7805,威聯通,7805.TW,https://sg.finance.yahoo.com/quote/7805.TW/analysis,1,empty,200,0,,2026-10-24T05:19:30Z
+40064098348,1,8f839924ef6693464fe4,5536,聖暉,5536.TW,https://finance.yahoo.com/quote/5536.TW/analysis,1,empty,200,0,,2026-10-24T05:19:31Z
+40064098348,1,3f872937637bada0fb3f,5536,聖暉,5536.TW,https://hk.finance.yahoo.com/quote/5536.TW/analysis,1,empty,200,0,,2026-10-24T05:19:33Z
+40064098348,1,0b1ee382b8c83d58b409,5536,聖暉,5536.TW,https://sg.finance.yahoo.com/quote/5536.TW/analysis,1,empty,200,0,,2026-10-24T05:19:35Z
+40064098348,1,5c17661f4be5c53caee8,6125,廣運,6125.TW,https://finance.yahoo.com/quote/6125.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6125.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:19:40Z
+40064098348,1,5c17661f4be5c53caee8,6125,廣運,6125.TW,https://finance.yahoo.com/quote/6125.TW/analysis,2,empty,200,0,,2026-10-24T05:19:40Z
+40064098348,1,71a35a4f807f851b7db1,6125,廣運,6125.TW,https://hk.finance.yahoo.com/quote/6125.TW/analysis,1,empty,200,0,,2026-10-24T05:19:43Z
+40064098348,1,3d3f32494b526190412a,6125,廣運,6125.TW,https://sg.finance.yahoo.com/quote/6125.TW/analysis,1,empty,200,0,,2026-10-24T05:19:45Z
+40064098348,1,5ad1ad295de0cb4f10db,2359,所羅門,2359.TW,https://finance.yahoo.com/quote/2359.TW/analysis,1,empty,200,0,,2026-10-24T05:19:46Z
+40064098348,1,546f06b313165bb30dd8,2359,所羅門,2359.TW,https://hk.finance.yahoo.com/quote/2359.TW/analysis,1,empty,200,0,,2026-10-24T05:19:47Z
+40064098348,1,d610a4cc3cbd5a9daf94,2359,所羅門,2359.TW,https://sg.finance.yahoo.com/quote/2359.TW/analysis,1,empty,200,0,,2026-10-24T05:19:49Z
+40064098348,1,a8645155a3d98ca51ec8,6506,雙邦,6506.TW,https://finance.yahoo.com/quote/6506.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6506.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:19:54Z
+40064098348,1,a8645155a3d98ca51ec8,6506,雙邦,6506.TW,https://finance.yahoo.com/quote/6506.TW/analysis,2,empty,200,0,,2026-10-24T05:19:54Z
+40064098348,1,cddefccc39a96a73824b,6506,雙邦,6506.TW,https://hk.finance.yahoo.com/quote/6506.TW/analysis,1,empty,200,0,,2026-10-24T05:19:57Z
+40064098348,1,08e97bc5b58c87fb81ac,6506,雙邦,6506.TW,https://sg.finance.yahoo.com/quote/6506.TW/analysis,1,empty,200,0,,2026-10-24T05:19:59Z
+40064098348,1,3c1d12ec658543573c72,3293,鈊象,3293.TW,https://finance.yahoo.com/quote/3293.TW/analysis,1,empty,200,0,,2026-10-24T05:20:01Z
+40064098348,1,55be4219d66eb293ff0b,3293,鈊象,3293.TW,https://hk.finance.yahoo.com/quote/3293.TW/analysis,1,empty,200,0,,2026-10-24T05:20:03Z
+40064098348,1,7545fe9eec4d3b2e3bfd,3293,鈊象,3293.TW,https://sg.finance.yahoo.com/quote/3293.TW/analysis,1,empty,200,0,,2026-10-24T05:20:06Z
+40064098348,1,4ff2ab23a382529a2921,5274,信驊,5274.TW,https://finance.yahoo.com/quote/5274.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:22:09Z
+40064098348,1,4ff2ab23a382529a2921,5274,信驊,5274.TW,https://finance.yahoo.com/quote/5274.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:22:09Z
+40064098348,1,4ff2ab23a382529a2921,5274,信驊,5274.TW,https://finance.yahoo.com/quote/5274.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:22:09Z
+40064098348,1,036f2b66f000621ea6ae,5274,信驊,5274.TW,https://hk.finance.yahoo.com/quote/5274.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:23:56Z
+40064098348,1,036f2b66f000621ea6ae,5274,信驊,5274.TW,https://hk.finance.yahoo.com/quote/5274.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:23:56Z
+40064098348,1,036f2b66f000621ea6ae,5274,信驊,5274.TW,https://hk.finance.yahoo.com/quote/5274.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:23:56Z
+40064098348,1,d27af08fe6af8e5c7bf6,5274,信驊,5274.TW,https://sg.finance.yahoo.com/quote/5274.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:25:06Z
+40064098348,1,d27af08fe6af8e5c7bf6,5274,信驊,5274.TW,https://sg.finance.yahoo.com/quote/5274.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:25:06Z
+40064098348,1,d27af08fe6af8e5c7bf6,5274,信驊,5274.TW,https://sg.finance.yahoo.com/quote/5274.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:25:06Z
+40064098348,1,c413f7b3fd0162f4f27d,2603,長榮,2603.TW,https://finance.yahoo.com/quote/2603.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:26:16Z
+40064098348,1,c413f7b3fd0162f4f27d,2603,長榮,2603.TW,https://finance.yahoo.com/quote/2603.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:26:16Z
+40064098348,1,c413f7b3fd0162f4f27d,2603,長榮,2603.TW,https://finance.yahoo.com/quote/2603.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:26:16Z
+40064098348,1,564b0c4e7d62b0fe0c0f,2603,長榮,2603.TW,https://hk.finance.yahoo.com/quote/2603.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:27:14Z
+40064098348,1,564b0c4e7d62b0fe0c0f,2603,長榮,2603.TW,https://hk.finance.yahoo.com/quote/2603.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:27:14Z
+40064098348,1,564b0c4e7d62b0fe0c0f,2603,長榮,2603.TW,https://hk.finance.yahoo.com/quote/2603.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:27:14Z
+40064098348,1,1e0d2b2065b8764f97ef,2603,長榮,2603.TW,https://sg.finance.yahoo.com/quote/2603.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:28:24Z
+40064098348,1,1e0d2b2065b8764f97ef,2603,長榮,2603.TW,https://sg.finance.yahoo.com/quote/2603.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:28:24Z
+40064098348,1,1e0d2b2065b8764f97ef,2603,長榮,2603.TW,https://sg.finance.yahoo.com/quote/2603.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2603.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:28:24Z
+40064098348,1,9d5cef91e8491cf483e0,7547,碩網,7547.TW,https://finance.yahoo.com/quote/7547.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:29:22Z
+40064098348,1,9d5cef91e8491cf483e0,7547,碩網,7547.TW,https://finance.yahoo.com/quote/7547.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:29:22Z
+40064098348,1,9d5cef91e8491cf483e0,7547,碩網,7547.TW,https://finance.yahoo.com/quote/7547.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:29:23Z
+40064098348,1,5739af695323f2669c6d,7547,碩網,7547.TW,https://hk.finance.yahoo.com/quote/7547.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:30:32Z
+40064098348,1,5739af695323f2669c6d,7547,碩網,7547.TW,https://hk.finance.yahoo.com/quote/7547.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:30:32Z
+40064098348,1,5739af695323f2669c6d,7547,碩網,7547.TW,https://hk.finance.yahoo.com/quote/7547.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:30:32Z
+40064098348,1,be177d77b8342600f6d5,7547,碩網,7547.TW,https://sg.finance.yahoo.com/quote/7547.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:30:58Z
+40064098348,1,be177d77b8342600f6d5,7547,碩網,7547.TW,https://sg.finance.yahoo.com/quote/7547.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:30:58Z
+40064098348,1,be177d77b8342600f6d5,7547,碩網,7547.TW,https://sg.finance.yahoo.com/quote/7547.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7547.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:30:58Z
+40064098348,1,39226fe19113e0c6eccb,7736,虎山,7736.TW,https://finance.yahoo.com/quote/7736.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:32:28Z
+40064098348,1,39226fe19113e0c6eccb,7736,虎山,7736.TW,https://finance.yahoo.com/quote/7736.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:32:28Z
+40064098348,1,39226fe19113e0c6eccb,7736,虎山,7736.TW,https://finance.yahoo.com/quote/7736.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:32:28Z
+40064098348,1,52f0d5b6c81569ccf0c5,7736,虎山,7736.TW,https://hk.finance.yahoo.com/quote/7736.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:32:56Z
+40064098348,1,52f0d5b6c81569ccf0c5,7736,虎山,7736.TW,https://hk.finance.yahoo.com/quote/7736.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:32:56Z
+40064098348,1,52f0d5b6c81569ccf0c5,7736,虎山,7736.TW,https://hk.finance.yahoo.com/quote/7736.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:32:57Z
+40064098348,1,c42bed8f54355fbaeb90,7736,虎山,7736.TW,https://sg.finance.yahoo.com/quote/7736.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:34:30Z
+40064098348,1,c42bed8f54355fbaeb90,7736,虎山,7736.TW,https://sg.finance.yahoo.com/quote/7736.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:34:30Z
+40064098348,1,c42bed8f54355fbaeb90,7736,虎山,7736.TW,https://sg.finance.yahoo.com/quote/7736.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7736.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:34:31Z
+40064098348,1,657ba75361965731be68,7732,金興精密,7732.TW,https://finance.yahoo.com/quote/7732.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:35:47Z
+40064098348,1,657ba75361965731be68,7732,金興精密,7732.TW,https://finance.yahoo.com/quote/7732.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:35:47Z
+40064098348,1,657ba75361965731be68,7732,金興精密,7732.TW,https://finance.yahoo.com/quote/7732.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:35:47Z
+40064098348,1,d4b71e9d349e0df8c03f,7732,金興精密,7732.TW,https://hk.finance.yahoo.com/quote/7732.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:36:50Z
+40064098348,1,d4b71e9d349e0df8c03f,7732,金興精密,7732.TW,https://hk.finance.yahoo.com/quote/7732.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:36:50Z
+40064098348,1,d4b71e9d349e0df8c03f,7732,金興精密,7732.TW,https://hk.finance.yahoo.com/quote/7732.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:36:50Z
+40064098348,1,9e51adcb315dfefa0881,7732,金興精密,7732.TW,https://sg.finance.yahoo.com/quote/7732.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:38:06Z
+40064098348,1,9e51adcb315dfefa0881,7732,金興精密,7732.TW,https://sg.finance.yahoo.com/quote/7732.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:38:06Z
+40064098348,1,9e51adcb315dfefa0881,7732,金興精密,7732.TW,https://sg.finance.yahoo.com/quote/7732.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7732.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:38:06Z
+40064098348,1,345b843b33104488e272,7769,鴻勁,7769.TW,https://finance.yahoo.com/quote/7769.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:39:21Z
+40064098348,1,345b843b33104488e272,7769,鴻勁,7769.TW,https://finance.yahoo.com/quote/7769.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:39:22Z
+40064098348,1,345b843b33104488e272,7769,鴻勁,7769.TW,https://finance.yahoo.com/quote/7769.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:39:22Z
+40064098348,1,8ceb8dc897a6eaf8e246,7769,鴻勁,7769.TW,https://hk.finance.yahoo.com/quote/7769.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:40:56Z
+40064098348,1,8ceb8dc897a6eaf8e246,7769,鴻勁,7769.TW,https://hk.finance.yahoo.com/quote/7769.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:40:56Z
+40064098348,1,8ceb8dc897a6eaf8e246,7769,鴻勁,7769.TW,https://hk.finance.yahoo.com/quote/7769.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:40:56Z
+40064098348,1,21cf13617ad0b3675ccf,7769,鴻勁,7769.TW,https://sg.finance.yahoo.com/quote/7769.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:41:30Z
+40064098348,1,21cf13617ad0b3675ccf,7769,鴻勁,7769.TW,https://sg.finance.yahoo.com/quote/7769.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:41:30Z
+40064098348,1,21cf13617ad0b3675ccf,7769,鴻勁,7769.TW,https://sg.finance.yahoo.com/quote/7769.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7769.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:41:30Z
+40064098348,1,6a7000bc0daf1b4d33c8,2383,台光電,2383.TW,https://finance.yahoo.com/quote/2383.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:43:04Z
+40064098348,1,6a7000bc0daf1b4d33c8,2383,台光電,2383.TW,https://finance.yahoo.com/quote/2383.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:43:04Z
+40064098348,1,6a7000bc0daf1b4d33c8,2383,台光電,2383.TW,https://finance.yahoo.com/quote/2383.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:43:04Z
+40064098348,1,d971f8d6d73cfe4f763d,2383,台光電,2383.TW,https://hk.finance.yahoo.com/quote/2383.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:43:38Z
+40064098348,1,d971f8d6d73cfe4f763d,2383,台光電,2383.TW,https://hk.finance.yahoo.com/quote/2383.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:43:38Z
+40064098348,1,d971f8d6d73cfe4f763d,2383,台光電,2383.TW,https://hk.finance.yahoo.com/quote/2383.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:43:38Z
+40064098348,1,aa6f359473145a50531b,2383,台光電,2383.TW,https://sg.finance.yahoo.com/quote/2383.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:45:12Z
+40064098348,1,aa6f359473145a50531b,2383,台光電,2383.TW,https://sg.finance.yahoo.com/quote/2383.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:45:12Z
+40064098348,1,aa6f359473145a50531b,2383,台光電,2383.TW,https://sg.finance.yahoo.com/quote/2383.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2383.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:45:12Z
+40064098348,1,8eb31cb3237d8576ef28,7709,榮田,7709.TW,https://finance.yahoo.com/quote/7709.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:45:46Z
+40064098348,1,8eb31cb3237d8576ef28,7709,榮田,7709.TW,https://finance.yahoo.com/quote/7709.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:45:47Z
+40064098348,1,8eb31cb3237d8576ef28,7709,榮田,7709.TW,https://finance.yahoo.com/quote/7709.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:45:47Z
+40064098348,1,79a6c01970c55801ae4b,7709,榮田,7709.TW,https://hk.finance.yahoo.com/quote/7709.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:46:51Z
+40064098348,1,79a6c01970c55801ae4b,7709,榮田,7709.TW,https://hk.finance.yahoo.com/quote/7709.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:46:51Z
+40064098348,1,79a6c01970c55801ae4b,7709,榮田,7709.TW,https://hk.finance.yahoo.com/quote/7709.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:46:51Z
+40064098348,1,97746c72a93422acf2c6,7709,榮田,7709.TW,https://sg.finance.yahoo.com/quote/7709.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:47:31Z
+40064098348,1,97746c72a93422acf2c6,7709,榮田,7709.TW,https://sg.finance.yahoo.com/quote/7709.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:47:31Z
+40064098348,1,97746c72a93422acf2c6,7709,榮田,7709.TW,https://sg.finance.yahoo.com/quote/7709.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F7709.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:47:31Z
+40064098348,1,5c1141fe71b2fba6614d,3260,威剛,3260.TW,https://finance.yahoo.com/quote/3260.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:48:46Z
+40064098348,1,5c1141fe71b2fba6614d,3260,威剛,3260.TW,https://finance.yahoo.com/quote/3260.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:48:46Z
+40064098348,1,5c1141fe71b2fba6614d,3260,威剛,3260.TW,https://finance.yahoo.com/quote/3260.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:48:46Z
+40064098348,1,3f54957a28f150fb878e,3260,威剛,3260.TW,https://hk.finance.yahoo.com/quote/3260.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:49:29Z
+40064098348,1,3f54957a28f150fb878e,3260,威剛,3260.TW,https://hk.finance.yahoo.com/quote/3260.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:49:29Z
+40064098348,1,3f54957a28f150fb878e,3260,威剛,3260.TW,https://hk.finance.yahoo.com/quote/3260.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:49:29Z
+40064098348,1,b3f2c2cd5b105a649675,3260,威剛,3260.TW,https://sg.finance.yahoo.com/quote/3260.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:49:53Z
+40064098348,1,b3f2c2cd5b105a649675,3260,威剛,3260.TW,https://sg.finance.yahoo.com/quote/3260.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:49:53Z
+40064098348,1,b3f2c2cd5b105a649675,3260,威剛,3260.TW,https://sg.finance.yahoo.com/quote/3260.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3260.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:49:53Z
+40064098348,1,0fb707a009bd44b6621a,3467,台灣精材,3467.TW,https://finance.yahoo.com/quote/3467.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:51:09Z
+40064098348,1,0fb707a009bd44b6621a,3467,台灣精材,3467.TW,https://finance.yahoo.com/quote/3467.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:51:09Z
+40064098348,1,0fb707a009bd44b6621a,3467,台灣精材,3467.TW,https://finance.yahoo.com/quote/3467.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:51:10Z
+40064098348,1,1445498b654e1eef3ec8,3467,台灣精材,3467.TW,https://hk.finance.yahoo.com/quote/3467.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:52:01Z
+40064098348,1,1445498b654e1eef3ec8,3467,台灣精材,3467.TW,https://hk.finance.yahoo.com/quote/3467.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:52:01Z
+40064098348,1,1445498b654e1eef3ec8,3467,台灣精材,3467.TW,https://hk.finance.yahoo.com/quote/3467.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3467.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-10-24T05:52:01Z
+40064098348,1,928f885c0b7afe353707,3467,台灣精材,3467.TW,https://sg.finance.yahoo.com/quote/3467.TW/analysis,1,empty,200,0,,2026-10-24T05:52:06Z
+40064098348,1,a8b92bb49d1eed02b38c,6597,立誠,6597.TW,https://finance.yahoo.com/quote/6597.TW/analysis,1,empty,200,0,,2026-10-24T05:52:10Z
+40064098348,1,4820e836e6df7b0f77c7,6597,立誠,6597.TW,https://hk.finance.yahoo.com/quote/6597.TW/analysis,1,empty,200,0,,2026-10-24T05:52:11Z
+40064098348,1,0b0e2ad67f0fab8762e2,6597,立誠,6597.TW,https://sg.finance.yahoo.com/quote/6597.TW/analysis,1,empty,200,0,,2026-10-24T05:52:13Z
+40064098348,1,aa14cccf08a17b7d55ba,6925,意藍,6925.TW,https://finance.yahoo.com/quote/6925.TW/analysis,1,empty,200,0,,2026-10-24T05:52:15Z
+40064098348,1,7b013011f606a8ccfe34,6925,意藍,6925.TW,https://hk.finance.yahoo.com/quote/6925.TW/analysis,1,empty,200,0,,2026-10-24T05:52:16Z
+40064098348,1,7591d72244d5581dd290,6925,意藍,6925.TW,https://sg.finance.yahoo.com/quote/6925.TW/analysis,1,empty,200,0,,2026-10-24T05:52:18Z
+40064098348,1,b90ee8ccbfd09f613b6a,2449,京元電子,2449.TW,https://finance.yahoo.com/quote/2449.TW/analysis,1,empty,200,0,,2026-10-24T05:52:19Z
+40064098348,1,7afcba8ccf5f841fb33a,2449,京元電子,2449.TW,https://hk.finance.yahoo.com/quote/2449.TW/analysis,1,empty,200,0,,2026-10-24T05:52:21Z
+40064098348,1,190115ce9d4fbf3329b5,2449,京元電子,2449.TW,https://sg.finance.yahoo.com/quote/2449.TW/analysis,1,empty,200,0,,2026-10-24T05:52:22Z
+40064098348,1,5121a85c8b425ec63da5,2345,智邦,2345.TW,https://finance.yahoo.com/quote/2345.TW/analysis,1,empty,200,0,,2026-10-24T05:52:24Z
+40064098348,1,f2b92f3326e13202d89a,2345,智邦,2345.TW,https://hk.finance.yahoo.com/quote/2345.TW/analysis,1,empty,200,0,,2026-10-24T05:52:26Z
+40064098348,1,fa5bf1f6b55685169ef0,2345,智邦,2345.TW,https://sg.finance.yahoo.com/quote/2345.TW/analysis,1,empty,200,0,,2026-10-24T05:52:27Z
+40064098348,1,ac104e1e62c001007621,6510,精測,6510.TW,https://finance.yahoo.com/quote/6510.TW/analysis,1,empty,200,0,,2026-10-24T05:52:29Z
+40064098348,1,35df8c853161f67c7239,6510,精測,6510.TW,https://hk.finance.yahoo.com/quote/6510.TW/analysis,1,empty,200,0,,2026-10-24T05:52:32Z
+40064098348,1,d207bba3239ec75d9f48,6510,精測,6510.TW,https://sg.finance.yahoo.com/quote/6510.TW/analysis,1,empty,200,0,,2026-10-24T05:52:33Z
+40064098348,1,05f804f3a5fae1c65024,3661,世芯-KY,3661.TW,https://finance.yahoo.com/quote/3661.TW/analysis,1,empty,200,0,,2026-10-24T05:52:35Z
+40064098348,1,6888c8a11437049781b2,3661,世芯-KY,3661.TW,https://hk.finance.yahoo.com/quote/3661.TW/analysis,1,empty,200,0,,2026-10-24T05:52:37Z
+40064098348,1,90edea04dc511da7263b,3661,世芯-KY,3661.TW,https://sg.finance.yahoo.com/quote/3661.TW/analysis,1,empty,200,0,,2026-10-24T05:52:38Z
+40064098348,1,cdff61bd4cddb3b86db4,2881,富邦金,2881.TW,https://finance.yahoo.com/quote/2881.TW/analysis,1,empty,200,0,,2026-10-24T05:52:40Z
+40064098348,1,8950920dc04955e21bd4,2881,富邦金,2881.TW,https://hk.finance.yahoo.com/quote/2881.TW/analysis,1,empty,200,0,,2026-10-24T05:52:41Z
+40064098348,1,f37818a20af0aeb8b20a,2881,富邦金,2881.TW,https://sg.finance.yahoo.com/quote/2881.TW/analysis,1,empty,200,0,,2026-10-24T05:52:43Z
+40064098348,1,c578556260f8625373c8,2882,國泰金,2882.TW,https://finance.yahoo.com/quote/2882.TW/analysis,1,empty,200,0,,2026-10-24T05:52:45Z
+40064098348,1,bca919ee5225594f8a8a,2882,國泰金,2882.TW,https://hk.finance.yahoo.com/quote/2882.TW/analysis,1,success,200,1,,2026-10-24T05:52:48Z
+40064098348,1,e547806533d09dfeed13,2882,國泰金,2882.TW,https://sg.finance.yahoo.com/quote/2882.TW/analysis,1,empty,200,0,,2026-10-24T05:52:49Z
+40064098348,1,66c1541df5d488798823,2891,中信金,2891.TW,https://finance.yahoo.com/quote/2891.TW/analysis,1,empty,200,0,,2026-10-24T05:52:51Z
+40064098348,1,352a7bf845133e389356,2891,中信金,2891.TW,https://hk.finance.yahoo.com/quote/2891.TW/analysis,1,success,200,1,,2026-10-24T05:52:52Z
+40064098348,1,6cc568a4a1d25b82b419,2891,中信金,2891.TW,https://sg.finance.yahoo.com/quote/2891.TW/analysis,1,empty,200,0,,2026-10-24T05:52:54Z
+40064098348,1,a8b10360addb035ffd18,2884,玉山金,2884.TW,https://finance.yahoo.com/quote/2884.TW/analysis,1,empty,200,0,,2026-10-24T05:52:55Z
+40064098348,1,159e6a68019f9680b5f9,2884,玉山金,2884.TW,https://hk.finance.yahoo.com/quote/2884.TW/analysis,1,empty,200,0,,2026-10-24T05:52:57Z
+40064098348,1,9a5faf25979724dff25d,2884,玉山金,2884.TW,https://sg.finance.yahoo.com/quote/2884.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2884.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:53:10Z
+40064098348,1,9a5faf25979724dff25d,2884,玉山金,2884.TW,https://sg.finance.yahoo.com/quote/2884.TW/analysis,2,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2884.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:53:10Z
+40064098348,1,9a5faf25979724dff25d,2884,玉山金,2884.TW,https://sg.finance.yahoo.com/quote/2884.TW/analysis,3,empty,200,0,,2026-10-24T05:53:10Z
+40064098348,1,10500dd8eee9bb7d0059,3711,日月光投控,3711.TW,https://finance.yahoo.com/quote/3711.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3711.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:53:19Z
+40064098348,1,10500dd8eee9bb7d0059,3711,日月光投控,3711.TW,https://finance.yahoo.com/quote/3711.TW/analysis,2,empty,200,0,,2026-10-24T05:53:19Z
+40064098348,1,e2d05ccde3cf11751365,3711,日月光投控,3711.TW,https://hk.finance.yahoo.com/quote/3711.TW/analysis,1,empty,200,0,,2026-10-24T05:53:22Z
+40064098348,1,092ebb5ee09f4af0bf72,3711,日月光投控,3711.TW,https://sg.finance.yahoo.com/quote/3711.TW/analysis,1,empty,200,0,,2026-10-24T05:53:24Z
+40064098348,1,1b2089a2cdf8f9b58089,2408,南亞科,2408.TW,https://finance.yahoo.com/quote/2408.TW/analysis,1,empty,200,0,,2026-10-24T05:53:26Z
+40064098348,1,9dd2da2ce867716f42d6,2408,南亞科,2408.TW,https://hk.finance.yahoo.com/quote/2408.TW/analysis,1,empty,200,0,,2026-10-24T05:53:27Z
+40064098348,1,645d325897ed522a6d6e,2408,南亞科,2408.TW,https://sg.finance.yahoo.com/quote/2408.TW/analysis,1,empty,200,0,,2026-10-24T05:53:29Z
+40064098348,1,fcc52ba31aebdcdb60d7,2360,致茂,2360.TW,https://finance.yahoo.com/quote/2360.TW/analysis,1,empty,200,0,,2026-10-24T05:53:30Z
+40064098348,1,14b92d92d7cd83fee9b9,2360,致茂,2360.TW,https://hk.finance.yahoo.com/quote/2360.TW/analysis,1,empty,200,0,,2026-10-24T05:53:32Z
+40064098348,1,d321bef33e05bd33dcc5,2360,致茂,2360.TW,https://sg.finance.yahoo.com/quote/2360.TW/analysis,1,empty,200,0,,2026-10-24T05:53:34Z
+40064098348,1,c5516cad5165b9d89cf3,3653,健策,3653.TW,https://finance.yahoo.com/quote/3653.TW/analysis,1,empty,200,0,,2026-10-24T05:53:35Z
+40064098348,1,0d6e3bd960be7401ae56,3653,健策,3653.TW,https://hk.finance.yahoo.com/quote/3653.TW/analysis,1,empty,200,0,,2026-10-24T05:53:37Z
+40064098348,1,76c49c3ae93e6681db9e,3653,健策,3653.TW,https://sg.finance.yahoo.com/quote/3653.TW/analysis,1,empty,200,0,,2026-10-24T05:53:38Z
+40064098348,1,4059b6d977aa29f4aa6b,3665,貿聯-KY,3665.TW,https://finance.yahoo.com/quote/3665.TW/analysis,1,empty,200,0,,2026-10-24T05:53:40Z
+40064098348,1,391e855d0d2161fe82c4,3665,貿聯-KY,3665.TW,https://hk.finance.yahoo.com/quote/3665.TW/analysis,1,empty,200,0,,2026-10-24T05:53:41Z
+40064098348,1,d0fda91f420f5bb7791c,3665,貿聯-KY,3665.TW,https://sg.finance.yahoo.com/quote/3665.TW/analysis,1,empty,200,0,,2026-10-24T05:53:43Z
+40064098348,1,9ac3c06a81a592ecd3db,2344,華邦電,2344.TW,https://finance.yahoo.com/quote/2344.TW/analysis,1,empty,200,0,,2026-10-24T05:53:45Z
+40064098348,1,a5fdf911e943c3364b91,2344,華邦電,2344.TW,https://hk.finance.yahoo.com/quote/2344.TW/analysis,1,empty,200,0,,2026-10-24T05:53:47Z
+40064098348,1,4442d09bb7f8ee099642,2344,華邦電,2344.TW,https://sg.finance.yahoo.com/quote/2344.TW/analysis,1,empty,200,0,,2026-10-24T05:53:48Z
+40064098348,1,c5c193da864c51fe89e6,2337,旺宏,2337.TW,https://finance.yahoo.com/quote/2337.TW/analysis,1,empty,200,0,,2026-10-24T05:53:50Z
+40064098348,1,dfebdd05c3ef330e0d7a,2337,旺宏,2337.TW,https://hk.finance.yahoo.com/quote/2337.TW/analysis,1,empty,200,0,,2026-10-24T05:53:53Z
+40064098348,1,93fe9988d832410e2fb2,2337,旺宏,2337.TW,https://sg.finance.yahoo.com/quote/2337.TW/analysis,1,success,200,4,,2026-10-24T05:53:55Z
+40064098348,1,a1bfe289815a15042580,3443,創意,3443.TW,https://finance.yahoo.com/quote/3443.TW/analysis,1,empty,200,0,,2026-10-24T05:53:56Z
+40064098348,1,cc2eacb9ae41f42e441d,3443,創意,3443.TW,https://hk.finance.yahoo.com/quote/3443.TW/analysis,1,empty,200,0,,2026-10-24T05:53:58Z
+40064098348,1,12f0ff1a4ff7e0200be2,3443,創意,3443.TW,https://sg.finance.yahoo.com/quote/3443.TW/analysis,1,empty,200,0,,2026-10-24T05:53:59Z
+40064098348,1,d7461db3bd525921ca74,0050,元大台灣50,0050.TW,https://finance.yahoo.com/quote/0050.TW/analysis,1,empty,200,0,,2026-10-24T05:54:01Z
+40064098348,1,ad4fe79b29bcd8ad9bd5,0050,元大台灣50,0050.TW,https://hk.finance.yahoo.com/quote/0050.TW/analysis,1,empty,200,0,,2026-10-24T05:54:02Z
+40064098348,1,6a50d7577748fc18416c,0050,元大台灣50,0050.TW,https://sg.finance.yahoo.com/quote/0050.TW/analysis,1,empty,200,0,,2026-10-24T05:54:04Z
+40064098348,1,0700263ab4c5e7475f2f,0052,富邦科技,0052.TW,https://finance.yahoo.com/quote/0052.TW/analysis,1,empty,200,0,,2026-10-24T05:54:07Z
+40064098348,1,c41c2deab893109c9020,0052,富邦科技,0052.TW,https://hk.finance.yahoo.com/quote/0052.TW/analysis,1,empty,200,0,,2026-10-24T05:54:08Z
+40064098348,1,369cece603c775c7a31f,0052,富邦科技,0052.TW,https://sg.finance.yahoo.com/quote/0052.TW/analysis,1,empty,200,0,,2026-10-24T05:54:09Z
+40064098348,1,073be763c49f61327fde,2851,中再保,2851.TW,https://finance.yahoo.com/quote/2851.TW/analysis,1,empty,200,0,,2026-10-24T05:54:11Z
+40064098348,1,3d8d5f584d42c042aae4,2851,中再保,2851.TW,https://hk.finance.yahoo.com/quote/2851.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2851.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-10-24T05:54:18Z
+40064098348,1,3d8d5f584d42c042aae4,2851,中再保,2851.TW,https://hk.finance.yahoo.com/quote/2851.TW/analysis,2,empty,200,0,,2026-10-24T05:54:18Z
+40064098348,1,dae635f4b43d73607042,2851,中再保,2851.TW,https://sg.finance.yahoo.com/quote/2851.TW/analysis,1,empty,200,0,,2026-10-24T05:54:20Z
+40064098348,1,38bcaccdaa626f7dd3ea,6166,凌華,6166.TW,https://finance.yahoo.com/quote/6166.TW/analysis,1,empty,200,0,,2026-10-24T05:54:21Z
+40064098348,1,88212c720db453e69b41,6166,凌華,6166.TW,https://hk.finance.yahoo.com/quote/6166.TW/analysis,1,empty,200,0,,2026-10-24T05:54:23Z
+40064098348,1,968037b9adbc451d02e0,6166,凌華,6166.TW,https://sg.finance.yahoo.com/quote/6166.TW/analysis,1,empty,200,0,,2026-10-24T05:54:28Z
+40064098348,1,0db4fe0850e845e2ba41,6579,研揚,6579.TW,https://finance.yahoo.com/quote/6579.TW/analysis,1,empty,200,0,,2026-10-24T05:54:29Z
+40064098348,1,c4d8885370c15933c249,6579,研揚,6579.TW,https://hk.finance.yahoo.com/quote/6579.TW/analysis,1,empty,200,0,,2026-10-24T05:54:31Z
+40064098348,1,897932c67b6e778293fd,6579,研揚,6579.TW,https://sg.finance.yahoo.com/quote/6579.TW/analysis,1,empty,200,0,,2026-10-24T05:54:34Z
+40064098348,1,ebb362fa313af7395c96,8234,新漢,8234.TW,https://finance.yahoo.com/quote/8234.TW/analysis,1,empty,200,0,,2026-10-24T05:54:36Z
+40064098348,1,aa30e5dc7a3f10cf91fa,8234,新漢,8234.TW,https://hk.finance.yahoo.com/quote/8234.TW/analysis,1,empty,200,0,,2026-10-24T05:54:37Z
+40064098348,1,9b90ef625b43ce0d1cb3,8234,新漢,8234.TW,https://sg.finance.yahoo.com/quote/8234.TW/analysis,1,empty,200,0,,2026-10-24T05:54:40Z
+40064098348,1,6447571737a88f30e1c8,3479,安勤,3479.TW,https://finance.yahoo.com/quote/3479.TW/analysis,1,empty,200,0,,2026-10-24T05:54:41Z
+40064098348,1,608689ab30a2ee37b2a2,3479,安勤,3479.TW,https://hk.finance.yahoo.com/quote/3479.TW/analysis,1,empty,200,0,,2026-10-24T05:54:43Z
+40064098348,1,23392721b02db1ed13a1,3479,安勤,3479.TW,https://sg.finance.yahoo.com/quote/3479.TW/analysis,1,empty,200,0,,2026-10-24T05:54:45Z
+40064098348,1,cead39f32d7f513c6197,8050,廣積,8050.TW,https://finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-10-24T05:54:47Z
+40064098348,1,83892bf690d6bc4b234a,8050,廣積,8050.TW,https://hk.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-10-24T05:54:48Z
+40064098348,1,efd4e0cf6aebec743a55,8050,廣積,8050.TW,https://sg.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-10-24T05:54:49Z
