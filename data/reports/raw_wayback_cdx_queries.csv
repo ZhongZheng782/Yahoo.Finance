@@ -10072,3 +10072,430 @@ Call log:
 41788099257,1,3bd8a9c89ea68b88d74e,8050,廣積,8050.TW,https://hk.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-04T07:04:03Z
 41788099257,1,ff2d225d36b2de1e67ed,8050,廣積,8050.TW,https://sg.finance.yahoo.com/quote/8050.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F8050.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-04T07:04:09Z
 41788099257,1,ff2d225d36b2de1e67ed,8050,廣積,8050.TW,https://sg.finance.yahoo.com/quote/8050.TW/analysis,2,empty,200,0,,2026-11-04T07:04:09Z
+41985231958,1,ac53625e2176f6c5ea5e,GLOBAL,Wayback 連線探測,,https://web.archive.org/cdx/search/cdx?url=example.com&output=json&limit=1,1,probe_success,200,,,2026-11-05T07:10:31Z
+41985231958,1,2e287299bf7c9bf396d3,2330,台積電,2330.TW,https://finance.yahoo.com/quote/2330.TW/analysis,1,success,200,10,,2026-11-05T07:10:32Z
+41985231958,1,ce0e73f941f3f66d4de1,2330,台積電,2330.TW,https://hk.finance.yahoo.com/quote/2330.TW/analysis,1,success,200,5,,2026-11-05T07:10:34Z
+41985231958,1,20e18036fdcc89fba3da,2330,台積電,2330.TW,https://sg.finance.yahoo.com/quote/2330.TW/analysis,1,empty,200,0,,2026-11-05T07:10:36Z
+41985231958,1,41591224c6c8a5b26f9d,8299,群聯,8299.TW,https://finance.yahoo.com/quote/8299.TW/analysis,1,empty,200,0,,2026-11-05T07:10:37Z
+41985231958,1,71b0d28d73aa9ae9e5aa,8299,群聯,8299.TW,https://hk.finance.yahoo.com/quote/8299.TW/analysis,1,empty,200,0,,2026-11-05T07:10:40Z
+41985231958,1,083a1a35464fc84dfc6f,8299,群聯,8299.TW,https://sg.finance.yahoo.com/quote/8299.TW/analysis,1,empty,200,0,,2026-11-05T07:10:42Z
+41985231958,1,f984f7a366745082380e,8272,全景軟體,8272.TW,https://finance.yahoo.com/quote/8272.TW/analysis,1,empty,200,0,,2026-11-05T07:10:44Z
+41985231958,1,cf4f2db3af9aef1ad6f2,8272,全景軟體,8272.TW,https://hk.finance.yahoo.com/quote/8272.TW/analysis,1,empty,200,0,,2026-11-05T07:10:47Z
+41985231958,1,2dc43aa473d1ef19d7cc,8272,全景軟體,8272.TW,https://sg.finance.yahoo.com/quote/8272.TW/analysis,1,empty,200,0,,2026-11-05T07:10:50Z
+41985231958,1,26c14d143e015b7eff02,7722,LINEPAY,7722.TW,https://finance.yahoo.com/quote/7722.TW/analysis,1,empty,200,0,,2026-11-05T07:10:51Z
+41985231958,1,5b7d088766802a17f02c,7722,LINEPAY,7722.TW,https://hk.finance.yahoo.com/quote/7722.TW/analysis,1,empty,200,0,,2026-11-05T07:10:53Z
+41985231958,1,017bbfe16f9d1aedf6cc,7722,LINEPAY,7722.TW,https://sg.finance.yahoo.com/quote/7722.TW/analysis,1,empty,200,0,,2026-11-05T07:10:56Z
+41985231958,1,ab1f705adda7cca4fd00,2382,廣達,2382.TW,https://finance.yahoo.com/quote/2382.TW/analysis,1,empty,200,0,,2026-11-05T07:10:58Z
+41985231958,1,1a10a5d9b6c9ef4ca176,2382,廣達,2382.TW,https://hk.finance.yahoo.com/quote/2382.TW/analysis,1,success,200,1,,2026-11-05T07:11:00Z
+41985231958,1,4c5dbafd80df0d6307c7,2382,廣達,2382.TW,https://sg.finance.yahoo.com/quote/2382.TW/analysis,1,empty,200,0,,2026-11-05T07:11:03Z
+41985231958,1,72c9bc66b3a18ca8cd53,2412,中華電,2412.TW,https://finance.yahoo.com/quote/2412.TW/analysis,1,success,200,1,,2026-11-05T07:11:07Z
+41985231958,1,8751ed4d706aba5b11eb,2412,中華電,2412.TW,https://hk.finance.yahoo.com/quote/2412.TW/analysis,1,empty,200,0,,2026-11-05T07:11:09Z
+41985231958,1,ba402f60978bc0fc2e02,2412,中華電,2412.TW,https://sg.finance.yahoo.com/quote/2412.TW/analysis,1,empty,200,0,,2026-11-05T07:11:10Z
+41985231958,1,3e563cac8fd3c4b3788a,3034,聯詠,3034.TW,https://finance.yahoo.com/quote/3034.TW/analysis,1,empty,200,0,,2026-11-05T07:11:12Z
+41985231958,1,b3f30b11d252641481ba,3034,聯詠,3034.TW,https://hk.finance.yahoo.com/quote/3034.TW/analysis,1,empty,200,0,,2026-11-05T07:11:13Z
+41985231958,1,54745fa4e364703aa7e6,3034,聯詠,3034.TW,https://sg.finance.yahoo.com/quote/3034.TW/analysis,1,empty,200,0,,2026-11-05T07:11:15Z
+41985231958,1,76e8b3a207088d7e5725,2379,瑞昱,2379.TW,https://finance.yahoo.com/quote/2379.TW/analysis,1,empty,200,0,,2026-11-05T07:11:16Z
+41985231958,1,92a8e40473d70ea466b6,2379,瑞昱,2379.TW,https://hk.finance.yahoo.com/quote/2379.TW/analysis,1,empty,200,0,,2026-11-05T07:11:17Z
+41985231958,1,f404315a7e1343cfa2cd,2379,瑞昱,2379.TW,https://sg.finance.yahoo.com/quote/2379.TW/analysis,1,empty,200,0,,2026-11-05T07:11:19Z
+41985231958,1,2d30de6d3fc2cdb9f0dc,2454,聯發科,2454.TW,https://finance.yahoo.com/quote/2454.TW/analysis,1,success,200,6,,2026-11-05T07:11:20Z
+41985231958,1,7ee9aa61187d0c8048f6,2454,聯發科,2454.TW,https://hk.finance.yahoo.com/quote/2454.TW/analysis,1,success,200,1,,2026-11-05T07:11:22Z
+41985231958,1,1e3b474c3f12c3abae5c,2454,聯發科,2454.TW,https://sg.finance.yahoo.com/quote/2454.TW/analysis,1,empty,200,0,,2026-11-05T07:11:23Z
+41985231958,1,7a45e1fcb1c3f377be39,2480,敦陽科,2480.TW,https://finance.yahoo.com/quote/2480.TW/analysis,1,empty,200,0,,2026-11-05T07:11:25Z
+41985231958,1,8d0798ce8d84b3480627,2480,敦陽科,2480.TW,https://hk.finance.yahoo.com/quote/2480.TW/analysis,1,empty,200,0,,2026-11-05T07:11:26Z
+41985231958,1,fc49d20fd8e6af87544e,2480,敦陽科,2480.TW,https://sg.finance.yahoo.com/quote/2480.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2480.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:11:43Z
+41985231958,1,fc49d20fd8e6af87544e,2480,敦陽科,2480.TW,https://sg.finance.yahoo.com/quote/2480.TW/analysis,2,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2480.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:11:43Z
+41985231958,1,fc49d20fd8e6af87544e,2480,敦陽科,2480.TW,https://sg.finance.yahoo.com/quote/2480.TW/analysis,3,empty,200,0,,2026-11-05T07:11:43Z
+41985231958,1,12e8e656e9c9eb6dec8f,2301,光寶科,2301.TW,https://finance.yahoo.com/quote/2301.TW/analysis,1,empty,200,0,,2026-11-05T07:11:44Z
+41985231958,1,737dd4a045757e0fe67d,2301,光寶科,2301.TW,https://hk.finance.yahoo.com/quote/2301.TW/analysis,1,empty,200,0,,2026-11-05T07:11:46Z
+41985231958,1,81d2f443feca16653c65,2301,光寶科,2301.TW,https://sg.finance.yahoo.com/quote/2301.TW/analysis,1,empty,200,0,,2026-11-05T07:11:47Z
+41985231958,1,62207d0470ec2b998c30,2303,聯電,2303.TW,https://finance.yahoo.com/quote/2303.TW/analysis,1,success,200,2,,2026-11-05T07:11:49Z
+41985231958,1,5000cab34c8a3e3d1a57,2303,聯電,2303.TW,https://hk.finance.yahoo.com/quote/2303.TW/analysis,1,empty,200,0,,2026-11-05T07:11:50Z
+41985231958,1,87e6668d454c8cf7aa04,2303,聯電,2303.TW,https://sg.finance.yahoo.com/quote/2303.TW/analysis,1,empty,200,0,,2026-11-05T07:11:52Z
+41985231958,1,0a780fbd606a7093b29a,2308,台達電,2308.TW,https://finance.yahoo.com/quote/2308.TW/analysis,1,success,200,1,,2026-11-05T07:11:54Z
+41985231958,1,8e7138a85e90b5b0bc3d,2308,台達電,2308.TW,https://hk.finance.yahoo.com/quote/2308.TW/analysis,1,success,200,3,,2026-11-05T07:11:56Z
+41985231958,1,f4fa9a8b2bd8580edeeb,2308,台達電,2308.TW,https://sg.finance.yahoo.com/quote/2308.TW/analysis,1,empty,200,0,,2026-11-05T07:11:57Z
+41985231958,1,f7026b82fc427a5b31f1,2317,鴻海,2317.TW,https://finance.yahoo.com/quote/2317.TW/analysis,1,success,200,4,,2026-11-05T07:11:59Z
+41985231958,1,fbcdf82127b1358f7f42,2317,鴻海,2317.TW,https://hk.finance.yahoo.com/quote/2317.TW/analysis,1,empty,200,0,,2026-11-05T07:12:00Z
+41985231958,1,7384c6953c6504430a95,2317,鴻海,2317.TW,https://sg.finance.yahoo.com/quote/2317.TW/analysis,1,empty,200,0,,2026-11-05T07:12:01Z
+41985231958,1,9a1a41251b4a2baeb0c0,2324,仁寶,2324.TW,https://finance.yahoo.com/quote/2324.TW/analysis,1,empty,200,0,,2026-11-05T07:12:03Z
+41985231958,1,35e05d7108e05d52a251,2324,仁寶,2324.TW,https://hk.finance.yahoo.com/quote/2324.TW/analysis,1,empty,200,0,,2026-11-05T07:12:05Z
+41985231958,1,39b09f35aded0d91408a,2324,仁寶,2324.TW,https://sg.finance.yahoo.com/quote/2324.TW/analysis,1,empty,200,0,,2026-11-05T07:12:07Z
+41985231958,1,f1a3f811af0a5d4a05a0,2354,鴻準,2354.TW,https://finance.yahoo.com/quote/2354.TW/analysis,1,success,200,2,,2026-11-05T07:12:09Z
+41985231958,1,ed22a852b443ca5e148f,2354,鴻準,2354.TW,https://hk.finance.yahoo.com/quote/2354.TW/analysis,1,success,200,1,,2026-11-05T07:12:10Z
+41985231958,1,e9b915ee398c3ad446d6,2354,鴻準,2354.TW,https://sg.finance.yahoo.com/quote/2354.TW/analysis,1,empty,200,0,,2026-11-05T07:12:12Z
+41985231958,1,758e4b1bae8189bf9687,2356,英業達,2356.TW,https://finance.yahoo.com/quote/2356.TW/analysis,1,success,200,1,,2026-11-05T07:12:13Z
+41985231958,1,eada1e57b24cdd53c825,2356,英業達,2356.TW,https://hk.finance.yahoo.com/quote/2356.TW/analysis,1,empty,200,0,,2026-11-05T07:12:15Z
+41985231958,1,82df0e0324eafde16b31,2356,英業達,2356.TW,https://sg.finance.yahoo.com/quote/2356.TW/analysis,1,empty,200,0,,2026-11-05T07:12:16Z
+41985231958,1,a84c6fcdb7b6059a1cfa,2357,華碩,2357.TW,https://finance.yahoo.com/quote/2357.TW/analysis,1,success,200,1,,2026-11-05T07:12:18Z
+41985231958,1,d5e96b3e9a4a218be597,2357,華碩,2357.TW,https://hk.finance.yahoo.com/quote/2357.TW/analysis,1,empty,200,0,,2026-11-05T07:12:19Z
+41985231958,1,3b7c5a63a2eadc0fe142,2357,華碩,2357.TW,https://sg.finance.yahoo.com/quote/2357.TW/analysis,1,success,200,1,,2026-11-05T07:12:21Z
+41985231958,1,62614bfab2d9dceedd27,2376,技嘉,2376.TW,https://finance.yahoo.com/quote/2376.TW/analysis,1,empty,200,0,,2026-11-05T07:12:22Z
+41985231958,1,55949dad5fdd83f2a137,2376,技嘉,2376.TW,https://hk.finance.yahoo.com/quote/2376.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2376.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:12:27Z
+41985231958,1,55949dad5fdd83f2a137,2376,技嘉,2376.TW,https://hk.finance.yahoo.com/quote/2376.TW/analysis,2,empty,200,0,,2026-11-05T07:12:27Z
+41985231958,1,7c53b55d4b73c6286020,2376,技嘉,2376.TW,https://sg.finance.yahoo.com/quote/2376.TW/analysis,1,empty,200,0,,2026-11-05T07:12:29Z
+41985231958,1,6234bbc84d35e7f93307,2377,微星,2377.TW,https://finance.yahoo.com/quote/2377.TW/analysis,1,empty,200,0,,2026-11-05T07:12:30Z
+41985231958,1,0162a24fa6b799965906,2377,微星,2377.TW,https://hk.finance.yahoo.com/quote/2377.TW/analysis,1,empty,200,0,,2026-11-05T07:12:31Z
+41985231958,1,4e795d0c5b6cc3daed0c,2377,微星,2377.TW,https://sg.finance.yahoo.com/quote/2377.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2377.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:12:38Z
+41985231958,1,4e795d0c5b6cc3daed0c,2377,微星,2377.TW,https://sg.finance.yahoo.com/quote/2377.TW/analysis,2,empty,200,0,,2026-11-05T07:12:38Z
+41985231958,1,5f4241ab5c13ffd17cd8,2458,義隆,2458.TW,https://finance.yahoo.com/quote/2458.TW/analysis,1,empty,200,0,,2026-11-05T07:12:39Z
+41985231958,1,b76d81dd8178520a14ac,2458,義隆,2458.TW,https://hk.finance.yahoo.com/quote/2458.TW/analysis,1,empty,200,0,,2026-11-05T07:12:42Z
+41985231958,1,4eb52a3b0f305117b90e,2458,義隆,2458.TW,https://sg.finance.yahoo.com/quote/2458.TW/analysis,1,empty,200,0,,2026-11-05T07:12:44Z
+41985231958,1,15cba487b8e7719080a7,3014,聯陽,3014.TW,https://finance.yahoo.com/quote/3014.TW/analysis,1,empty,200,0,,2026-11-05T07:12:46Z
+41985231958,1,d9976fa99459e5724b36,3014,聯陽,3014.TW,https://hk.finance.yahoo.com/quote/3014.TW/analysis,1,empty,200,0,,2026-11-05T07:12:48Z
+41985231958,1,bfb100961f8977674106,3014,聯陽,3014.TW,https://sg.finance.yahoo.com/quote/3014.TW/analysis,1,empty,200,0,,2026-11-05T07:12:49Z
+41985231958,1,ec014ce9dd3e85feab2f,3022,威強電,3022.TW,https://finance.yahoo.com/quote/3022.TW/analysis,1,empty,200,0,,2026-11-05T07:12:51Z
+41985231958,1,122694b23709c8e787b1,3022,威強電,3022.TW,https://hk.finance.yahoo.com/quote/3022.TW/analysis,1,empty,200,0,,2026-11-05T07:12:52Z
+41985231958,1,683f9c009a1f898e3cb5,3022,威強電,3022.TW,https://sg.finance.yahoo.com/quote/3022.TW/analysis,1,empty,200,0,,2026-11-05T07:12:54Z
+41985231958,1,bde1dcbe7f5013eeaaed,3035,智原,3035.TW,https://finance.yahoo.com/quote/3035.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3035.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:13:00Z
+41985231958,1,bde1dcbe7f5013eeaaed,3035,智原,3035.TW,https://finance.yahoo.com/quote/3035.TW/analysis,2,empty,200,0,,2026-11-05T07:13:00Z
+41985231958,1,f3932dc4993704b81dc5,3035,智原,3035.TW,https://hk.finance.yahoo.com/quote/3035.TW/analysis,1,empty,200,0,,2026-11-05T07:13:01Z
+41985231958,1,cdb4e4c13c8b63c3e7bd,3035,智原,3035.TW,https://sg.finance.yahoo.com/quote/3035.TW/analysis,1,empty,200,0,,2026-11-05T07:13:03Z
+41985231958,1,374928b7318c856718ed,3045,台灣大,3045.TW,https://finance.yahoo.com/quote/3045.TW/analysis,1,empty,200,0,,2026-11-05T07:13:04Z
+41985231958,1,2750fbec5f7631ad2d63,3045,台灣大,3045.TW,https://hk.finance.yahoo.com/quote/3045.TW/analysis,1,empty,200,0,,2026-11-05T07:13:06Z
+41985231958,1,d6e748a095a2400b7ea9,3045,台灣大,3045.TW,https://sg.finance.yahoo.com/quote/3045.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3045.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:13:12Z
+41985231958,1,d6e748a095a2400b7ea9,3045,台灣大,3045.TW,https://sg.finance.yahoo.com/quote/3045.TW/analysis,2,empty,200,0,,2026-11-05T07:13:12Z
+41985231958,1,5959309b2c39cb1e93df,3231,緯創,3231.TW,https://finance.yahoo.com/quote/3231.TW/analysis,1,success,200,1,,2026-11-05T07:13:14Z
+41985231958,1,28a1d8097b6c3377c39a,3231,緯創,3231.TW,https://hk.finance.yahoo.com/quote/3231.TW/analysis,1,empty,200,0,,2026-11-05T07:13:15Z
+41985231958,1,4fc20f6d94c80d011974,3231,緯創,3231.TW,https://sg.finance.yahoo.com/quote/3231.TW/analysis,1,empty,200,0,,2026-11-05T07:13:17Z
+41985231958,1,df5bf9dba75f9e6c7675,4938,和碩,4938.TW,https://finance.yahoo.com/quote/4938.TW/analysis,1,success,200,1,,2026-11-05T07:13:18Z
+41985231958,1,68c42fa17c58db23fef1,4938,和碩,4938.TW,https://hk.finance.yahoo.com/quote/4938.TW/analysis,1,empty,200,0,,2026-11-05T07:13:20Z
+41985231958,1,a4f08c947242b6e2374a,4938,和碩,4938.TW,https://sg.finance.yahoo.com/quote/4938.TW/analysis,1,success,200,3,,2026-11-05T07:13:22Z
+41985231958,1,1bcc4630644702921a0e,6214,精誠,6214.TW,https://finance.yahoo.com/quote/6214.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6214.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:13:28Z
+41985231958,1,1bcc4630644702921a0e,6214,精誠,6214.TW,https://finance.yahoo.com/quote/6214.TW/analysis,2,empty,200,0,,2026-11-05T07:13:28Z
+41985231958,1,6ee5b3ea7e88d0631b2d,6214,精誠,6214.TW,https://hk.finance.yahoo.com/quote/6214.TW/analysis,1,empty,200,0,,2026-11-05T07:13:30Z
+41985231958,1,99e1ede60af535843918,6214,精誠,6214.TW,https://sg.finance.yahoo.com/quote/6214.TW/analysis,1,empty,200,0,,2026-11-05T07:13:33Z
+41985231958,1,97a02e7af2d570c34f88,6231,系微,6231.TW,https://finance.yahoo.com/quote/6231.TW/analysis,1,empty,200,0,,2026-11-05T07:13:34Z
+41985231958,1,6702c96f6c9ce754e765,6231,系微,6231.TW,https://hk.finance.yahoo.com/quote/6231.TW/analysis,1,empty,200,0,,2026-11-05T07:13:37Z
+41985231958,1,cb696d151bafd8016559,6231,系微,6231.TW,https://sg.finance.yahoo.com/quote/6231.TW/analysis,1,empty,200,0,,2026-11-05T07:13:40Z
+41985231958,1,6540efe58077b152f832,6285,啟碁,6285.TW,https://finance.yahoo.com/quote/6285.TW/analysis,1,empty,200,0,,2026-11-05T07:13:41Z
+41985231958,1,b6027308eec587e5b7cf,6285,啟碁,6285.TW,https://hk.finance.yahoo.com/quote/6285.TW/analysis,1,empty,200,0,,2026-11-05T07:13:43Z
+41985231958,1,88af316b947134418dc8,6285,啟碁,6285.TW,https://sg.finance.yahoo.com/quote/6285.TW/analysis,1,empty,200,0,,2026-11-05T07:13:46Z
+41985231958,1,d058de5f307a22655dcb,6669,緯穎,6669.TW,https://finance.yahoo.com/quote/6669.TW/analysis,1,empty,200,0,,2026-11-05T07:13:47Z
+41985231958,1,8a7b62db51ab57f8bd0e,6669,緯穎,6669.TW,https://hk.finance.yahoo.com/quote/6669.TW/analysis,1,empty,200,0,,2026-11-05T07:13:49Z
+41985231958,1,2f47ed7c2e4ab8058765,6669,緯穎,6669.TW,https://sg.finance.yahoo.com/quote/6669.TW/analysis,1,empty,200,0,,2026-11-05T07:13:52Z
+41985231958,1,7ae5921c67f61a4071b0,7728,光焱科技,7728.TW,https://finance.yahoo.com/quote/7728.TW/analysis,1,empty,200,0,,2026-11-05T07:13:54Z
+41985231958,1,fc6c1364b83fb61d42b3,7728,光焱科技,7728.TW,https://hk.finance.yahoo.com/quote/7728.TW/analysis,1,empty,200,0,,2026-11-05T07:13:55Z
+41985231958,1,002ae1ff1825ac497971,7728,光焱科技,7728.TW,https://sg.finance.yahoo.com/quote/7728.TW/analysis,1,empty,200,0,,2026-11-05T07:13:57Z
+41985231958,1,e08f3c866beb7bc23995,7734,印能科技,7734.TW,https://finance.yahoo.com/quote/7734.TW/analysis,1,empty,200,0,,2026-11-05T07:13:58Z
+41985231958,1,dd293e57681cd18c01ef,7734,印能科技,7734.TW,https://hk.finance.yahoo.com/quote/7734.TW/analysis,1,empty,200,0,,2026-11-05T07:14:00Z
+41985231958,1,bac24f1f738daa1a973c,7734,印能科技,7734.TW,https://sg.finance.yahoo.com/quote/7734.TW/analysis,1,empty,200,0,,2026-11-05T07:14:01Z
+41985231958,1,3b4434735efbe7f7176b,7765,中華資安,7765.TW,https://finance.yahoo.com/quote/7765.TW/analysis,1,empty,200,0,,2026-11-05T07:14:03Z
+41985231958,1,37aee2bed77f7e83bd75,7765,中華資安,7765.TW,https://hk.finance.yahoo.com/quote/7765.TW/analysis,1,empty,200,0,,2026-11-05T07:14:06Z
+41985231958,1,7477c4db89bed098b366,7765,中華資安,7765.TW,https://sg.finance.yahoo.com/quote/7765.TW/analysis,1,empty,200,0,,2026-11-05T07:14:07Z
+41985231958,1,48a8c74b2315204500b0,2395,研華,2395.TW,https://finance.yahoo.com/quote/2395.TW/analysis,1,success,200,1,,2026-11-05T07:14:09Z
+41985231958,1,3518b90882a4298a1e77,2395,研華,2395.TW,https://hk.finance.yahoo.com/quote/2395.TW/analysis,1,empty,200,0,,2026-11-05T07:14:11Z
+41985231958,1,19848067e33faccfaa0c,2395,研華,2395.TW,https://sg.finance.yahoo.com/quote/2395.TW/analysis,1,empty,200,0,,2026-11-05T07:14:13Z
+41985231958,1,38a43254c6972d145e00,5347,世界,5347.TW,https://finance.yahoo.com/quote/5347.TW/analysis,1,empty,200,0,,2026-11-05T07:14:15Z
+41985231958,1,193b020d708d24188d61,5347,世界,5347.TW,https://hk.finance.yahoo.com/quote/5347.TW/analysis,1,empty,200,0,,2026-11-05T07:14:16Z
+41985231958,1,13455d12d0850740e7ca,5347,世界,5347.TW,https://sg.finance.yahoo.com/quote/5347.TW/analysis,1,empty,200,0,,2026-11-05T07:14:18Z
+41985231958,1,5c2481cdec700a352c2e,6770,力積電,6770.TW,https://finance.yahoo.com/quote/6770.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6770.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:14:24Z
+41985231958,1,5c2481cdec700a352c2e,6770,力積電,6770.TW,https://finance.yahoo.com/quote/6770.TW/analysis,2,empty,200,0,,2026-11-05T07:14:24Z
+41985231958,1,cb4bdfc103514968c90f,6770,力積電,6770.TW,https://hk.finance.yahoo.com/quote/6770.TW/analysis,1,empty,200,0,,2026-11-05T07:14:25Z
+41985231958,1,ccac80c8b6494cfe2711,6770,力積電,6770.TW,https://sg.finance.yahoo.com/quote/6770.TW/analysis,1,empty,200,0,,2026-11-05T07:14:27Z
+41985231958,1,09c00d572555b0507d95,2347,聯強,2347.TW,https://finance.yahoo.com/quote/2347.TW/analysis,1,success,200,3,,2026-11-05T07:14:29Z
+41985231958,1,35eb6000b15aae5caf92,2347,聯強,2347.TW,https://hk.finance.yahoo.com/quote/2347.TW/analysis,1,empty,200,0,,2026-11-05T07:14:30Z
+41985231958,1,32d74cb392ec6926fe44,2347,聯強,2347.TW,https://sg.finance.yahoo.com/quote/2347.TW/analysis,1,empty,200,0,,2026-11-05T07:14:32Z
+41985231958,1,b2edd719e890c58a005f,2405,輔信,2405.TW,https://finance.yahoo.com/quote/2405.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2405.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:14:37Z
+41985231958,1,b2edd719e890c58a005f,2405,輔信,2405.TW,https://finance.yahoo.com/quote/2405.TW/analysis,2,empty,200,0,,2026-11-05T07:14:37Z
+41985231958,1,c8a32b2b8042192c2867,2405,輔信,2405.TW,https://hk.finance.yahoo.com/quote/2405.TW/analysis,1,empty,200,0,,2026-11-05T07:14:39Z
+41985231958,1,f2ff3e9befef01ced931,2405,輔信,2405.TW,https://sg.finance.yahoo.com/quote/2405.TW/analysis,1,empty,200,0,,2026-11-05T07:14:40Z
+41985231958,1,b65c676a5748cb788691,2451,創見,2451.TW,https://finance.yahoo.com/quote/2451.TW/analysis,1,empty,200,0,,2026-11-05T07:14:42Z
+41985231958,1,78cd09d36cc7edb52409,2451,創見,2451.TW,https://hk.finance.yahoo.com/quote/2451.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2451.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:14:47Z
+41985231958,1,78cd09d36cc7edb52409,2451,創見,2451.TW,https://hk.finance.yahoo.com/quote/2451.TW/analysis,2,empty,200,0,,2026-11-05T07:14:47Z
+41985231958,1,79889d3b7a30bf0a223a,2451,創見,2451.TW,https://sg.finance.yahoo.com/quote/2451.TW/analysis,1,empty,200,0,,2026-11-05T07:14:49Z
+41985231958,1,4007ef1d119730c58acb,2474,可成,2474.TW,https://finance.yahoo.com/quote/2474.TW/analysis,1,empty,200,0,,2026-11-05T07:14:51Z
+41985231958,1,194b8a365d0e2b302494,2474,可成,2474.TW,https://hk.finance.yahoo.com/quote/2474.TW/analysis,1,success,200,1,,2026-11-05T07:14:54Z
+41985231958,1,550f313e9f9147b8455b,2474,可成,2474.TW,https://sg.finance.yahoo.com/quote/2474.TW/analysis,1,empty,200,0,,2026-11-05T07:14:55Z
+41985231958,1,3dad7e4cf455aa36dbe9,3026,禾伸堂,3026.TW,https://finance.yahoo.com/quote/3026.TW/analysis,1,empty,200,0,,2026-11-05T07:14:57Z
+41985231958,1,b6458d8c519889b0a26e,3026,禾伸堂,3026.TW,https://hk.finance.yahoo.com/quote/3026.TW/analysis,1,empty,200,0,,2026-11-05T07:15:00Z
+41985231958,1,01eab5a2b6edc62f27a0,3026,禾伸堂,3026.TW,https://sg.finance.yahoo.com/quote/3026.TW/analysis,1,empty,200,0,,2026-11-05T07:15:02Z
+41985231958,1,7f97632624f485e32b64,3048,益登,3048.TW,https://finance.yahoo.com/quote/3048.TW/analysis,1,empty,200,0,,2026-11-05T07:15:03Z
+41985231958,1,1b34c18fa559a7e2387a,3048,益登,3048.TW,https://hk.finance.yahoo.com/quote/3048.TW/analysis,1,empty,200,0,,2026-11-05T07:15:05Z
+41985231958,1,1fa801361b1f30375a2c,3048,益登,3048.TW,https://sg.finance.yahoo.com/quote/3048.TW/analysis,1,empty,200,0,,2026-11-05T07:15:06Z
+41985231958,1,d993b9b333a5f5cfdb18,3356,奇偶,3356.TW,https://finance.yahoo.com/quote/3356.TW/analysis,1,empty,200,0,,2026-11-05T07:15:08Z
+41985231958,1,665461deae9b72ec4084,3356,奇偶,3356.TW,https://hk.finance.yahoo.com/quote/3356.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3356.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:15:14Z
+41985231958,1,665461deae9b72ec4084,3356,奇偶,3356.TW,https://hk.finance.yahoo.com/quote/3356.TW/analysis,2,empty,200,0,,2026-11-05T07:15:14Z
+41985231958,1,afdfe20eaecff1893746,3356,奇偶,3356.TW,https://sg.finance.yahoo.com/quote/3356.TW/analysis,1,empty,200,0,,2026-11-05T07:15:17Z
+41985231958,1,e5cd984456dac5eb8cd2,5203,訊連,5203.TW,https://finance.yahoo.com/quote/5203.TW/analysis,1,empty,200,0,,2026-11-05T07:15:19Z
+41985231958,1,930a4dcff68dc696a92c,5203,訊連,5203.TW,https://hk.finance.yahoo.com/quote/5203.TW/analysis,1,empty,200,0,,2026-11-05T07:15:21Z
+41985231958,1,cd54df01da39337002fe,5203,訊連,5203.TW,https://sg.finance.yahoo.com/quote/5203.TW/analysis,1,empty,200,0,,2026-11-05T07:15:22Z
+41985231958,1,67258900d403bdb6232a,6462,神盾,6462.TW,https://finance.yahoo.com/quote/6462.TW/analysis,1,empty,200,0,,2026-11-05T07:15:24Z
+41985231958,1,0199d7fcc59f5ee0528c,6462,神盾,6462.TW,https://hk.finance.yahoo.com/quote/6462.TW/analysis,1,empty,200,0,,2026-11-05T07:15:26Z
+41985231958,1,f4b322ffce0738348572,6462,神盾,6462.TW,https://sg.finance.yahoo.com/quote/6462.TW/analysis,1,empty,200,0,,2026-11-05T07:15:28Z
+41985231958,1,e54fb0141d38c0a99c01,9914,美利達,9914.TW,https://finance.yahoo.com/quote/9914.TW/analysis,1,empty,200,0,,2026-11-05T07:15:30Z
+41985231958,1,84f63c115b3e21284987,9914,美利達,9914.TW,https://hk.finance.yahoo.com/quote/9914.TW/analysis,1,empty,200,0,,2026-11-05T07:15:32Z
+41985231958,1,48eb9c0803276d5bf86f,9914,美利達,9914.TW,https://sg.finance.yahoo.com/quote/9914.TW/analysis,1,empty,200,0,,2026-11-05T07:15:35Z
+41985231958,1,f9286b92d1a955b92867,9921,巨大,9921.TW,https://finance.yahoo.com/quote/9921.TW/analysis,1,empty,200,0,,2026-11-05T07:15:36Z
+41985231958,1,739ea4ed89c6aded90c2,9921,巨大,9921.TW,https://hk.finance.yahoo.com/quote/9921.TW/analysis,1,empty,200,0,,2026-11-05T07:15:38Z
+41985231958,1,dc8ead3b6466d60468a6,9921,巨大,9921.TW,https://sg.finance.yahoo.com/quote/9921.TW/analysis,1,empty,200,0,,2026-11-05T07:15:39Z
+41985231958,1,896f2580f73d1cffa069,5434,崇越,5434.TW,https://finance.yahoo.com/quote/5434.TW/analysis,1,empty,200,0,,2026-11-05T07:15:41Z
+41985231958,1,e0e354e8872513420fc6,5434,崇越,5434.TW,https://hk.finance.yahoo.com/quote/5434.TW/analysis,1,empty,200,0,,2026-11-05T07:15:43Z
+41985231958,1,18f0584ae0418064ac09,5434,崇越,5434.TW,https://sg.finance.yahoo.com/quote/5434.TW/analysis,1,empty,200,0,,2026-11-05T07:15:45Z
+41985231958,1,9d4e7530326fa55aaaa5,6526,達發,6526.TW,https://finance.yahoo.com/quote/6526.TW/analysis,1,empty,200,0,,2026-11-05T07:15:46Z
+41985231958,1,88537630b0a6ce92b9de,6526,達發,6526.TW,https://hk.finance.yahoo.com/quote/6526.TW/analysis,1,empty,200,0,,2026-11-05T07:15:49Z
+41985231958,1,9e1eb396f91726811564,6526,達發,6526.TW,https://sg.finance.yahoo.com/quote/6526.TW/analysis,1,empty,200,0,,2026-11-05T07:15:50Z
+41985231958,1,d8e2bdc0dfabfb9094b4,5269,祥碩,5269.TW,https://finance.yahoo.com/quote/5269.TW/analysis,1,empty,200,0,,2026-11-05T07:15:52Z
+41985231958,1,f207f90a710ccbd23ff5,5269,祥碩,5269.TW,https://hk.finance.yahoo.com/quote/5269.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5269.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:16:00Z
+41985231958,1,f207f90a710ccbd23ff5,5269,祥碩,5269.TW,https://hk.finance.yahoo.com/quote/5269.TW/analysis,2,empty,200,0,,2026-11-05T07:16:00Z
+41985231958,1,161b391e94fee08465c6,5269,祥碩,5269.TW,https://sg.finance.yahoo.com/quote/5269.TW/analysis,1,success,200,1,,2026-11-05T07:16:01Z
+41985231958,1,0ffe006cf0de73f3112d,6695,芯鼎,6695.TW,https://finance.yahoo.com/quote/6695.TW/analysis,1,empty,200,0,,2026-11-05T07:16:03Z
+41985231958,1,02d0915e7262370bf4c3,6695,芯鼎,6695.TW,https://hk.finance.yahoo.com/quote/6695.TW/analysis,1,empty,200,0,,2026-11-05T07:16:04Z
+41985231958,1,32473e41b7786c86780c,6695,芯鼎,6695.TW,https://sg.finance.yahoo.com/quote/6695.TW/analysis,1,empty,200,0,,2026-11-05T07:16:06Z
+41985231958,1,7f3f775ca4e31da14f97,6561,是方,6561.TW,https://finance.yahoo.com/quote/6561.TW/analysis,1,empty,200,0,,2026-11-05T07:16:08Z
+41985231958,1,670df943797db1c96435,6561,是方,6561.TW,https://hk.finance.yahoo.com/quote/6561.TW/analysis,1,empty,200,0,,2026-11-05T07:16:10Z
+41985231958,1,f83f6631cc9780c612da,6561,是方,6561.TW,https://sg.finance.yahoo.com/quote/6561.TW/analysis,1,empty,200,0,,2026-11-05T07:16:11Z
+41985231958,1,62413305785df10a999c,4953,緯軟,4953.TW,https://finance.yahoo.com/quote/4953.TW/analysis,1,empty,200,0,,2026-11-05T07:16:14Z
+41985231958,1,72fe2fa6d32c77477496,4953,緯軟,4953.TW,https://hk.finance.yahoo.com/quote/4953.TW/analysis,1,empty,200,0,,2026-11-05T07:16:17Z
+41985231958,1,d6358a84dd942597b371,4953,緯軟,4953.TW,https://sg.finance.yahoo.com/quote/4953.TW/analysis,1,empty,200,0,,2026-11-05T07:16:19Z
+41985231958,1,03955668b6a9d68f6c91,9917,中保科,9917.TW,https://finance.yahoo.com/quote/9917.TW/analysis,1,empty,200,0,,2026-11-05T07:16:21Z
+41985231958,1,7fc9d3f705d95f8b9f11,9917,中保科,9917.TW,https://hk.finance.yahoo.com/quote/9917.TW/analysis,1,empty,200,0,,2026-11-05T07:16:22Z
+41985231958,1,542dedab5bd5bd049e09,9917,中保科,9917.TW,https://sg.finance.yahoo.com/quote/9917.TW/analysis,1,empty,200,0,,2026-11-05T07:16:24Z
+41985231958,1,bb9b574f8ad6327a12b3,3558,神準,3558.TW,https://finance.yahoo.com/quote/3558.TW/analysis,1,empty,200,0,,2026-11-05T07:16:25Z
+41985231958,1,25be1326b9b9ea34331c,3558,神準,3558.TW,https://hk.finance.yahoo.com/quote/3558.TW/analysis,1,empty,200,0,,2026-11-05T07:16:27Z
+41985231958,1,8d0d3af971c17c118d1d,3558,神準,3558.TW,https://sg.finance.yahoo.com/quote/3558.TW/analysis,1,empty,200,0,,2026-11-05T07:16:29Z
+41985231958,1,e4e3f9128040b37f4831,2450,神腦,2450.TW,https://finance.yahoo.com/quote/2450.TW/analysis,1,empty,200,0,,2026-11-05T07:16:30Z
+41985231958,1,50320d5b227a3047c48f,2450,神腦,2450.TW,https://hk.finance.yahoo.com/quote/2450.TW/analysis,1,empty,200,0,,2026-11-05T07:16:33Z
+41985231958,1,fda874b70b4c98b0b7b4,2450,神腦,2450.TW,https://sg.finance.yahoo.com/quote/2450.TW/analysis,1,empty,200,0,,2026-11-05T07:16:35Z
+41985231958,1,963d11c60f6807a64879,6613,朋億,6613.TW,https://finance.yahoo.com/quote/6613.TW/analysis,1,empty,200,0,,2026-11-05T07:16:36Z
+41985231958,1,89c79b800c67cbd76b49,6613,朋億,6613.TW,https://hk.finance.yahoo.com/quote/6613.TW/analysis,1,empty,200,0,,2026-11-05T07:16:38Z
+41985231958,1,9137580a840c00cbc0a2,6613,朋億,6613.TW,https://sg.finance.yahoo.com/quote/6613.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6613.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:16:43Z
+41985231958,1,9137580a840c00cbc0a2,6613,朋億,6613.TW,https://sg.finance.yahoo.com/quote/6613.TW/analysis,2,empty,200,0,,2026-11-05T07:16:43Z
+41985231958,1,9f3c9278fc3c89272686,7703,銳澤,7703.TW,https://finance.yahoo.com/quote/7703.TW/analysis,1,empty,200,0,,2026-11-05T07:16:44Z
+41985231958,1,b08e4c96d337aa9955af,7703,銳澤,7703.TW,https://hk.finance.yahoo.com/quote/7703.TW/analysis,1,empty,200,0,,2026-11-05T07:16:47Z
+41985231958,1,ae09eb047394e8c3020f,7703,銳澤,7703.TW,https://sg.finance.yahoo.com/quote/7703.TW/analysis,1,empty,200,0,,2026-11-05T07:16:49Z
+41985231958,1,b0f651b0aa310d882abb,3158,嘉實,3158.TW,https://finance.yahoo.com/quote/3158.TW/analysis,1,empty,200,0,,2026-11-05T07:16:50Z
+41985231958,1,7ef5abeafd5d4c44c894,3158,嘉實,3158.TW,https://hk.finance.yahoo.com/quote/3158.TW/analysis,1,empty,200,0,,2026-11-05T07:16:52Z
+41985231958,1,efa9fb0eaa18118e0d89,3158,嘉實,3158.TW,https://sg.finance.yahoo.com/quote/3158.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F3158.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:16:57Z
+41985231958,1,efa9fb0eaa18118e0d89,3158,嘉實,3158.TW,https://sg.finance.yahoo.com/quote/3158.TW/analysis,2,empty,200,0,,2026-11-05T07:16:57Z
+41985231958,1,3bda2a3f77b6f36cdca6,6035,悠遊卡,6035.TW,https://finance.yahoo.com/quote/6035.TW/analysis,1,empty,200,0,,2026-11-05T07:16:58Z
+41985231958,1,5adf5450cb0403ddc0ad,6035,悠遊卡,6035.TW,https://hk.finance.yahoo.com/quote/6035.TW/analysis,1,empty,200,0,,2026-11-05T07:17:00Z
+41985231958,1,7635235aa0135f4fa13f,6035,悠遊卡,6035.TW,https://sg.finance.yahoo.com/quote/6035.TW/analysis,1,empty,200,0,,2026-11-05T07:17:01Z
+41985231958,1,7e78f8e5b7b71cc954e6,5904,寶雅,5904.TW,https://finance.yahoo.com/quote/5904.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5904.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:17:07Z
+41985231958,1,7e78f8e5b7b71cc954e6,5904,寶雅,5904.TW,https://finance.yahoo.com/quote/5904.TW/analysis,2,empty,200,0,,2026-11-05T07:17:07Z
+41985231958,1,18019a52ce4b451fb0b0,5904,寶雅,5904.TW,https://hk.finance.yahoo.com/quote/5904.TW/analysis,1,empty,200,0,,2026-11-05T07:17:10Z
+41985231958,1,bdcbd5c7cc7b1b55f046,5904,寶雅,5904.TW,https://sg.finance.yahoo.com/quote/5904.TW/analysis,1,empty,200,0,,2026-11-05T07:17:11Z
+41985231958,1,e7ef0bcbb65c814f35cc,6182,合晶,6182.TW,https://finance.yahoo.com/quote/6182.TW/analysis,1,empty,200,0,,2026-11-05T07:17:13Z
+41985231958,1,f9b00b0f46626e718f8f,6182,合晶,6182.TW,https://hk.finance.yahoo.com/quote/6182.TW/analysis,1,empty,200,0,,2026-11-05T07:17:15Z
+41985231958,1,361a078ebe458626b830,6182,合晶,6182.TW,https://sg.finance.yahoo.com/quote/6182.TW/analysis,1,empty,200,0,,2026-11-05T07:17:16Z
+41985231958,1,85e77d515166e63e44ee,6962,奕力-KY,6962.TW,https://finance.yahoo.com/quote/6962.TW/analysis,1,empty,200,0,,2026-11-05T07:17:17Z
+41985231958,1,09f30347bfc5f7b58320,6962,奕力-KY,6962.TW,https://hk.finance.yahoo.com/quote/6962.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6962.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:17:23Z
+41985231958,1,09f30347bfc5f7b58320,6962,奕力-KY,6962.TW,https://hk.finance.yahoo.com/quote/6962.TW/analysis,2,empty,200,0,,2026-11-05T07:17:23Z
+41985231958,1,abf0b88e009af4893245,6962,奕力-KY,6962.TW,https://sg.finance.yahoo.com/quote/6962.TW/analysis,1,empty,200,0,,2026-11-05T07:17:25Z
+41985231958,1,f5501368c740922dd6ea,6757,台灣虎航,6757.TW,https://finance.yahoo.com/quote/6757.TW/analysis,1,empty,200,0,,2026-11-05T07:17:26Z
+41985231958,1,30fcbce1047db674fdf5,6757,台灣虎航,6757.TW,https://hk.finance.yahoo.com/quote/6757.TW/analysis,1,empty,200,0,,2026-11-05T07:17:28Z
+41985231958,1,a6f6080908de192e3c6f,6757,台灣虎航,6757.TW,https://sg.finance.yahoo.com/quote/6757.TW/analysis,1,empty,200,0,,2026-11-05T07:17:30Z
+41985231958,1,07ef8c83dde2cad97499,7794,宏碁智新,7794.TW,https://finance.yahoo.com/quote/7794.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7794.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:17:35Z
+41985231958,1,07ef8c83dde2cad97499,7794,宏碁智新,7794.TW,https://finance.yahoo.com/quote/7794.TW/analysis,2,empty,200,0,,2026-11-05T07:17:36Z
+41985231958,1,eb628143b6f8be2864aa,7794,宏碁智新,7794.TW,https://hk.finance.yahoo.com/quote/7794.TW/analysis,1,empty,200,0,,2026-11-05T07:17:37Z
+41985231958,1,5180015596d0a18abd10,7794,宏碁智新,7794.TW,https://sg.finance.yahoo.com/quote/7794.TW/analysis,1,empty,200,0,,2026-11-05T07:17:42Z
+41985231958,1,486438c2933ea140c60b,6996,力領科技,6996.TW,https://finance.yahoo.com/quote/6996.TW/analysis,1,empty,200,0,,2026-11-05T07:17:44Z
+41985231958,1,0ce5fa2e4dbc6dd455b4,6996,力領科技,6996.TW,https://hk.finance.yahoo.com/quote/6996.TW/analysis,1,empty,200,0,,2026-11-05T07:17:46Z
+41985231958,1,a5b95ebf39455ca07ed3,6996,力領科技,6996.TW,https://sg.finance.yahoo.com/quote/6996.TW/analysis,1,empty,200,0,,2026-11-05T07:17:48Z
+41985231958,1,d6785eced3078bd9601b,8016,矽創,8016.TW,https://finance.yahoo.com/quote/8016.TW/analysis,1,empty,200,0,,2026-11-05T07:17:50Z
+41985231958,1,116f349086fab220fce7,8016,矽創,8016.TW,https://hk.finance.yahoo.com/quote/8016.TW/analysis,1,empty,200,0,,2026-11-05T07:17:52Z
+41985231958,1,cdee652f4cca9f1b760f,8016,矽創,8016.TW,https://sg.finance.yahoo.com/quote/8016.TW/analysis,1,empty,200,0,,2026-11-05T07:17:53Z
+41985231958,1,cfec54607eee19f0155a,8045,達運光電,8045.TW,https://finance.yahoo.com/quote/8045.TW/analysis,1,empty,200,0,,2026-11-05T07:17:55Z
+41985231958,1,546f86c3fc3e03685e5d,8045,達運光電,8045.TW,https://hk.finance.yahoo.com/quote/8045.TW/analysis,1,empty,200,0,,2026-11-05T07:17:57Z
+41985231958,1,b6589ef07a2cd9cb2ee9,8045,達運光電,8045.TW,https://sg.finance.yahoo.com/quote/8045.TW/analysis,1,empty,200,0,,2026-11-05T07:17:59Z
+41985231958,1,a6a7e7e2a05322041d31,7704,明遠精密,7704.TW,https://finance.yahoo.com/quote/7704.TW/analysis,1,empty,200,0,,2026-11-05T07:18:00Z
+41985231958,1,e7a11bfb169aa488c43d,7704,明遠精密,7704.TW,https://hk.finance.yahoo.com/quote/7704.TW/analysis,1,empty,200,0,,2026-11-05T07:18:02Z
+41985231958,1,f3f970e05bb7a85ff100,7704,明遠精密,7704.TW,https://sg.finance.yahoo.com/quote/7704.TW/analysis,1,empty,200,0,,2026-11-05T07:18:03Z
+41985231958,1,f02ba68cb9d31117ceb3,6997,博弘,6997.TW,https://finance.yahoo.com/quote/6997.TW/analysis,1,empty,200,0,,2026-11-05T07:18:05Z
+41985231958,1,4f6acfc17076b547747a,6997,博弘,6997.TW,https://hk.finance.yahoo.com/quote/6997.TW/analysis,1,empty,200,0,,2026-11-05T07:18:08Z
+41985231958,1,de94896c92b1a0ba7543,6997,博弘,6997.TW,https://sg.finance.yahoo.com/quote/6997.TW/analysis,1,empty,200,0,,2026-11-05T07:18:12Z
+41985231958,1,a56d7a8adb41e2313e4b,4749,新應材,4749.TW,https://finance.yahoo.com/quote/4749.TW/analysis,1,empty,200,0,,2026-11-05T07:18:13Z
+41985231958,1,68db0b3e509ff40fceb4,4749,新應材,4749.TW,https://hk.finance.yahoo.com/quote/4749.TW/analysis,1,empty,200,0,,2026-11-05T07:18:15Z
+41985231958,1,d6ef41c8cf59ae8fd0e7,4749,新應材,4749.TW,https://sg.finance.yahoo.com/quote/4749.TW/analysis,1,empty,200,0,,2026-11-05T07:18:17Z
+41985231958,1,72be9e4d8ea9d4de3dde,7747,昕奇雲端,7747.TW,https://finance.yahoo.com/quote/7747.TW/analysis,1,empty,200,0,,2026-11-05T07:18:18Z
+41985231958,1,18cfc6fc2340ed612e5c,7747,昕奇雲端,7747.TW,https://hk.finance.yahoo.com/quote/7747.TW/analysis,1,empty,200,0,,2026-11-05T07:18:21Z
+41985231958,1,152655c48ad0a4a9d733,7747,昕奇雲端,7747.TW,https://sg.finance.yahoo.com/quote/7747.TW/analysis,1,empty,200,0,,2026-11-05T07:18:22Z
+41985231958,1,01f7d11614c2a8028768,6425,易發,6425.TW,https://finance.yahoo.com/quote/6425.TW/analysis,1,empty,200,0,,2026-11-05T07:18:24Z
+41985231958,1,10e8a20445e8561a54a4,6425,易發,6425.TW,https://hk.finance.yahoo.com/quote/6425.TW/analysis,1,empty,200,0,,2026-11-05T07:18:26Z
+41985231958,1,569b736b4a72b66f8e1f,6425,易發,6425.TW,https://sg.finance.yahoo.com/quote/6425.TW/analysis,1,empty,200,0,,2026-11-05T07:18:28Z
+41985231958,1,2d2e0a3e1520de1fc7c9,7712,博盛半導體,7712.TW,https://finance.yahoo.com/quote/7712.TW/analysis,1,empty,200,0,,2026-11-05T07:18:30Z
+41985231958,1,5dd9c544737733afcb23,7712,博盛半導體,7712.TW,https://hk.finance.yahoo.com/quote/7712.TW/analysis,1,empty,200,0,,2026-11-05T07:18:31Z
+41985231958,1,af4548fa4897e8909cf5,7712,博盛半導體,7712.TW,https://sg.finance.yahoo.com/quote/7712.TW/analysis,1,empty,200,0,,2026-11-05T07:18:33Z
+41985231958,1,46fa03bd98b12aec42a2,6811,宏碁資訊,6811.TW,https://finance.yahoo.com/quote/6811.TW/analysis,1,empty,200,0,,2026-11-05T07:18:35Z
+41985231958,1,01163aea0abb90e7666f,6811,宏碁資訊,6811.TW,https://hk.finance.yahoo.com/quote/6811.TW/analysis,1,empty,200,0,,2026-11-05T07:18:38Z
+41985231958,1,3125f6977a97f66135c7,6811,宏碁資訊,6811.TW,https://sg.finance.yahoo.com/quote/6811.TW/analysis,1,empty,200,0,,2026-11-05T07:18:39Z
+41985231958,1,676a6e993c9edf2f33dd,3029,零壹,3029.TW,https://finance.yahoo.com/quote/3029.TW/analysis,1,empty,200,0,,2026-11-05T07:18:40Z
+41985231958,1,bd557ac908d03a4fa4d5,3029,零壹,3029.TW,https://hk.finance.yahoo.com/quote/3029.TW/analysis,1,empty,200,0,,2026-11-05T07:18:43Z
+41985231958,1,a7767e19b5dd0034d8a9,3029,零壹,3029.TW,https://sg.finance.yahoo.com/quote/3029.TW/analysis,1,empty,200,0,,2026-11-05T07:18:44Z
+41985231958,1,dca450b63ef05f85548b,6690,安碁資訊,6690.TW,https://finance.yahoo.com/quote/6690.TW/analysis,1,empty,200,0,,2026-11-05T07:18:46Z
+41985231958,1,ed3906a4ac16fdc2b91e,6690,安碁資訊,6690.TW,https://hk.finance.yahoo.com/quote/6690.TW/analysis,1,empty,200,0,,2026-11-05T07:18:47Z
+41985231958,1,ad76abcf7299ecaf8a85,6690,安碁資訊,6690.TW,https://sg.finance.yahoo.com/quote/6690.TW/analysis,1,empty,200,0,,2026-11-05T07:18:49Z
+41985231958,1,bc51bf750e6fc0faa9b1,6763,綠界科技,6763.TW,https://finance.yahoo.com/quote/6763.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6763.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:18:54Z
+41985231958,1,bc51bf750e6fc0faa9b1,6763,綠界科技,6763.TW,https://finance.yahoo.com/quote/6763.TW/analysis,2,empty,200,0,,2026-11-05T07:18:54Z
+41985231958,1,4b1602ad6af30ffe52af,6763,綠界科技,6763.TW,https://hk.finance.yahoo.com/quote/6763.TW/analysis,1,empty,200,0,,2026-11-05T07:18:56Z
+41985231958,1,699b8d624b7cce2a3be8,6763,綠界科技,6763.TW,https://sg.finance.yahoo.com/quote/6763.TW/analysis,1,empty,200,0,,2026-11-05T07:18:57Z
+41985231958,1,0ab3261d4bf003012351,6751,智聯服務,6751.TW,https://finance.yahoo.com/quote/6751.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6751.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:19:03Z
+41985231958,1,0ab3261d4bf003012351,6751,智聯服務,6751.TW,https://finance.yahoo.com/quote/6751.TW/analysis,2,empty,200,0,,2026-11-05T07:19:03Z
+41985231958,1,02cc24f7c05631bee728,6751,智聯服務,6751.TW,https://hk.finance.yahoo.com/quote/6751.TW/analysis,1,empty,200,0,,2026-11-05T07:19:04Z
+41985231958,1,c4646a6fe4f0541df664,6751,智聯服務,6751.TW,https://sg.finance.yahoo.com/quote/6751.TW/analysis,1,empty,200,0,,2026-11-05T07:19:06Z
+41985231958,1,138044157543f3f4e0ba,6442,光聖,6442.TW,https://finance.yahoo.com/quote/6442.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6442.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:19:11Z
+41985231958,1,138044157543f3f4e0ba,6442,光聖,6442.TW,https://finance.yahoo.com/quote/6442.TW/analysis,2,empty,200,0,,2026-11-05T07:19:11Z
+41985231958,1,4e5007f64bb932eef7ae,6442,光聖,6442.TW,https://hk.finance.yahoo.com/quote/6442.TW/analysis,1,empty,200,0,,2026-11-05T07:19:13Z
+41985231958,1,b4aedb7eebda77d82ae3,6442,光聖,6442.TW,https://sg.finance.yahoo.com/quote/6442.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6442.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:19:18Z
+41985231958,1,b4aedb7eebda77d82ae3,6442,光聖,6442.TW,https://sg.finance.yahoo.com/quote/6442.TW/analysis,2,empty,200,0,,2026-11-05T07:19:18Z
+41985231958,1,1205adedaa1485029c15,8454,富邦媒,8454.TW,https://finance.yahoo.com/quote/8454.TW/analysis,1,empty,200,0,,2026-11-05T07:19:20Z
+41985231958,1,5c70f251bc4b70f7af29,8454,富邦媒,8454.TW,https://hk.finance.yahoo.com/quote/8454.TW/analysis,1,empty,200,0,,2026-11-05T07:19:22Z
+41985231958,1,96d5558009ade57ca673,8454,富邦媒,8454.TW,https://sg.finance.yahoo.com/quote/8454.TW/analysis,1,empty,200,0,,2026-11-05T07:19:24Z
+41985231958,1,347ed8510177707eb6be,2332,友訊,2332.TW,https://finance.yahoo.com/quote/2332.TW/analysis,1,empty,200,0,,2026-11-05T07:19:25Z
+41985231958,1,ddbc4a143ddd956d6965,2332,友訊,2332.TW,https://hk.finance.yahoo.com/quote/2332.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F2332.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:19:30Z
+41985231958,1,ddbc4a143ddd956d6965,2332,友訊,2332.TW,https://hk.finance.yahoo.com/quote/2332.TW/analysis,2,empty,200,0,,2026-11-05T07:19:30Z
+41985231958,1,f8aee9949f1c2324887f,2332,友訊,2332.TW,https://sg.finance.yahoo.com/quote/2332.TW/analysis,1,empty,200,0,,2026-11-05T07:19:31Z
+41985231958,1,7e10f5e04047ba94b4bd,7805,威聯通,7805.TW,https://finance.yahoo.com/quote/7805.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F7805.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:19:37Z
+41985231958,1,7e10f5e04047ba94b4bd,7805,威聯通,7805.TW,https://finance.yahoo.com/quote/7805.TW/analysis,2,empty,200,0,,2026-11-05T07:19:37Z
+41985231958,1,1ac87b8e772bbc210000,7805,威聯通,7805.TW,https://hk.finance.yahoo.com/quote/7805.TW/analysis,1,empty,200,0,,2026-11-05T07:19:39Z
+41985231958,1,131ffb1a5d653d3ddf43,7805,威聯通,7805.TW,https://sg.finance.yahoo.com/quote/7805.TW/analysis,1,empty,200,0,,2026-11-05T07:19:40Z
+41985231958,1,dfd777b392d5a8e6ecf9,5536,聖暉,5536.TW,https://finance.yahoo.com/quote/5536.TW/analysis,1,empty,200,0,,2026-11-05T07:19:44Z
+41985231958,1,67cccc3e17f6cca837d9,5536,聖暉,5536.TW,https://hk.finance.yahoo.com/quote/5536.TW/analysis,1,empty,200,0,,2026-11-05T07:19:46Z
+41985231958,1,72f16e0322232f70079f,5536,聖暉,5536.TW,https://sg.finance.yahoo.com/quote/5536.TW/analysis,1,empty,200,0,,2026-11-05T07:19:47Z
+41985231958,1,4806ce3f2686c9491c3b,6125,廣運,6125.TW,https://finance.yahoo.com/quote/6125.TW/analysis,1,empty,200,0,,2026-11-05T07:19:49Z
+41985231958,1,90e65e7f6a49f3a51bfb,6125,廣運,6125.TW,https://hk.finance.yahoo.com/quote/6125.TW/analysis,1,empty,200,0,,2026-11-05T07:19:52Z
+41985231958,1,9b5e32001c401794f958,6125,廣運,6125.TW,https://sg.finance.yahoo.com/quote/6125.TW/analysis,1,empty,200,0,,2026-11-05T07:19:53Z
+41985231958,1,3bf067d4664fa1dfd089,2359,所羅門,2359.TW,https://finance.yahoo.com/quote/2359.TW/analysis,1,empty,200,0,,2026-11-05T07:19:55Z
+41985231958,1,a017a82482f35c6e0c18,2359,所羅門,2359.TW,https://hk.finance.yahoo.com/quote/2359.TW/analysis,1,empty,200,0,,2026-11-05T07:19:57Z
+41985231958,1,297af773a6dc725aa9f7,2359,所羅門,2359.TW,https://sg.finance.yahoo.com/quote/2359.TW/analysis,1,empty,200,0,,2026-11-05T07:19:58Z
+41985231958,1,673706673626f9389e3e,6506,雙邦,6506.TW,https://finance.yahoo.com/quote/6506.TW/analysis,1,empty,200,0,,2026-11-05T07:20:00Z
+41985231958,1,03be97f4d9d0bf6997b5,6506,雙邦,6506.TW,https://hk.finance.yahoo.com/quote/6506.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F6506.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:20:05Z
+41985231958,1,03be97f4d9d0bf6997b5,6506,雙邦,6506.TW,https://hk.finance.yahoo.com/quote/6506.TW/analysis,2,empty,200,0,,2026-11-05T07:20:05Z
+41985231958,1,aa993842a79dd88fa2dc,6506,雙邦,6506.TW,https://sg.finance.yahoo.com/quote/6506.TW/analysis,1,empty,200,0,,2026-11-05T07:20:07Z
+41985231958,1,6cba94a4048d1fda948b,3293,鈊象,3293.TW,https://finance.yahoo.com/quote/3293.TW/analysis,1,empty,200,0,,2026-11-05T07:20:09Z
+41985231958,1,6cd3eb8212415da0b194,3293,鈊象,3293.TW,https://hk.finance.yahoo.com/quote/3293.TW/analysis,1,empty,200,0,,2026-11-05T07:20:10Z
+41985231958,1,6bea8a3f754f25f25f9b,3293,鈊象,3293.TW,https://sg.finance.yahoo.com/quote/3293.TW/analysis,1,empty,200,0,,2026-11-05T07:20:12Z
+41985231958,1,97b0bd624f9c201b53e4,5274,信驊,5274.TW,https://finance.yahoo.com/quote/5274.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:21:54Z
+41985231958,1,97b0bd624f9c201b53e4,5274,信驊,5274.TW,https://finance.yahoo.com/quote/5274.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-11-05T07:21:54Z
+41985231958,1,97b0bd624f9c201b53e4,5274,信驊,5274.TW,https://finance.yahoo.com/quote/5274.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-11-05T07:21:54Z
+41985231958,1,d59cdc5405c505326405,5274,信驊,5274.TW,https://hk.finance.yahoo.com/quote/5274.TW/analysis,1,network_or_parse_error,,,"WaybackRequestError: TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-11-05T07:24:03Z
+41985231958,1,d59cdc5405c505326405,5274,信驊,5274.TW,https://hk.finance.yahoo.com/quote/5274.TW/analysis,2,network_or_parse_error,,,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-11-05T07:24:03Z
+41985231958,1,d59cdc5405c505326405,5274,信驊,5274.TW,https://hk.finance.yahoo.com/quote/5274.TW/analysis,3,network_or_parse_error,,0,"WaybackRequestError: Error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length
+Call log:
+  - navigating to ""https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F5274.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length"", waiting until ""domcontentloaded""
+",2026-11-05T07:24:03Z
+41985231958,1,79cf0655e4a84a877173,5274,信驊,5274.TW,https://sg.finance.yahoo.com/quote/5274.TW/analysis,1,empty,200,0,,2026-11-05T07:24:20Z
+41985231958,1,ca39994d2dd963d3cc3c,2603,長榮,2603.TW,https://finance.yahoo.com/quote/2603.TW/analysis,1,empty,200,0,,2026-11-05T07:24:21Z
+41985231958,1,45ed10c2562d46340503,2603,長榮,2603.TW,https://hk.finance.yahoo.com/quote/2603.TW/analysis,1,empty,200,0,,2026-11-05T07:24:26Z
+41985231958,1,94c7df9c78082423081b,2603,長榮,2603.TW,https://sg.finance.yahoo.com/quote/2603.TW/analysis,1,empty,200,0,,2026-11-05T07:24:27Z
+41985231958,1,d2362c189392b98f6975,7547,碩網,7547.TW,https://finance.yahoo.com/quote/7547.TW/analysis,1,empty,200,0,,2026-11-05T07:24:35Z
+41985231958,1,3b325be2b9936f8e7fb9,7547,碩網,7547.TW,https://hk.finance.yahoo.com/quote/7547.TW/analysis,1,empty,200,0,,2026-11-05T07:24:36Z
+41985231958,1,a7409378dd882513fd26,7547,碩網,7547.TW,https://sg.finance.yahoo.com/quote/7547.TW/analysis,1,empty,200,0,,2026-11-05T07:24:40Z
+41985231958,1,8e4ba33b530ff696a751,7736,虎山,7736.TW,https://finance.yahoo.com/quote/7736.TW/analysis,1,empty,200,0,,2026-11-05T07:24:42Z
+41985231958,1,d589a986d1fa12baafe5,7736,虎山,7736.TW,https://hk.finance.yahoo.com/quote/7736.TW/analysis,1,empty,200,0,,2026-11-05T07:24:44Z
+41985231958,1,b51a17f3aeab66e0646a,7736,虎山,7736.TW,https://sg.finance.yahoo.com/quote/7736.TW/analysis,1,empty,200,0,,2026-11-05T07:24:45Z
+41985231958,1,b8a1cf2aac1c133245ba,7732,金興精密,7732.TW,https://finance.yahoo.com/quote/7732.TW/analysis,1,empty,200,0,,2026-11-05T07:24:47Z
+41985231958,1,106c9eafe2620d343ee7,7732,金興精密,7732.TW,https://hk.finance.yahoo.com/quote/7732.TW/analysis,1,empty,200,0,,2026-11-05T07:24:48Z
+41985231958,1,1f9f26af83861b2ccf28,7732,金興精密,7732.TW,https://sg.finance.yahoo.com/quote/7732.TW/analysis,1,empty,200,0,,2026-11-05T07:24:50Z
+41985231958,1,42f195c9b47676109576,7769,鴻勁,7769.TW,https://finance.yahoo.com/quote/7769.TW/analysis,1,empty,200,0,,2026-11-05T07:24:51Z
+41985231958,1,1fc2547ad92be88634f1,7769,鴻勁,7769.TW,https://hk.finance.yahoo.com/quote/7769.TW/analysis,1,empty,200,0,,2026-11-05T07:24:53Z
+41985231958,1,ca503f5e091473df0f65,7769,鴻勁,7769.TW,https://sg.finance.yahoo.com/quote/7769.TW/analysis,1,empty,200,0,,2026-11-05T07:24:54Z
+41985231958,1,9d9266ed7ebbed48613a,2383,台光電,2383.TW,https://finance.yahoo.com/quote/2383.TW/analysis,1,empty,200,0,,2026-11-05T07:24:56Z
+41985231958,1,e8757d27d7157b187e28,2383,台光電,2383.TW,https://hk.finance.yahoo.com/quote/2383.TW/analysis,1,empty,200,0,,2026-11-05T07:24:59Z
+41985231958,1,04bb0bc018a51e795a58,2383,台光電,2383.TW,https://sg.finance.yahoo.com/quote/2383.TW/analysis,1,empty,200,0,,2026-11-05T07:25:02Z
+41985231958,1,a879a41ae571ba44fa9f,7709,榮田,7709.TW,https://finance.yahoo.com/quote/7709.TW/analysis,1,empty,200,0,,2026-11-05T07:25:04Z
+41985231958,1,03a71942b74c55703e53,7709,榮田,7709.TW,https://hk.finance.yahoo.com/quote/7709.TW/analysis,1,empty,200,0,,2026-11-05T07:25:06Z
+41985231958,1,8413572dbc61b7dd7041,7709,榮田,7709.TW,https://sg.finance.yahoo.com/quote/7709.TW/analysis,1,empty,200,0,,2026-11-05T07:25:07Z
+41985231958,1,155aedd15481e15fd2e6,3260,威剛,3260.TW,https://finance.yahoo.com/quote/3260.TW/analysis,1,empty,200,0,,2026-11-05T07:25:09Z
+41985231958,1,a8cc596743953a4bcc8d,3260,威剛,3260.TW,https://hk.finance.yahoo.com/quote/3260.TW/analysis,1,empty,200,0,,2026-11-05T07:25:10Z
+41985231958,1,49fbb8fbbfb3c7849862,3260,威剛,3260.TW,https://sg.finance.yahoo.com/quote/3260.TW/analysis,1,empty,200,0,,2026-11-05T07:25:11Z
+41985231958,1,089a3603e16eb01ace2f,3467,台灣精材,3467.TW,https://finance.yahoo.com/quote/3467.TW/analysis,1,empty,200,0,,2026-11-05T07:25:14Z
+41985231958,1,87309435b419c1829d6a,3467,台灣精材,3467.TW,https://hk.finance.yahoo.com/quote/3467.TW/analysis,1,empty,200,0,,2026-11-05T07:25:15Z
+41985231958,1,a74ca8b9ede0e817fe8f,3467,台灣精材,3467.TW,https://sg.finance.yahoo.com/quote/3467.TW/analysis,1,empty,200,0,,2026-11-05T07:25:19Z
+41985231958,1,a7c9833074e6affd3557,6597,立誠,6597.TW,https://finance.yahoo.com/quote/6597.TW/analysis,1,empty,200,0,,2026-11-05T07:25:21Z
+41985231958,1,5497657bfa4d94008768,6597,立誠,6597.TW,https://hk.finance.yahoo.com/quote/6597.TW/analysis,1,empty,200,0,,2026-11-05T07:25:23Z
+41985231958,1,cb6dbabca43175583398,6597,立誠,6597.TW,https://sg.finance.yahoo.com/quote/6597.TW/analysis,1,empty,200,0,,2026-11-05T07:25:24Z
+41985231958,1,e5277398dad583612206,6925,意藍,6925.TW,https://finance.yahoo.com/quote/6925.TW/analysis,1,empty,200,0,,2026-11-05T07:25:26Z
+41985231958,1,387b4714e5914ec2da14,6925,意藍,6925.TW,https://hk.finance.yahoo.com/quote/6925.TW/analysis,1,empty,200,0,,2026-11-05T07:25:29Z
+41985231958,1,f0dd39fd739558718017,6925,意藍,6925.TW,https://sg.finance.yahoo.com/quote/6925.TW/analysis,1,empty,200,0,,2026-11-05T07:25:30Z
+41985231958,1,de043529eb50bf976e6a,2449,京元電子,2449.TW,https://finance.yahoo.com/quote/2449.TW/analysis,1,empty,200,0,,2026-11-05T07:25:32Z
+41985231958,1,f62f6d15d92fb4ca16d9,2449,京元電子,2449.TW,https://hk.finance.yahoo.com/quote/2449.TW/analysis,1,empty,200,0,,2026-11-05T07:25:33Z
+41985231958,1,0d903626b823a7296e9e,2449,京元電子,2449.TW,https://sg.finance.yahoo.com/quote/2449.TW/analysis,1,empty,200,0,,2026-11-05T07:25:35Z
+41985231958,1,19eb8ab0d07366173f50,2345,智邦,2345.TW,https://finance.yahoo.com/quote/2345.TW/analysis,1,empty,200,0,,2026-11-05T07:25:36Z
+41985231958,1,6628ff4e9d0cd56541f6,2345,智邦,2345.TW,https://hk.finance.yahoo.com/quote/2345.TW/analysis,1,empty,200,0,,2026-11-05T07:25:38Z
+41985231958,1,37caa50313d602b18c8d,2345,智邦,2345.TW,https://sg.finance.yahoo.com/quote/2345.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F2345.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:25:44Z
+41985231958,1,37caa50313d602b18c8d,2345,智邦,2345.TW,https://sg.finance.yahoo.com/quote/2345.TW/analysis,2,empty,200,0,,2026-11-05T07:25:44Z
+41985231958,1,ad6c486881a4ad599714,6510,精測,6510.TW,https://finance.yahoo.com/quote/6510.TW/analysis,1,empty,200,0,,2026-11-05T07:25:46Z
+41985231958,1,4792c55e4a8a77dad522,6510,精測,6510.TW,https://hk.finance.yahoo.com/quote/6510.TW/analysis,1,empty,200,0,,2026-11-05T07:25:47Z
+41985231958,1,2f85dc430e3c9a7a8f7a,6510,精測,6510.TW,https://sg.finance.yahoo.com/quote/6510.TW/analysis,1,empty,200,0,,2026-11-05T07:25:49Z
+41985231958,1,4cb195d1c34c02a6f2b5,3661,世芯-KY,3661.TW,https://finance.yahoo.com/quote/3661.TW/analysis,1,empty,200,0,,2026-11-05T07:25:50Z
+41985231958,1,daaa481519a3833f51c7,3661,世芯-KY,3661.TW,https://hk.finance.yahoo.com/quote/3661.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F3661.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:25:56Z
+41985231958,1,daaa481519a3833f51c7,3661,世芯-KY,3661.TW,https://hk.finance.yahoo.com/quote/3661.TW/analysis,2,empty,200,0,,2026-11-05T07:25:56Z
+41985231958,1,f028034d940bb094806e,3661,世芯-KY,3661.TW,https://sg.finance.yahoo.com/quote/3661.TW/analysis,1,empty,200,0,,2026-11-05T07:25:59Z
+41985231958,1,d44507edbf83cb5a5569,2881,富邦金,2881.TW,https://finance.yahoo.com/quote/2881.TW/analysis,1,empty,200,0,,2026-11-05T07:26:00Z
+41985231958,1,0853fc87651218b4d976,2881,富邦金,2881.TW,https://hk.finance.yahoo.com/quote/2881.TW/analysis,1,empty,200,0,,2026-11-05T07:26:02Z
+41985231958,1,cc4a066bdb1247372dc4,2881,富邦金,2881.TW,https://sg.finance.yahoo.com/quote/2881.TW/analysis,1,empty,200,0,,2026-11-05T07:26:03Z
+41985231958,1,604c1cae51917be9e2f0,2882,國泰金,2882.TW,https://finance.yahoo.com/quote/2882.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F2882.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:26:11Z
+41985231958,1,604c1cae51917be9e2f0,2882,國泰金,2882.TW,https://finance.yahoo.com/quote/2882.TW/analysis,2,empty,200,0,,2026-11-05T07:26:11Z
+41985231958,1,23b7330ba578a9c81266,2882,國泰金,2882.TW,https://hk.finance.yahoo.com/quote/2882.TW/analysis,1,success,200,1,,2026-11-05T07:26:13Z
+41985231958,1,7b9d0251c71ece8c45b3,2882,國泰金,2882.TW,https://sg.finance.yahoo.com/quote/2882.TW/analysis,1,empty,200,0,,2026-11-05T07:26:15Z
+41985231958,1,cf9da57a6c4c39ff4b98,2891,中信金,2891.TW,https://finance.yahoo.com/quote/2891.TW/analysis,1,empty,200,0,,2026-11-05T07:26:17Z
+41985231958,1,25901f8ed6e89f2bb1ed,2891,中信金,2891.TW,https://hk.finance.yahoo.com/quote/2891.TW/analysis,1,success,200,1,,2026-11-05T07:26:18Z
+41985231958,1,9841910100a9f1608e6c,2891,中信金,2891.TW,https://sg.finance.yahoo.com/quote/2891.TW/analysis,1,empty,200,0,,2026-11-05T07:26:20Z
+41985231958,1,ad09858de96777e98637,2884,玉山金,2884.TW,https://finance.yahoo.com/quote/2884.TW/analysis,1,empty,200,0,,2026-11-05T07:26:22Z
+41985231958,1,59161733fd1e65cc19d2,2884,玉山金,2884.TW,https://hk.finance.yahoo.com/quote/2884.TW/analysis,1,empty,200,0,,2026-11-05T07:26:24Z
+41985231958,1,7da60d37ecafb88321b2,2884,玉山金,2884.TW,https://sg.finance.yahoo.com/quote/2884.TW/analysis,1,empty,200,0,,2026-11-05T07:26:26Z
+41985231958,1,2a3357fe6fd560631217,3711,日月光投控,3711.TW,https://finance.yahoo.com/quote/3711.TW/analysis,1,empty,200,0,,2026-11-05T07:26:28Z
+41985231958,1,a61699a38ace800577fd,3711,日月光投控,3711.TW,https://hk.finance.yahoo.com/quote/3711.TW/analysis,1,empty,200,0,,2026-11-05T07:26:29Z
+41985231958,1,7e87f4a2297d9fc3990a,3711,日月光投控,3711.TW,https://sg.finance.yahoo.com/quote/3711.TW/analysis,1,empty,200,0,,2026-11-05T07:26:31Z
+41985231958,1,0fafa0b12a716921b4af,2408,南亞科,2408.TW,https://finance.yahoo.com/quote/2408.TW/analysis,1,empty,200,0,,2026-11-05T07:26:33Z
+41985231958,1,14f7bff1c1ce1f5ae862,2408,南亞科,2408.TW,https://hk.finance.yahoo.com/quote/2408.TW/analysis,1,empty,200,0,,2026-11-05T07:26:36Z
+41985231958,1,a32222cb08c811579892,2408,南亞科,2408.TW,https://sg.finance.yahoo.com/quote/2408.TW/analysis,1,empty,200,0,,2026-11-05T07:26:37Z
+41985231958,1,a74acf4dd0e67773f3d6,2360,致茂,2360.TW,https://finance.yahoo.com/quote/2360.TW/analysis,1,empty,200,0,,2026-11-05T07:26:39Z
+41985231958,1,cd4c688d29ffdb608fcc,2360,致茂,2360.TW,https://hk.finance.yahoo.com/quote/2360.TW/analysis,1,empty,200,0,,2026-11-05T07:26:41Z
+41985231958,1,8ac105e11ca52c66b32e,2360,致茂,2360.TW,https://sg.finance.yahoo.com/quote/2360.TW/analysis,1,empty,200,0,,2026-11-05T07:26:42Z
+41985231958,1,f74da0966a18632ae1fb,3653,健策,3653.TW,https://finance.yahoo.com/quote/3653.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F3653.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:26:48Z
+41985231958,1,f74da0966a18632ae1fb,3653,健策,3653.TW,https://finance.yahoo.com/quote/3653.TW/analysis,2,empty,200,0,,2026-11-05T07:26:48Z
+41985231958,1,40f442183d4307055fa8,3653,健策,3653.TW,https://hk.finance.yahoo.com/quote/3653.TW/analysis,1,empty,200,0,,2026-11-05T07:26:51Z
+41985231958,1,4d5edf1ee518fdd4ecfb,3653,健策,3653.TW,https://sg.finance.yahoo.com/quote/3653.TW/analysis,1,empty,200,0,,2026-11-05T07:26:52Z
+41985231958,1,581d5e2cc67218d37878,3665,貿聯-KY,3665.TW,https://finance.yahoo.com/quote/3665.TW/analysis,1,empty,200,0,,2026-11-05T07:26:57Z
+41985231958,1,09712947e917beaa0b74,3665,貿聯-KY,3665.TW,https://hk.finance.yahoo.com/quote/3665.TW/analysis,1,empty,200,0,,2026-11-05T07:26:59Z
+41985231958,1,7f4af8d55067269ed33f,3665,貿聯-KY,3665.TW,https://sg.finance.yahoo.com/quote/3665.TW/analysis,1,empty,200,0,,2026-11-05T07:27:00Z
+41985231958,1,50600a8da88ab8162692,2344,華邦電,2344.TW,https://finance.yahoo.com/quote/2344.TW/analysis,1,empty,200,0,,2026-11-05T07:27:02Z
+41985231958,1,a9597c8fa3f8695eb8fb,2344,華邦電,2344.TW,https://hk.finance.yahoo.com/quote/2344.TW/analysis,1,empty,200,0,,2026-11-05T07:27:04Z
+41985231958,1,47177d9f0393160eeb12,2344,華邦電,2344.TW,https://sg.finance.yahoo.com/quote/2344.TW/analysis,1,empty,200,0,,2026-11-05T07:27:05Z
+41985231958,1,222598c5870c4ed557e1,2337,旺宏,2337.TW,https://finance.yahoo.com/quote/2337.TW/analysis,1,empty,200,0,,2026-11-05T07:27:07Z
+41985231958,1,52080f241542fe456d5a,2337,旺宏,2337.TW,https://hk.finance.yahoo.com/quote/2337.TW/analysis,1,empty,200,0,,2026-11-05T07:27:08Z
+41985231958,1,c1f6009048fc10358f1c,2337,旺宏,2337.TW,https://sg.finance.yahoo.com/quote/2337.TW/analysis,1,success,200,4,,2026-11-05T07:27:10Z
+41985231958,1,ca97690ead46db8817cc,3443,創意,3443.TW,https://finance.yahoo.com/quote/3443.TW/analysis,1,empty,200,0,,2026-11-05T07:27:11Z
+41985231958,1,b608f4df3b65134868af,3443,創意,3443.TW,https://hk.finance.yahoo.com/quote/3443.TW/analysis,1,empty,200,0,,2026-11-05T07:27:13Z
+41985231958,1,b82bd5adedb9c5c27840,3443,創意,3443.TW,https://sg.finance.yahoo.com/quote/3443.TW/analysis,1,empty,200,0,,2026-11-05T07:27:15Z
+41985231958,1,c0d5d7e9c766334c2783,0050,元大台灣50,0050.TW,https://finance.yahoo.com/quote/0050.TW/analysis,1,empty,200,0,,2026-11-05T07:27:16Z
+41985231958,1,5b22e8120edce1bb7e61,0050,元大台灣50,0050.TW,https://hk.finance.yahoo.com/quote/0050.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F0050.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:27:22Z
+41985231958,1,5b22e8120edce1bb7e61,0050,元大台灣50,0050.TW,https://hk.finance.yahoo.com/quote/0050.TW/analysis,2,empty,200,0,,2026-11-05T07:27:22Z
+41985231958,1,988db22d67ad6a1fe51e,0050,元大台灣50,0050.TW,https://sg.finance.yahoo.com/quote/0050.TW/analysis,1,empty,200,0,,2026-11-05T07:27:24Z
+41985231958,1,bebe4f432639b5856b06,0052,富邦科技,0052.TW,https://finance.yahoo.com/quote/0052.TW/analysis,1,empty,200,0,,2026-11-05T07:27:26Z
+41985231958,1,cd21399e53afc9777530,0052,富邦科技,0052.TW,https://hk.finance.yahoo.com/quote/0052.TW/analysis,1,empty,200,0,,2026-11-05T07:27:28Z
+41985231958,1,d62ca2688db6fe0fc4ad,0052,富邦科技,0052.TW,https://sg.finance.yahoo.com/quote/0052.TW/analysis,1,empty,200,0,,2026-11-05T07:27:30Z
+41985231958,1,d3c00d459fc05809c91a,2851,中再保,2851.TW,https://finance.yahoo.com/quote/2851.TW/analysis,1,empty,200,0,,2026-11-05T07:27:31Z
+41985231958,1,121ebb9dc5733a3a1c52,2851,中再保,2851.TW,https://hk.finance.yahoo.com/quote/2851.TW/analysis,1,empty,200,0,,2026-11-05T07:27:33Z
+41985231958,1,0d867592007fd7412c2f,2851,中再保,2851.TW,https://sg.finance.yahoo.com/quote/2851.TW/analysis,1,empty,200,0,,2026-11-05T07:27:34Z
+41985231958,1,2214b737722dd8559972,6166,凌華,6166.TW,https://finance.yahoo.com/quote/6166.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2F6166.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:27:40Z
+41985231958,1,2214b737722dd8559972,6166,凌華,6166.TW,https://finance.yahoo.com/quote/6166.TW/analysis,2,empty,200,0,,2026-11-05T07:27:40Z
+41985231958,1,9cfd618b591696db5cda,6166,凌華,6166.TW,https://hk.finance.yahoo.com/quote/6166.TW/analysis,1,empty,200,0,,2026-11-05T07:27:41Z
+41985231958,1,08ad769a8d122a683db6,6166,凌華,6166.TW,https://sg.finance.yahoo.com/quote/6166.TW/analysis,1,empty,200,0,,2026-11-05T07:27:43Z
+41985231958,1,b108b77bcfe7f395645d,6579,研揚,6579.TW,https://finance.yahoo.com/quote/6579.TW/analysis,1,empty,200,0,,2026-11-05T07:27:45Z
+41985231958,1,f5c7907adcfbcb5c528c,6579,研揚,6579.TW,https://hk.finance.yahoo.com/quote/6579.TW/analysis,1,empty,200,0,,2026-11-05T07:27:46Z
+41985231958,1,034c845303291a39819a,6579,研揚,6579.TW,https://sg.finance.yahoo.com/quote/6579.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsg.finance.yahoo.com%2Fquote%2F6579.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:27:53Z
+41985231958,1,034c845303291a39819a,6579,研揚,6579.TW,https://sg.finance.yahoo.com/quote/6579.TW/analysis,2,empty,200,0,,2026-11-05T07:27:53Z
+41985231958,1,784a6e0dc25ba040be13,8234,新漢,8234.TW,https://finance.yahoo.com/quote/8234.TW/analysis,1,empty,200,0,,2026-11-05T07:27:55Z
+41985231958,1,b79c2916b46d91aed065,8234,新漢,8234.TW,https://hk.finance.yahoo.com/quote/8234.TW/analysis,1,empty,200,0,,2026-11-05T07:27:56Z
+41985231958,1,fdcb6b24a80d033a6ee0,8234,新漢,8234.TW,https://sg.finance.yahoo.com/quote/8234.TW/analysis,1,empty,200,0,,2026-11-05T07:27:57Z
+41985231958,1,af36cbe78e2631b6de46,3479,安勤,3479.TW,https://finance.yahoo.com/quote/3479.TW/analysis,1,empty,200,0,,2026-11-05T07:27:59Z
+41985231958,1,707387bc16ef1a6fe368,3479,安勤,3479.TW,https://hk.finance.yahoo.com/quote/3479.TW/analysis,1,empty,200,0,,2026-11-05T07:28:01Z
+41985231958,1,39756db7e05a98413ee0,3479,安勤,3479.TW,https://sg.finance.yahoo.com/quote/3479.TW/analysis,1,empty,200,0,,2026-11-05T07:28:03Z
+41985231958,1,f5f6ef981c1611eb4ec3,8050,廣積,8050.TW,https://finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-05T07:28:05Z
+41985231958,1,1bb00746c301993d987e,8050,廣積,8050.TW,https://hk.finance.yahoo.com/quote/8050.TW/analysis,1,http_error,429,,"WaybackRequestError: HTTP 429 while loading https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhk.finance.yahoo.com%2Fquote%2F8050.TW%2Fanalysis&output=json&fl=timestamp,original,mimetype,statuscode,digest,length",2026-11-05T07:28:10Z
+41985231958,1,1bb00746c301993d987e,8050,廣積,8050.TW,https://hk.finance.yahoo.com/quote/8050.TW/analysis,2,empty,200,0,,2026-11-05T07:28:10Z
+41985231958,1,964635a26cd807849d7c,8050,廣積,8050.TW,https://sg.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-05T07:28:11Z
