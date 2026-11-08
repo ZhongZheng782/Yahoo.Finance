@@ -11299,3 +11299,12 @@ Call log:
 ║                                                            ║
 ║ <3 Playwright Team                                         ║
 ╚════════════════════════════════════════════════════════════╝",2026-11-08T11:15:17Z
+42476388745,1,2713a31ee9a3bb8cb7d1,GLOBAL,Wayback CDP 連線,,http://192.168.31.101:9222,1,cdp_connect_failed,,,"Error: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝",2026-11-08T11:36:04Z
