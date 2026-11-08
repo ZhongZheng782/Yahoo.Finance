@@ -11286,3 +11286,7 @@ Call log:
 Call log:
   - <ws preparing> retrieving websocket url from http://192.168.31.101:9222
 ",2026-11-08T06:29:19Z
+42474123639,1,58c70b01cbfb8f7e7d4d,GLOBAL,Wayback CDP 連線,,http://192.168.31.101:9222,1,cdp_connect_failed,,,"Error: BrowserType.connect_over_cdp: connect ECONNREFUSED 192.168.31.101:9222
+Call log:
+  - <ws preparing> retrieving websocket url from http://192.168.31.101:9222
+",2026-11-08T11:05:31Z
