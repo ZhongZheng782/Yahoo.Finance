@@ -151,8 +151,22 @@ def connect_wayback_cdp(cdp_url: str) -> None:
     from playwright.sync_api import sync_playwright
 
     WAYBACK_PLAYWRIGHT = sync_playwright().start()
-    browser = WAYBACK_PLAYWRIGHT.chromium.connect_over_cdp(cdp_url, timeout=15000)
-    context = browser.contexts[0] if browser.contexts else browser.new_context()
+    browser = None
+    candidates = [cdp_url, "http://host.docker.internal:9222", "http://172.17.0.1:9222", "http://127.0.0.1:9222"]
+    for c in [x for x in candidates if x]:
+        try:
+            print(f"Attempting CDP connection to {c} ...")
+            browser = WAYBACK_PLAYWRIGHT.chromium.connect_over_cdp(c, timeout=5000)
+            print(f"Connected to CDP at {c}")
+            break
+        except Exception:
+            pass
+    if browser is None:
+        print("CDP endpoints unreachable, launching local headless chromium...")
+        browser = WAYBACK_PLAYWRIGHT.chromium.launch(headless=True)
+        context = browser.new_context()
+    else:
+        context = browser.contexts[0] if browser.contexts else browser.new_context()
     # Keep Wayback navigation isolated from the existing GoodInfo/browser tabs.
     WAYBACK_CDP_PAGE = context.new_page()
     WAYBACK_CDP_SESSION = context.new_cdp_session(WAYBACK_CDP_PAGE)
