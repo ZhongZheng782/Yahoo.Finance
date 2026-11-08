@@ -11282,3 +11282,7 @@ Call log:
 42346655029,1,ca7c9443bf92f04c83f5,8050,廣積,8050.TW,https://finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-07T06:38:52Z
 42346655029,1,9dcc4416b247613bbfc2,8050,廣積,8050.TW,https://hk.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-07T06:38:53Z
 42346655029,1,fe436099a491f1e034c9,8050,廣積,8050.TW,https://sg.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-07T06:38:56Z
+42454889835,1,1595f5a72c3798fe1708,GLOBAL,Wayback CDP 連線,,http://192.168.31.101:9222,1,cdp_connect_failed,,,"Error: BrowserType.connect_over_cdp: connect ECONNREFUSED 192.168.31.101:9222
+Call log:
+  - <ws preparing> retrieving websocket url from http://192.168.31.101:9222
+",2026-11-08T06:29:19Z
