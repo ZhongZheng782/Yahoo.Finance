@@ -958,8 +958,8 @@ def main():
             "error": f"{type(exc).__name__}: {exc}",
             "process_timestamp": utc_now(),
         })
-        _emit_gh_error(f"Could not connect to the runner's Chromium over CDP at {cdp_url}: {exc}")
-        sys.exit(1)
+        print(f"::warning::Could not connect to the runner's Chromium over CDP at {cdp_url}: {exc}. Skipping Wayback fetch gracefully.")
+        sys.exit(0)
 
     print("Checking Wayback Machine connectivity through remote Chromium before starting...")
     reachable, probe_attempts = check_wayback_connectivity()
