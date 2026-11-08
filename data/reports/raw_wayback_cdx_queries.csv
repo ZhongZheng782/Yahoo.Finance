@@ -11290,3 +11290,12 @@ Call log:
 Call log:
   - <ws preparing> retrieving websocket url from http://192.168.31.101:9222
 ",2026-11-08T11:05:31Z
+42474855433,1,2591b5266917f4c442f3,GLOBAL,Wayback CDP 連線,,http://192.168.31.101:9222,1,cdp_connect_failed,,,"Error: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝",2026-11-08T11:15:17Z
