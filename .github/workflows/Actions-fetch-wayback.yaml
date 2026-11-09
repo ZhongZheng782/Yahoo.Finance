@@ -37,7 +37,7 @@ jobs:
       actions: read
     env:
       SYNC_PAT_BIZTRENDS: ${{ secrets.REPO_FILE_SYNC_WENCHIEHLEE_MONEY }}
-      WAYBACK_CDP_URL: "http://172.30.0.10:9222"  # CHROMIUM on Docker network cdp-net (Container.Manager)
+      WAYBACK_CDP_URL: "http://10.222.0.10:9222"  # CHROMIUM on Docker network cdp-net (Container.Manager)
       WAYBACK_SYMBOLS: ${{ github.event.inputs.specific_symbols || '' }}
       WAYBACK_MAX_RUNTIME: ${{ github.event.inputs.max_runtime_minutes || '300' }}
       WAYBACK_BACKFILL: ${{ github.event.inputs.backfill || 'false' }}
