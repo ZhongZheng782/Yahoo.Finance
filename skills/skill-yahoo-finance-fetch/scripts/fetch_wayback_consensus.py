@@ -152,8 +152,18 @@ def connect_wayback_cdp(cdp_url: str) -> None:
 
     WAYBACK_PLAYWRIGHT = sync_playwright().start()
     browser = None
-    candidates = [cdp_url, "http://host.docker.internal:9222", "http://172.17.0.1:9222", "http://127.0.0.1:9222"]
-    for c in [x for x in candidates if x]:
+    # 172.30.0.10 = CHROMIUM on Docker network cdp-net (reachable from runner containers);
+    # 100.110.72.104 = Tailscale (for machines outside the NAS).
+    candidates = [
+        cdp_url,
+        os.environ.get("CHROMIUM_CDP_URL"),
+        "http://172.30.0.10:9222",
+        "http://100.110.72.104:9222",
+        "http://host.docker.internal:9222",
+        "http://172.17.0.1:9222",
+        "http://127.0.0.1:9222",
+    ]
+    for c in dict.fromkeys(x for x in candidates if x):
         try:
             print(f"Attempting CDP connection to {c} ...")
             browser = WAYBACK_PLAYWRIGHT.chromium.connect_over_cdp(c, timeout=5000)
