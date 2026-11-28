@@ -19198,3 +19198,12 @@ Call log:
 45969352319,1,1eb19a53899c47140d3e,8050,廣積,8050.TW,https://finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-27T09:09:41Z
 45969352319,1,47c5409b08204a215545,8050,廣積,8050.TW,https://hk.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-27T09:09:42Z
 45969352319,1,2f12db642b8add7f0f5b,8050,廣積,8050.TW,https://sg.finance.yahoo.com/quote/8050.TW/analysis,1,empty,200,0,,2026-11-27T09:09:43Z
+46124961736,1,4bf9a2099b8edc2d247b,GLOBAL,Wayback CDP 連線,,http://10.222.0.10:9222,1,cdp_connect_failed,,,"Error: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝",2026-11-28T08:17:42Z
